@@ -1,0 +1,3 @@
+This text file helps verify that the document extraction API works correctly with English content.
+By providing several sentences we can observe how the service groups them into chunks and preserves sentence boundaries.
+The closing sentence summarizes the main idea so the output remains coherent after processing.
