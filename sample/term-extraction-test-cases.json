@@ -1,0 +1,158 @@
+{
+  "test_cases": [
+    {
+      "name": "빈 청크 배열 - 400 에러 예상",
+      "description": "청크 배열이 비어있는 경우 400 Bad Request 응답",
+      "request": {
+        "processed_files": [
+          {
+            "filename": "empty-chunks.txt",
+            "chunks": []
+          }
+        ]
+      },
+      "expected_status": 400,
+      "expected_error": "청크 배열은 비어있을 수 없습니다"
+    },
+    {
+      "name": "빈 파일 배열 - 422 에러 예상",
+      "description": "processed_files 배열이 비어있는 경우 422 Unprocessable Entity 응답",
+      "request": {
+        "processed_files": []
+      },
+      "expected_status": 422,
+      "expected_error": "Field required"
+    },
+    {
+      "name": "빈 문자열 청크 - 400 에러 예상",
+      "description": "청크 내용이 빈 문자열인 경우 400 Bad Request 응답",
+      "request": {
+        "processed_files": [
+          {
+            "filename": "empty-content.txt",
+            "chunks": [""]
+          }
+        ]
+      },
+      "expected_status": 400,
+      "expected_error": "비어있을 수 없습니다"
+    },
+    {
+      "name": "정상 요청 - 한국어 텍스트",
+      "description": "정상적인 한국어 텍스트 처리",
+      "request": {
+        "processed_files": [
+          {
+            "filename": "korean-sample.txt",
+            "chunks": [
+              "홍길동은 조선시대의 전설적인 의적이다. 탐관오리들의 재물을 빼앗아 백성들에게 나누어 주었다.",
+              "삼성전자는 대한민국의 대표적인 글로벌 기업이다. 갤럭시 시리즈로 전 세계 스마트폰 시장에서 큰 점유율을 차지하고 있다."
+            ],
+            "metadata": {
+              "test_type": "korean"
+            }
+          }
+        ],
+        "use_cache": false,
+        "parallel_workers": 1,
+        "template_name": "extract_terms.j2",
+        "max_entities_per_chunk": 10,
+        "include_context": true
+      },
+      "expected_status": 200,
+      "expected_entities_min": 4
+    },
+    {
+      "name": "정상 요청 - 영어 텍스트",
+      "description": "정상적인 영어 텍스트 처리",
+      "request": {
+        "processed_files": [
+          {
+            "filename": "english-sample.txt",
+            "chunks": [
+              "Apple Inc. is an American multinational technology company. Steve Jobs and Steve Wozniak founded the company in 1976.",
+              "Elon Musk is the CEO of Tesla and SpaceX. He is known for his ambitious vision of space exploration and electric vehicles."
+            ],
+            "metadata": {
+              "test_type": "english"
+            }
+          }
+        ],
+        "use_cache": false,
+        "parallel_workers": 1,
+        "template_name": "extract_terms.j2",
+        "max_entities_per_chunk": 10,
+        "include_context": true
+      },
+      "expected_status": 200,
+      "expected_entities_min": 6
+    },
+    {
+      "name": "정상 요청 - 혼합 텍스트",
+      "description": "한글과 영어가 혼합된 텍스트 처리",
+      "request": {
+        "processed_files": [
+          {
+            "filename": "mixed-sample.txt",
+            "chunks": [
+              "Python은 Guido van Rossum이 개발한 고급 프로그래밍 언어입니다. 데이터 과학과 머신러닝 분야에서 널리 사용됩니다.",
+              "React는 Meta(구 Facebook)에서 개발한 JavaScript 라이브러리입니다. 컴포넌트 기반 아키텍처로 사용자 인터페이스를 구축합니다."
+            ],
+            "metadata": {
+              "test_type": "mixed"
+            }
+          }
+        ],
+        "use_cache": false,
+        "parallel_workers": 1,
+        "template_name": "extract_terms.j2",
+        "max_entities_per_chunk": 10,
+        "include_context": true
+      },
+      "expected_status": 200,
+      "expected_entities_min": 6
+    },
+    {
+      "name": "캐시 테스트 - 동일 텍스트 재요청",
+      "description": "동일한 텍스트를 캐시 활성화 상태로 두 번 요청",
+      "request": {
+        "processed_files": [
+          {
+            "filename": "cache-test.txt",
+            "chunks": [
+              "테스트용 텍스트입니다. 홍길동과 삼성전자가 등장합니다."
+            ]
+          }
+        ],
+        "use_cache": true,
+        "parallel_workers": 1,
+        "template_name": "extract_terms.j2"
+      },
+      "expected_status": 200,
+      "notes": "첫 번째 요청 후 동일한 요청을 다시 보내면 cache_hit_rate가 1.0이어야 함"
+    },
+    {
+      "name": "병렬 처리 테스트",
+      "description": "여러 청크를 병렬로 처리",
+      "request": {
+        "processed_files": [
+          {
+            "filename": "parallel-test.txt",
+            "chunks": [
+              "청크 1: 홍길동은 조선시대의 인물이다.",
+              "청크 2: 삼성전자는 한국의 기업이다.",
+              "청크 3: Apple은 미국의 기업이다.",
+              "청크 4: Elon Musk는 Tesla의 CEO이다.",
+              "청크 5: Python은 프로그래밍 언어이다."
+            ]
+          }
+        ],
+        "use_cache": false,
+        "parallel_workers": 3,
+        "template_name": "extract_terms.j2"
+      },
+      "expected_status": 200,
+      "expected_chunks": 5
+    }
+  ]
+}

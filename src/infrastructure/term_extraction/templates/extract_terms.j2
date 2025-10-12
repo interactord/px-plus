@@ -1,0 +1,31 @@
+Extract technical terms and proper nouns from the following content. Return JSON only.
+
+**REQUIRED OUTPUT FORMAT:**
+{"extracted_entities":[{"term":"name","type":"person|company|product|technical_term","primary_domain":"domain","tags":["#tag1"],"context":"brief description","multilingual_expressions":null}]}
+
+**SOURCE CONTENT:**
+{% if text_content %}
+Text: {{ text_content }}
+{% endif %}
+
+{% if linkedin_data %}
+LinkedIn Profile Data:
+{% for key, value in linkedin_data.items() %}
+- {{ key }}: {{ value }}
+{% endfor %}
+{% endif %}
+
+**EXTRACTION GUIDELINES:**
+- **person**: Names of individuals, professionals, team members
+- **company**: Organizations, businesses, institutions, startups  
+- **product**: Products, services, brands, applications, platforms
+- **technical_term**: Technical vocabulary, frameworks, tools, methodologies, programming languages
+
+**QUALITY REQUIREMENTS:**
+- Include multilingual names when available (Korean/English pairs)
+- Keep context descriptions under 100 characters
+- Maximum 5 tags per entity
+- Focus on professionally relevant terms
+- Prioritize technical and business terminology
+
+**OUTPUT:** Return pure JSON only. No markdown, no explanations, no additional text.

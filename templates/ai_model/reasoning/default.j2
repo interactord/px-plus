@@ -1,0 +1,14 @@
+{#
+Reasoning 모델 기본 템플릿
+
+변수:
+- problem: 해결할 문제
+- context: 추가 컨텍스트 (선택)
+#}
+{{ problem }}
+
+{% if context %}
+
+추가 컨텍스트:
+{{ context }}
+{% endif %}

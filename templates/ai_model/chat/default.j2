@@ -1,0 +1,14 @@
+{#
+Chat 모델 기본 템플릿
+
+변수:
+- query: 사용자 질문
+- context: 추가 컨텍스트 (선택)
+#}
+{{ query }}
+
+{% if context %}
+
+참고 정보:
+{{ context }}
+{% endif %}

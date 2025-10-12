@@ -1,0 +1,29 @@
+{#
+Chat 모델 시스템-사용자 템플릿
+
+변수:
+- role: 시스템 역할 설명
+- task: 사용자 작업
+- constraints: 제약사항 (선택)
+- examples: 예시 리스트 (선택)
+#}
+당신은 {{ role }}입니다.
+
+사용자 작업:
+{{ task }}
+
+{% if constraints %}
+
+제약사항:
+{% for constraint in constraints %}
+- {{ constraint }}
+{% endfor %}
+{% endif %}
+
+{% if examples %}
+
+예시:
+{% for example in examples %}
+{{ loop.index }}. {{ example }}
+{% endfor %}
+{% endif %}

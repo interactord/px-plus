@@ -64,7 +64,11 @@ app.add_middleware(
 )
 
 # 라우터 등록
+from .presentation.api.routes import term_extraction_router, demo_router
+
 app.include_router(router, tags=["greetings"])
+app.include_router(term_extraction_router)
+app.include_router(demo_router)  # demo_router에 이미 prefix="/demo" 포함
 
 # 데모 페이지 라우팅
 @app.get("/demo/document-extractor", tags=["demo"])

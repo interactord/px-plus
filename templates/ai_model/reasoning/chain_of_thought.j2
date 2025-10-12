@@ -1,0 +1,19 @@
+{#
+Reasoning 모델 사고 체인 템플릿
+
+변수:
+- problem: 해결할 문제
+- steps: 단계 수 (선택, 기본값: 5)
+- show_reasoning: 추론 과정 표시 여부 (선택, 기본값: true)
+#}
+다음 문제를 단계별로 해결해주세요:
+
+{{ problem }}
+
+{% if show_reasoning|default(true) %}
+각 단계마다 추론 과정을 명확히 설명해주세요.
+{% endif %}
+
+{% if steps %}
+총 {{ steps }}단계로 나누어 설명해주세요.
+{% endif %}
