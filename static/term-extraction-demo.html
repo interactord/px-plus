@@ -11,226 +11,149 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary: #14B8A6;
-            --primary-dark: #0F766E;
-            --success: #10B981;
-            --error: #EF4444;
-            --warning: #F59E0B;
-            --bg-light: #F3F4F6;
-            --bg-white: #FFFFFF;
-            --text-dark: #1F2937;
-            --text-gray: #6B7280;
-            --border: #E5E7EB;
-            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: var(--bg-light);
-            color: var(--text-dark);
+            background: #F3F4F6;
+            color: #1F2937;
             line-height: 1.6;
+            padding: 2rem;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 2rem 1rem;
         }
 
         header {
-            background: var(--bg-white);
+            background: white;
             padding: 2rem;
             border-radius: 12px;
-            box-shadow: var(--shadow);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
             margin-bottom: 2rem;
-            text-align: center;
         }
 
         h1 {
             font-size: 2rem;
             margin-bottom: 0.5rem;
-            color: var(--primary);
+            color: #3B82F6;
         }
 
         .subtitle {
-            color: var(--text-gray);
-            font-size: 1rem;
+            color: #6B7280;
+            margin-bottom: 1rem;
         }
 
-        .input-section {
-            background: var(--bg-white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
+        .nav-link {
+            color: #3B82F6;
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
             margin-bottom: 2rem;
         }
 
-        .section-title {
+        .panel {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .panel h2 {
             font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--text-dark);
+            margin-bottom: 1rem;
+            color: #1F2937;
         }
 
         .form-group {
             margin-bottom: 1.5rem;
         }
 
-        .form-label {
+        label {
             display: block;
-            font-weight: 600;
             margin-bottom: 0.5rem;
-            color: var(--text-dark);
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: border-color 0.2s;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
-        }
-
-        textarea.form-input {
-            min-height: 150px;
-            resize: vertical;
-            font-family: 'Courier New', monospace;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .checkbox-group input[type="checkbox"] {
-            width: 1.25rem;
-            height: 1.25rem;
-            cursor: pointer;
-        }
-
-        .sample-buttons {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-top: 0.5rem;
-        }
-
-        .btn-sample {
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-            background: var(--bg-light);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .btn-sample:hover {
-            background: var(--border);
-        }
-
-        .btn {
-            padding: 0.875rem 2rem;
-            font-size: 1rem;
             font-weight: 600;
+            color: #374151;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 400px;
+            padding: 1rem;
+            border: 1px solid #D1D5DB;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.875rem;
+            resize: vertical;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #3B82F6;
+            color: white;
             border: none;
             border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
             cursor: pointer;
-            transition: all 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
+            transition: background 0.2s;
         }
 
-        .btn-primary {
-            background: var(--primary);
-            color: white;
+        .button:hover:not(:disabled) {
+            background: #2563EB;
         }
 
-        .btn-primary:hover:not(:disabled) {
-            background: var(--primary-dark);
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn:disabled {
-            opacity: 0.5;
+        .button:disabled {
+            background: #9CA3AF;
             cursor: not-allowed;
         }
 
-        .btn-container {
-            text-align: center;
-            margin-top: 1.5rem;
-        }
-
-        .alert {
+        .output-area {
+            min-height: 400px;
+            max-height: 600px;
+            overflow-y: auto;
             padding: 1rem;
+            background: #F9FAFB;
+            border: 1px solid #D1D5DB;
             border-radius: 8px;
-            margin-bottom: 1.5rem;
-            display: none;
-        }
-
-        .alert.show {
-            display: block;
-            animation: slideDown 0.3s ease;
-        }
-
-        .alert-error {
-            background: rgba(239, 68, 68, 0.1);
-            border-left: 4px solid var(--error);
-            color: #991B1B;
-        }
-
-        .alert-success {
-            background: rgba(16, 185, 129, 0.1);
-            border-left: 4px solid var(--success);
-            color: #065F46;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.875rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
 
         .loading {
-            text-align: center;
-            padding: 3rem;
             display: none;
+            text-align: center;
+            padding: 2rem;
+            color: #6B7280;
         }
 
-        .loading.show {
+        .loading.active {
             display: block;
         }
 
         .spinner {
-            border: 4px solid var(--border);
-            border-top: 4px solid var(--primary);
+            border: 3px solid #E5E7EB;
+            border-top: 3px solid #3B82F6;
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             animation: spin 1s linear infinite;
             margin: 0 auto 1rem;
         }
@@ -240,94 +163,43 @@
             100% { transform: rotate(360deg); }
         }
 
-        .results-section {
-            background: var(--bg-white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
+        .error {
+            background: #FEE2E2;
+            color: #991B1B;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
             display: none;
         }
 
-        .results-section.show {
+        .error.active {
             display: block;
-            animation: fadeIn 0.5s ease;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .results-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .json-output {
-            background: #1F2937;
-            color: #F3F4F6;
-            padding: 1.5rem;
-            border-radius: 8px;
-            overflow-x: auto;
-            font-family: 'Courier New', monospace;
-            font-size: 0.875rem;
-            line-height: 1.6;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .stat-card {
-            background: var(--bg-light);
+        .info-box {
+            background: #DBEAFE;
+            color: #1E40AF;
             padding: 1rem;
             border-radius: 8px;
-            text-align: center;
-        }
-
-        .stat-value {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.25rem;
-        }
-
-        .stat-label {
+            margin-bottom: 1rem;
             font-size: 0.875rem;
-            color: var(--text-gray);
+        }
+
+        .info-box strong {
+            display: block;
+            margin-bottom: 0.5rem;
         }
 
         footer {
             text-align: center;
-            padding: 2rem;
-            color: var(--text-gray);
+            margin-top: 3rem;
+            color: #6B7280;
             font-size: 0.875rem;
         }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            .form-row {
+        @media (max-width: 1024px) {
+            .main-content {
                 grid-template-columns: 1fr;
-            }
-
-            .results-header {
-                flex-direction: column;
-                gap: 1rem;
-                align-items: flex-start;
             }
         }
     </style>
@@ -336,180 +208,108 @@
     <div class="container">
         <header>
             <h1>🔍 용어 추출 데모</h1>
-            <p class="subtitle">GPT-4o를 사용한 고유명사 및 주요 도메인 추출</p>
+            <p class="subtitle">GPT-4o를 사용하여 텍스트에서 고유명사와 주요 도메인을 자동으로 추출합니다</p>
+            <a href="/demo" class="nav-link">← 데모 목록으로 돌아가기</a>
         </header>
 
-        <div class="input-section">
-            <h2 class="section-title">텍스트 입력</h2>
+        <div class="error" id="errorMessage"></div>
 
-            <div id="alert" class="alert"></div>
-
-            <form id="extractForm">
-                <div class="form-group">
-                    <label class="form-label" for="filename">파일명</label>
-                    <input type="text" id="filename" class="form-input" 
-                           value="test-document.txt" placeholder="파일명을 입력하세요">
+        <div class="main-content">
+            <!-- 입력 패널 -->
+            <div class="panel">
+                <h2>📝 입력</h2>
+                
+                <div class="info-box">
+                    <strong>사용 방법:</strong>
+                    1. 아래 텍스트 영역에 JSON 데이터를 입력하세요<br>
+                    2. "용어 추출 시작" 버튼을 클릭하세요<br>
+                    3. 오른쪽에서 추출된 용어를 확인하세요
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label" for="chunkText">
-                        텍스트 입력
-                        <span style="font-weight: normal; color: var(--text-gray);">(청크로 분할하여 입력)</span>
-                    </label>
-                    <textarea id="chunkText" class="form-input" 
-                              placeholder="추출할 텍스트를 입력하세요..."></textarea>
-                    <div class="sample-buttons">
-                        <button type="button" class="btn-sample" onclick="loadSample('korean')">
-                            샘플 1 (한국어)
-                        </button>
-                        <button type="button" class="btn-sample" onclick="loadSample('english')">
-                            샘플 2 (영어)
-                        </button>
-                        <button type="button" class="btn-sample" onclick="loadSample('mixed')">
-                            샘플 3 (혼합)
-                        </button>
-                    </div>
+                    <label for="inputText">JSON 입력 (text-extractor_sample.json 형식)</label>
+                    <textarea id="inputText"></textarea>
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label class="checkbox-group">
-                            <input type="checkbox" id="useCache" checked>
-                            <span>LLM 캐싱 사용</span>
-                        </label>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label" for="parallelWorkers">병렬 워커 수</label>
-                        <input type="number" id="parallelWorkers" class="form-input" 
-                               value="3" min="1" max="10">
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label" for="maxEntities">최대 엔티티 수</label>
-                        <input type="number" id="maxEntities" class="form-input" 
-                               value="50" min="1" max="100">
-                    </div>
-                </div>
-
-                <div class="btn-container">
-                    <button type="submit" class="btn btn-primary">
-                        <span>🚀</span>
-                        <span>용어 추출 시작</span>
+                <div>
+                    <button id="extractButton" class="button" onclick="extractTerms()">
+                        🚀 용어 추출 시작
                     </button>
                 </div>
-            </form>
+            </div>
 
-            <div id="loading" class="loading">
-                <div class="spinner"></div>
-                <p>GPT-4o가 용어를 추출하고 있습니다...</p>
+            <!-- 출력 패널 -->
+            <div class="panel">
+                <h2>📊 결과</h2>
+                
+                <div class="loading" id="loadingIndicator">
+                    <div class="spinner"></div>
+                    <p>용어 추출 중...</p>
+                </div>
+
+                <div class="form-group">
+                    <label>JSON 응답</label>
+                    <div id="outputArea" class="output-area">여기에 추출 결과가 표시됩니다</div>
+                </div>
             </div>
         </div>
 
-        <div id="results" class="results-section">
-            <div class="results-header">
-                <h2 class="section-title">추출 결과</h2>
-            </div>
-
-            <div class="stats-grid" id="statsGrid"></div>
-
-            <div class="form-group">
-                <label class="form-label">JSON 응답</label>
-                <div class="json-output" id="jsonOutput"></div>
-            </div>
-        </div>
+        <footer>
+            <p>&copy; 2024 PX-Plus - Hyper-Personalization AI Platform</p>
+        </footer>
     </div>
 
-    <footer>
-        <p>&copy; 2024 PX-Plus - FastAPI + RFS Framework + GPT-4o</p>
-    </footer>
-
     <script>
-        // 샘플 텍스트
-        const samples = {
-            korean: `홍길동은 조선시대의 전설적인 의적이다. 탐관오리들의 재물을 빼앗아 백성들에게 나누어 주었다. 그의 활약은 민중들 사이에서 구전되며 전해져 내려왔다.
-
-삼성전자는 대한민국의 대표적인 전자 기업이다. 스마트폰, 반도체, 가전제품 등 다양한 분야에서 세계 시장을 선도하고 있다. 갤럭시 시리즈는 애플의 아이폰과 경쟁하는 주력 제품이다.`,
-
-            english: `Apple Inc. is a multinational technology company headquartered in Cupertino, California. Steve Jobs, Steve Wozniak, and Ronald Wayne founded the company in 1976. The iPhone revolutionized the smartphone industry when it was introduced in 2007.
-
-Elon Musk is the CEO of Tesla and SpaceX. Tesla produces electric vehicles and battery energy storage systems. SpaceX focuses on aerospace technology and space transportation.`,
-
-            mixed: `파이썬(Python)은 귀도 반 로섬(Guido van Rossum)이 개발한 프로그래밍 언어다. Django와 Flask는 파이썬 기반의 웹 프레임워크이다.
-
-React는 메타(Meta, 구 Facebook)에서 개발한 자바스크립트 라이브러리다. Next.js는 Vercel에서 만든 React 기반 프레임워크이다. TypeScript는 마이크로소프트(Microsoft)가 개발한 자바스크립트의 상위집합 언어다.`
+        // 샘플 데이터 정의 (템플릿 리터럴 사용)
+        const sampleData = {
+            "processed": [
+                {
+                    "filename": "질문7_로깅및모니터링.md",
+                    "total_characters": 1734,
+                    "total_chunks": 1,
+                    "chunks": [
+                        "# 질문 7: 로깅 및 모니터링\n\n**보안 관련 로깅 및 모니터링 체계를 설명해 주시겠습니까?**\n\n---\n\n## 1. 로그 수집 및 저장\n\n### 1-1. 로그 종류\n- 어떤 종류의 로그를 수집하시나요?\n  - 접근 로그 (Access Log)\n  - 에러 로그 (Error Log)\n  - 보안 이벤트 로그\n  - 애플리케이션 로그\n  - 시스템 로그\n  - 감사 로그 (Audit Log)\n  - 기타"
+                    ]
+                }
+            ],
+            "skipped": []
         };
 
-        // DOM 요소
-        const extractForm = document.getElementById('extractForm');
-        const chunkText = document.getElementById('chunkText');
-        const filename = document.getElementById('filename');
-        const useCache = document.getElementById('useCache');
-        const parallelWorkers = document.getElementById('parallelWorkers');
-        const maxEntities = document.getElementById('maxEntities');
-        const loading = document.getElementById('loading');
-        const results = document.getElementById('results');
-        const jsonOutput = document.getElementById('jsonOutput');
-        const statsGrid = document.getElementById('statsGrid');
-        const alert = document.getElementById('alert');
-
-        // 폼 제출 핸들러
-        extractForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            await handleExtract();
+        // 페이지 로드 시 샘플 데이터 설정
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('inputText').value = JSON.stringify(sampleData, null, 2);
         });
 
-        // 샘플 로드 함수
-        function loadSample(type) {
-            chunkText.value = samples[type];
-        }
-
-        // 알림 표시 함수
-        function showAlert(message, type = 'error') {
-            alert.textContent = message;
-            alert.className = `alert alert-${type} show`;
-            setTimeout(() => {
-                alert.classList.remove('show');
-            }, 5000);
-        }
-
         // 용어 추출 실행
-        async function handleExtract() {
-            const text = chunkText.value.trim();
-            const fname = filename.value.trim();
+        async function extractTerms() {
+            const inputText = document.getElementById('inputText').value.trim();
+            const extractButton = document.getElementById('extractButton');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const outputArea = document.getElementById('outputArea');
 
-            if (!text) {
-                showAlert('텍스트를 입력해주세요.', 'error');
+            // 입력 검증
+            if (!inputText) {
+                showError('JSON 데이터를 입력해주세요');
                 return;
             }
 
-            if (!fname) {
-                showAlert('파일명을 입력해주세요.', 'error');
+            // JSON 파싱 검증
+            let inputData;
+            try {
+                inputData = JSON.parse(inputText);
+            } catch (error) {
+                showError('잘못된 JSON 형식입니다: ' + error.message);
                 return;
             }
 
-            // 요청 데이터 구성
-            const requestData = {
-                processed_files: [
-                    {
-                        filename: fname,
-                        chunks: [text],
-                        metadata: {
-                            timestamp: new Date().toISOString()
-                        }
-                    }
-                ],
-                use_cache: useCache.checked,
-                parallel_workers: parseInt(parallelWorkers.value),
-                template_name: "extract_terms.j2",
-                max_entities_per_chunk: parseInt(maxEntities.value),
-                include_context: true
-            };
+            // API 요청 데이터 변환
+            const requestData = transformToAPIFormat(inputData);
 
             // UI 상태 변경
-            loading.classList.add('show');
-            results.classList.remove('show');
-            alert.classList.remove('show');
+            extractButton.disabled = true;
+            loadingIndicator.classList.add('active');
+            outputArea.textContent = '';
+            showError('');
 
             try {
                 const response = await fetch('/api/v1/extract-terms/process-documents', {
@@ -522,54 +322,59 @@ React는 메타(Meta, 구 Facebook)에서 개발한 자바스크립트 라이브
 
                 if (!response.ok) {
                     const errorData = await response.json();
-                    throw new Error(errorData.detail || `HTTP ${response.status}: ${response.statusText}`);
+                    throw new Error(errorData.detail || '용어 추출 실패');
                 }
 
-                const data = await response.json();
-
-                // 결과 렌더링
-                renderResults(data);
-                showAlert('용어 추출이 완료되었습니다!', 'success');
+                const result = await response.json();
+                
+                // 결과를 JSON 형식으로 출력
+                outputArea.textContent = JSON.stringify(result, null, 2);
 
             } catch (error) {
-                console.error('추출 실패:', error);
-                showAlert(error.message || '용어 추출 중 오류가 발생했습니다.', 'error');
+                showError('용어 추출 중 오류 발생: ' + error.message);
+                outputArea.textContent = '오류가 발생했습니다';
             } finally {
-                loading.classList.remove('show');
+                extractButton.disabled = false;
+                loadingIndicator.classList.remove('active');
             }
         }
 
-        // 결과 렌더링
-        function renderResults(data) {
-            results.classList.add('show');
+        // 입력 데이터를 API 요청 형식으로 변환
+        function transformToAPIFormat(inputData) {
+            const processedFiles = [];
+            
+            if (inputData.processed && Array.isArray(inputData.processed)) {
+                inputData.processed.forEach(doc => {
+                    if (doc.chunks && Array.isArray(doc.chunks)) {
+                        processedFiles.push({
+                            filename: doc.filename || 'unknown.txt',
+                            chunks: doc.chunks,
+                            metadata: null
+                        });
+                    }
+                });
+            }
 
-            // 통계 렌더링
-            const summary = data.summary;
-            statsGrid.innerHTML = `
-                <div class="stat-card">
-                    <div class="stat-value">${summary.total_chunks}</div>
-                    <div class="stat-label">총 청크 수</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">${summary.total_entities}</div>
-                    <div class="stat-label">추출된 엔티티</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">${(summary.cache_hit_rate * 100).toFixed(1)}%</div>
-                    <div class="stat-label">캐시 히트율</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">${summary.total_processing_time.toFixed(2)}s</div>
-                    <div class="stat-label">처리 시간</div>
-                </div>
-            `;
-
-            // JSON 응답 렌더링
-            jsonOutput.textContent = JSON.stringify(data, null, 2);
+            return {
+                processed_files: processedFiles,
+                use_cache: true,
+                parallel_workers: 3,
+                template_name: "extract_terms.j2",
+                max_entities_per_chunk: null,
+                include_context: true
+            };
         }
 
-        // 전역 함수 노출
-        window.loadSample = loadSample;
+        // 에러 메시지 표시
+        function showError(message) {
+            const errorElement = document.getElementById('errorMessage');
+            if (message) {
+                errorElement.textContent = message;
+                errorElement.classList.add('active');
+            } else {
+                errorElement.classList.remove('active');
+            }
+        }
     </script>
 </body>
 </html>
