@@ -1,0 +1,84 @@
+# ========================================
+# gcloud 배포 시 제외할 파일/디렉토리
+# ========================================
+
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+tests/
+
+# Documentation
+docs/
+*.md
+
+# Logs and Temporary Files
+logs/
+*.log
+uploads/
+sample/
+
+# Environment Files (Secret Manager 사용)
+.env
+.env.*
+
+# Development Tools
+.claude/
+.serena/
+.playwright-mcp/
+
+# Build Tools
+docker-compose.yml
+
+# CI/CD
+.github/
+
+# Configuration
+config/
+
+# Other
+rules/
+progress/

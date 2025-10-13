@@ -1,0 +1,73 @@
+# ========================================
+# PX-Plus Docker Compose Configuration
+# ========================================
+# 로컬 개발 및 테스트용 Docker Compose 설정
+
+version: '3.8'
+
+services:
+  # ========================================
+  # PX-Plus API Server
+  # ========================================
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: px-plus:latest
+    container_name: px-plus-api
+    ports:
+      - "${API_PORT:-8002}:8080"
+    env_file:
+      - .env
+    environment:
+      - PORT=8080
+      - REDIS_URL=redis://redis:6379
+    volumes:
+      - ./uploads:/app/uploads
+      - ./logs:/app/logs
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8080/health', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - px-network
+    restart: unless-stopped
+
+  # ========================================
+  # Redis Cache
+  # ========================================
+  redis:
+    image: redis:7-alpine
+    container_name: px-plus-redis
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - px-network
+    restart: unless-stopped
+
+# ========================================
+# Networks
+# ========================================
+networks:
+  px-network:
+    driver: bridge
+
+# ========================================
+# Volumes
+# ========================================
+volumes:
+  redis-data:
+    driver: local

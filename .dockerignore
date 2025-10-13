@@ -1,0 +1,105 @@
+# ========================================
+# Docker 빌드 시 제외할 파일/디렉토리
+# ========================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Cloud
+.gcloudignore
+cloudrun.yaml
+
+# Build Tools
+Makefile
+scripts/
+
+# Logs
+logs/
+*.log
+
+# Temporary Files
+uploads/
+sample/
+tests/
+
+# Environment Files
+.env
+.env.*
+!.env.sample
+
+# Claude & Development
+.claude/
+.serena/
+.playwright-mcp/
+
+# CI/CD
+.github/
+
+# Configuration
+config/
+templates/gcp-monitoring/
+
+# Other
+rules/
+progress/
