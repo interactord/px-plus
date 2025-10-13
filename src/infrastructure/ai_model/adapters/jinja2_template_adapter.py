@@ -29,8 +29,8 @@ except ImportError:
 
     Result = Union[Success[T], Failure[E]]
 
-from ...domain.ai_model.ports.template_port import TemplatePort
-from ...domain.ai_model.value_objects.template_context import TemplateContext
+from ....domain.ai_model.ports.template_port import TemplatePort
+from ....domain.ai_model.value_objects.template_context import TemplateContext
 
 
 class Jinja2TemplateAdapter(TemplatePort):

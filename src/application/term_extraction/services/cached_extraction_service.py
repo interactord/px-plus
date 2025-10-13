@@ -5,7 +5,7 @@
 """
 
 import time
-from typing import List, Dict
+from typing import List, Dict, Optional
 
 # RFS Framework - Result 패턴
 try:
@@ -120,7 +120,7 @@ class CachedTermExtractionService:
         self,
         chunks: List[ChunkText],
         context: ExtractionContext,
-        num_workers: int
+        num_workers: Optional[int]
     ) -> List[ExtractionResult]:
         """
         캐시를 활용하여 청크를 처리합니다.
@@ -188,7 +188,7 @@ class CachedTermExtractionService:
         self,
         chunks: List[ChunkText],
         context: ExtractionContext,
-        num_workers: int
+        num_workers: Optional[int]
     ) -> List[ExtractionResult]:
         """
         캐시 없이 청크를 처리합니다.
@@ -201,13 +201,16 @@ class CachedTermExtractionService:
         Returns:
             List[ExtractionResult]: 처리 결과 목록
         """
-        if num_workers > 1 and len(chunks) > 1:
+        # parallel_workers가 None이면 1로 처리 (순차 실행)
+        workers = num_workers if num_workers is not None else 1
+        
+        if workers > 1 and len(chunks) > 1:
             # 병렬 처리
             from ....domain.term_extraction.value_objects.chunk_text import ChunkTextBatch
             import asyncio
             
             batch = ChunkTextBatch(chunks=tuple(chunks))
-            worker_batches = batch.split_for_parallel(num_workers)
+            worker_batches = batch.split_for_parallel(workers)
             
             tasks = [
                 self._process_worker_batch(worker_chunks, context)

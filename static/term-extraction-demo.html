@@ -358,9 +358,7 @@
             return {
                 processed_files: processedFiles,
                 use_cache: true,
-                parallel_workers: 3,
-                template_name: "extract_terms.j2",
-                max_entities_per_chunk: null,
+                max_entities_per_chunk: 0,
                 include_context: true
             };
         }

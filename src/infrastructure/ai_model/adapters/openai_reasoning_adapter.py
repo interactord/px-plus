@@ -27,8 +27,8 @@ except ImportError:
 
     Result = Union[Success[T], Failure[E]]
 
-from ...domain.ai_model.entities.model_request import ModelRequest
-from ...domain.ai_model.entities.model_response import ModelResponse
+from ....domain.ai_model.entities.model_request import ModelRequest
+from ....domain.ai_model.entities.model_response import ModelResponse
 from .base_openai_adapter import BaseOpenAIAdapter
 
 

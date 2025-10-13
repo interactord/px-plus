@@ -8,7 +8,7 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 
 from ..value_objects.chunk_text import ChunkText
-from ..value_objects.entity_type import EntityTypeFilter
+
 from .extracted_entity import ExtractedEntity
 
 try:
@@ -124,31 +124,7 @@ class ExtractionResult:
         """추출된 엔티티 개수"""
         return len(self.entities)
     
-    def filter_entities(
-        self,
-        type_filter: Optional[EntityTypeFilter]
-    ) -> "ExtractionResult":
-        """
-        엔티티 필터링
-        
-        Args:
-            type_filter: 타입 필터
-            
-        Returns:
-            필터링된 새 결과 (불변성 유지)
-        """
-        if type_filter is None:
-            return self
-        
-        filtered = [e for e in self.entities if e.matches_filter(type_filter)]
-        
-        return ExtractionResult(
-            chunk=self.chunk,
-            entities=tuple(filtered),
-            cached=self.cached,
-            processing_time=self.processing_time,
-            error=self.error
-        )
+
     
     def to_dict(self) -> dict:
         """딕셔너리 변환"""
@@ -231,12 +207,16 @@ class ExtractionBatchResult:
         Returns:
             요약 딕셔너리
         """
+        total = len(self.results)
+        avg_time = self.total_processing_time / total if total > 0 else 0.0
+        
         return {
-            "total_chunks": len(self.results),
+            "total_chunks": total,
             "processed": self.success_count(),
             "failed": self.failure_count(),
             "total_entities": self.total_entities(),
             "cache_hits": self.cache_hit_count(),
             "cache_hit_rate": round(self.cache_hit_rate(), 2),
-            "processing_time_seconds": round(self.total_processing_time, 2)
+            "total_processing_time": round(self.total_processing_time, 3),
+            "avg_processing_time": round(avg_time, 3)
         }

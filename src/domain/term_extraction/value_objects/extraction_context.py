@@ -7,8 +7,6 @@
 from dataclasses import dataclass
 from typing import Optional
 
-from .entity_type import EntityTypeFilter
-
 try:
     from rfs.core.result import Result, Success, Failure
 except ImportError:
@@ -44,13 +42,11 @@ class ExtractionContext:
     추출 작업 컨텍스트
     
     Attributes:
-        template_name: 사용할 템플릿 이름
-        type_filter: 엔티티 타입 필터
+        template_name: 사용할 템플릿 이름 (고정: extract_terms.j2)
         max_entities: 최대 추출 개수 (None이면 무제한)
         include_context: 컨텍스트 설명 포함 여부
     """
     template_name: str = "extract_terms.j2"
-    type_filter: Optional[EntityTypeFilter] = None
     max_entities: Optional[int] = None
     include_context: bool = True
     
@@ -63,8 +59,6 @@ class ExtractionContext:
     def create(
         cls,
         template_name: str = "extract_terms.j2",
-        include_types: Optional[list[str]] = None,
-        exclude_types: Optional[list[str]] = None,
         max_entities: Optional[int] = None,
         include_context: bool = True
     ) -> Result["ExtractionContext", str]:
@@ -72,30 +66,19 @@ class ExtractionContext:
         컨텍스트 생성
         
         Args:
-            template_name: 템플릿 이름
-            include_types: 포함할 타입
-            exclude_types: 제외할 타입
-            max_entities: 최대 엔티티 개수
+            template_name: 템플릿 이름 (고정: extract_terms.j2)
+            max_entities: 최대 엔티티 개수 (None이면 무제한)
             include_context: 컨텍스트 포함 여부
             
         Returns:
             Result[ExtractionContext, str]: 성공 시 컨텍스트, 실패 시 에러
         """
-        # 타입 필터 생성
-        type_filter = None
-        if include_types or exclude_types:
-            filter_result = EntityTypeFilter.create(include_types, exclude_types)
-            if filter_result.is_failure():
-                return Failure(filter_result.unwrap_failure())
-            type_filter = filter_result.unwrap()
-        
-        # max_entities 검증
-        if max_entities is not None and max_entities <= 0:
-            return Failure("최대 엔티티 개수는 1 이상이어야 합니다")
+        # max_entities 검증: 음수는 불가, 0과 None은 무제한으로 허용
+        if max_entities is not None and max_entities < 0:
+            return Failure("최대 엔티티 개수는 0 이상이어야 합니다 (0=무제한)")
         
         return Success(cls(
             template_name=template_name,
-            type_filter=type_filter,
             max_entities=max_entities,
             include_context=include_context
         ))

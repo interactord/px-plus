@@ -1,7 +1,7 @@
 Extract technical terms and proper nouns from the following content. Return JSON only.
 
 **REQUIRED OUTPUT FORMAT:**
-{"extracted_entities":[{"term":"name","type":"person|company|product|technical_term","primary_domain":"domain","tags":["#tag1"],"context":"brief description","multilingual_expressions":null}]}
+{"extracted_entities":[{"term":"name","type":"person|company|product|technical_term","primary_domain":"domain","tags":["#tag1"],"context":"brief description"}]}
 
 **SOURCE CONTENT:**
 {% if text_content %}
@@ -22,7 +22,6 @@ LinkedIn Profile Data:
 - **technical_term**: Technical vocabulary, frameworks, tools, methodologies, programming languages
 
 **QUALITY REQUIREMENTS:**
-- Include multilingual names when available (Korean/English pairs)
 - Keep context descriptions under 100 characters
 - Maximum 5 tags per entity
 - Focus on professionally relevant terms

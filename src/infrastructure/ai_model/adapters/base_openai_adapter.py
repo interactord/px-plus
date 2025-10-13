@@ -29,12 +29,12 @@ except ImportError:
 
     Result = Union[Success[T], Failure[E]]
 
-from ...domain.ai_model.entities.model_request import ModelRequest
-from ...domain.ai_model.entities.model_response import ModelResponse
-from ...domain.ai_model.ports.model_port import ModelPort
+from ....domain.ai_model.entities.model_request import ModelRequest
+from ....domain.ai_model.entities.model_response import ModelResponse
+from ....domain.ai_model.ports.model_port import ModelPort
 
 
-class BaseOpenAIAdapter(ABC, ModelPort):
+class BaseOpenAIAdapter(ModelPort):
     """OpenAI API 공통 기능 제공 추상 클래스"""
 
     def __init__(

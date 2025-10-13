@@ -165,30 +165,36 @@ class OpenAITermExtractor(TermExtractionPort):
             Result[str, str]: 성공 시 렌더링된 프롬프트, 실패 시 에러 메시지
         """
         template_vars = {
-            "text": chunk.content,
+            "text_content": chunk.content,  # 템플릿과 변수명 일치
             "filename": chunk.source_filename,
             "chunk_index": chunk.chunk_index,
             "include_context": context.include_context,
         }
-        
-        # type_filter가 있으면 추가
-        if context.type_filter:
-            template_vars["allowed_types"] = [
-                t.value for t in context.type_filter.allowed_types
-            ]
         
         # max_entities가 있으면 추가
         if context.max_entities:
             template_vars["max_entities"] = context.max_entities
         
         try:
-            rendered = await self._template.render(
+            # TemplateContext 생성
+            from ....domain.ai_model.value_objects.template_context import TemplateContext
+            
+            template_context_result = TemplateContext.create(template_vars)
+            if template_context_result.is_failure():
+                return Failure(f"템플릿 컨텍스트 생성 실패: {template_context_result.error}")
+            
+            # 템플릿 렌더링 (동기 함수)
+            rendered_result = self._template.render(
                 template_name=context.template_name,
-                variables=template_vars
+                context=template_context_result.value
             )
-            return Success(rendered)
+            
+            if rendered_result.is_failure():
+                return Failure(f"템플릿 렌더링 오류: {rendered_result.error}")
+            
+            return Success(rendered_result.value)
         except Exception as e:
-            return Failure(f"템플릿 렌더링 오류: {str(e)}")
+            return Failure(f"템플릿 렌더링 예외: {str(e)}")
     
     async def _execute_llm(self, prompt: str) -> Result[str, str]:
         """
@@ -201,8 +207,40 @@ class OpenAITermExtractor(TermExtractionPort):
             Result[str, str]: 성공 시 LLM 응답, 실패 시 에러 메시지
         """
         try:
-            response = await self._model.execute(prompt)
-            return Success(response)
+            # ModelRequest 생성에 필요한 임포트
+            from ....domain.ai_model.entities.model_request import ModelRequest
+            from ....domain.ai_model.value_objects.message import Message
+            from ....domain.ai_model.value_objects.model_type import ModelType
+            
+            # Message 생성
+            message = Message.user(prompt)
+            
+            # ModelRequest 생성
+            request_result = ModelRequest.create(
+                model_type=ModelType.CHAT,
+                messages=[message]
+            )
+            
+            if request_result.is_failure():
+                return Failure(f"ModelRequest 생성 실패: {request_result.error}")
+            
+            # LLM 실행 (동기 함수)
+            response_result = self._model.execute(request_result.value)
+            
+            if response_result.is_failure():
+                return Failure(f"LLM 실행 실패: {response_result.error}")
+            
+            # ModelResponse에서 content 추출
+            model_response = response_result.value
+            
+            # 디버그 로깅
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.info(f"ModelResponse content length: {len(model_response.content)}")
+            logger.info(f"ModelResponse content preview: {model_response.content[:200] if model_response.content else 'EMPTY'}")
+            
+            return Success(model_response.content)
+            
         except Exception as e:
             return Failure(f"LLM 실행 오류: {str(e)}")
     
@@ -217,8 +255,19 @@ class OpenAITermExtractor(TermExtractionPort):
             Result[List[ExtractedEntity], str]: 성공 시 엔티티 리스트, 실패 시 에러 메시지
         """
         try:
+            # Markdown 코드 블록 제거 (```json ... ``` 또는 ``` ... ```)
+            cleaned_response = response.strip()
+            if cleaned_response.startswith("```"):
+                # 첫 번째 줄 제거 (```json 또는 ```)
+                lines = cleaned_response.split("\n")
+                if len(lines) > 2:
+                    # 마지막 줄도 제거 (```)
+                    cleaned_response = "\n".join(lines[1:-1])
+                else:
+                    cleaned_response = cleaned_response.replace("```json", "").replace("```", "").strip()
+
             # JSON 파싱
-            data = json.loads(response)
+            data = json.loads(cleaned_response)
             
             if not isinstance(data, dict):
                 return Failure("응답이 JSON 객체가 아닙니다")
@@ -240,6 +289,10 @@ class OpenAITermExtractor(TermExtractionPort):
                 if entity_result.is_failure():
                     # 개별 엔티티 파싱 실패는 로그만 하고 계속 진행
                     # (일부 엔티티가 잘못되어도 나머지는 사용 가능)
+                    import logging
+                    logger = logging.getLogger(__name__)
+                    logger.warning(f"엔티티 파싱 실패 (index={idx}): {entity_result.unwrap_failure()}")
+                    logger.debug(f"실패한 엔티티 데이터: {entity_data}")
                     continue
                 
                 entities.append(entity_result.value)
@@ -283,8 +336,7 @@ class OpenAITermExtractor(TermExtractionPort):
                 type_value=data["type"],
                 primary_domain=data["primary_domain"],
                 tags=data.get("tags"),
-                context=data.get("context", ""),
-                multilingual_expressions=data.get("multilingual_expressions")
+                context=data.get("context", "")
             )
             
         except Exception as e:
@@ -307,14 +359,7 @@ class OpenAITermExtractor(TermExtractionPort):
         """
         filtered = entities
         
-        # 1. 타입 필터 적용
-        if context.type_filter:
-            filtered = [
-                entity for entity in filtered
-                if entity.matches_filter(context.type_filter)
-            ]
-        
-        # 2. 최대 개수 제한
+        # 최대 개수 제한
         if context.max_entities and len(filtered) > context.max_entities:
             filtered = filtered[:context.max_entities]
         

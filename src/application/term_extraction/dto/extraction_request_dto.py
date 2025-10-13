@@ -33,7 +33,6 @@ except ImportError:
 
 # 도메인 객체 import
 from ....domain.term_extraction.value_objects.chunk_text import ChunkText
-from ....domain.term_extraction.value_objects.entity_type import EntityTypeFilter
 from ....domain.term_extraction.value_objects.extraction_context import ExtractionContext
 
 
@@ -128,27 +127,17 @@ class ExtractionRequestDTO(BaseModel):
         description="LLM 응답 캐싱 사용 여부"
     )
     
-    parallel_workers: int = Field(
-        default=3,
-        description="병렬 처리 워커 수",
+    parallel_workers: Optional[int] = Field(
+        default=None,
+        description="병렬 처리 워커 수 (기본값: 3)",
         ge=1,
         le=10
     )
     
-    template_name: str = Field(
-        default="extract_terms.j2",
-        description="사용할 Jinja2 템플릿 파일명"
-    )
-    
-    type_filter: Optional[List[str]] = Field(
-        default=None,
-        description="필터링할 엔티티 타입 (예: ['person', 'company'])"
-    )
-    
-    max_entities_per_chunk: Optional[int] = Field(
-        default=None,
-        description="청크당 최대 추출 엔티티 수",
-        ge=1,
+    max_entities_per_chunk: int = Field(
+        default=0,
+        description="청크당 최대 추출 엔티티 수 (0=무제한, 기본값: 0)",
+        ge=0,
         le=100
     )
     
@@ -157,14 +146,7 @@ class ExtractionRequestDTO(BaseModel):
         description="엔티티의 컨텍스트 정보 포함 여부"
     )
     
-    @field_validator("template_name")
-    @classmethod
-    def validate_template_name(cls, v: str) -> str:
-        """템플릿 파일명 검증"""
-        if not v.endswith(".j2"):
-            raise ValueError("템플릿 파일명은 .j2 확장자를 가져야 합니다")
-        return v
-    
+
     def to_chunks(self) -> Result[List[ChunkText], str]:
         """
         모든 파일의 청크를 도메인 ChunkText 객체 리스트로 변환합니다.
@@ -191,19 +173,13 @@ class ExtractionRequestDTO(BaseModel):
         Returns:
             Result[ExtractionContext, str]: 성공 시 ExtractionContext, 실패 시 에러 메시지
         """
-        # type_filter 변환
-        type_filter_obj = None
-        if self.type_filter:
-            result = EntityTypeFilter.create(self.type_filter)
-            if result.is_failure():
-                return Failure(f"타입 필터 생성 실패: {result.error}")
-            type_filter_obj = result.value
+        # max_entities_per_chunk 변환: 0이면 None(무제한)으로 처리
+        max_entities = None if self.max_entities_per_chunk == 0 else self.max_entities_per_chunk
         
-        # ExtractionContext 생성
+        # ExtractionContext 생성 (template_name 고정, type_filter 제거)
         result = ExtractionContext.create(
-            template_name=self.template_name,
-            type_filter=type_filter_obj,
-            max_entities=self.max_entities_per_chunk,
+            template_name="extract_terms.j2",
+            max_entities=max_entities,
             include_context=self.include_context
         )
         
@@ -231,9 +207,7 @@ class ExtractionRequestDTO(BaseModel):
                 ],
                 "use_cache": True,
                 "parallel_workers": 3,
-                "template_name": "extract_terms.j2",
-                "type_filter": ["person", "company"],
-                "max_entities_per_chunk": 50,
+                "max_entities_per_chunk": 0,
                 "include_context": True
             }
         }

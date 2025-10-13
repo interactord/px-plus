@@ -639,7 +639,10 @@
 
                 // 결과 렌더링
                 renderResults(data);
-                showAlert(`성공적으로 ${data.chunks.length}개의 텍스트 청크를 추출했습니다!`, 'success');
+                
+                // 전체 청크 수 계산
+                const totalChunks = data.processed.reduce((sum, doc) => sum + doc.total_chunks, 0);
+                showAlert(`성공적으로 ${totalChunks}개의 텍스트 청크를 추출했습니다!`, 'success');
 
             } catch (error) {
                 console.error('추출 실패:', error);
@@ -654,36 +657,15 @@
         function renderResults(data) {
             results.classList.add('show');
 
-            // 모든 청크 수집 (모든 처리된 파일의 청크)
-            const allChunks = [];
-            data.processed.forEach(doc => {
-                doc.chunks.forEach(chunkContent => {
-                    allChunks.push({
-                        content: chunkContent,
-                        source: doc.filename
-                    });
-                });
-            });
+            // API 응답을 그대로 JSON으로 표시
+            resultsCount.textContent = `처리된 파일: ${data.processed.length}개, 건너뛴 파일: ${data.skipped.length}개`;
 
-            resultsCount.textContent = `총 ${allChunks.length}개의 청크 (${data.processed.length}개 파일)`;
+            // 청크 뷰를 숨기고 JSON 뷰만 표시
+            chunksView.style.display = 'none';
+            jsonView.classList.add('show');
+            toggleView.style.display = 'none';  // 토글 버튼 숨김
 
-            // 청크 카드 렌더링
-            chunksView.innerHTML = allChunks.map((chunk, index) => `
-                <div class="chunk-card">
-                    <div class="chunk-header">
-                        <div class="chunk-id">청크 #${index + 1}</div>
-                        <div class="chunk-source">📄 ${chunk.source}</div>
-                    </div>
-                    <div class="chunk-content">${escapeHtml(chunk.content)}</div>
-                    <div class="chunk-metadata">
-                        <span class="metadata-item">
-                            <span class="metadata-label">길이:</span> ${chunk.content.length} 문자
-                        </span>
-                    </div>
-                </div>
-            `).join('');
-
-            // JSON 뷰 렌더링
+            // JSON 뷰 렌더링 (API 응답 그대로)
             jsonView.textContent = JSON.stringify(data, null, 2);
         }
 

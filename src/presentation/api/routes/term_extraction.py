@@ -234,14 +234,16 @@ async def get_extraction_service(
 )
 async def process_documents(
     request: ExtractionRequestDTO,
-    service: Annotated[CachedTermExtractionService, Depends(get_extraction_service)]
+    model_port: Annotated[ModelPort, Depends(get_model_port)],
+    template_port: Annotated[TemplatePort, Depends(get_template_port)]
 ) -> ExtractionResponseDTO:
     """
     문서들로부터 용어를 추출합니다.
     
     Args:
         request: 추출 요청 데이터
-        service: 용어 추출 서비스 (의존성 주입)
+        model_port: AI 모델 포트
+        template_port: 템플릿 포트
         
     Returns:
         ExtractionResponseDTO: 추출 결과
@@ -249,6 +251,20 @@ async def process_documents(
     Raises:
         HTTPException: 처리 실패 시
     """
+    # parallel_workers 기본값 처리
+    max_workers = request.parallel_workers if request.parallel_workers is not None else 3
+    
+    # 팩토리로 서비스 생성
+    factory = ExtractionServiceFactory(
+        model_port=model_port,
+        template_port=template_port
+    )
+    
+    service = factory.create_cached_service(
+        max_workers=max_workers,
+        use_shared_cache=True
+    )
+    
     # 서비스 실행
     result = await service.extract_from_documents(request)
     

@@ -47,11 +47,6 @@ class ExtractedEntityDTO(BaseModel):
         description="엔티티가 사용된 문맥"
     )
     
-    multilingual_expressions: Optional[Dict[str, str]] = Field(
-        default=None,
-        description="다국어 표현 (언어 코드: 용어)"
-    )
-    
     @classmethod
     def from_domain(cls, entity: ExtractedEntity) -> "ExtractedEntityDTO":
         """
@@ -68,8 +63,7 @@ class ExtractedEntityDTO(BaseModel):
             type=entity.type.value,
             primary_domain=entity.primary_domain,
             tags=list(entity.tags),
-            context=entity.context if entity.context else None,
-            multilingual_expressions=entity.multilingual_expressions
+            context=entity.context if entity.context else None
         )
 
 
