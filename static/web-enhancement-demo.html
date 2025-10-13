@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 강화 데모 - PX-Plus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #F3F4F6;
+            color: #1F2937;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #3B82F6;
+        }
+
+        .subtitle {
+            color: #6B7280;
+            margin-bottom: 1rem;
+        }
+
+        .nav-link {
+            color: #3B82F6;
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .panel {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .panel h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #1F2937;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 400px;
+            padding: 1rem;
+            border: 1px solid #D1D5DB;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.875rem;
+            resize: vertical;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #3B82F6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .button:hover:not(:disabled) {
+            background: #2563EB;
+        }
+
+        .button:disabled {
+            background: #9CA3AF;
+            cursor: not-allowed;
+        }
+
+        .button-secondary {
+            background: #6B7280;
+        }
+
+        .button-secondary:hover:not(:disabled) {
+            background: #4B5563;
+        }
+
+        .output-area {
+            min-height: 400px;
+            max-height: 600px;
+            overflow-y: auto;
+            padding: 1rem;
+            background: #F9FAFB;
+            border: 1px solid #D1D5DB;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.875rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            color: #6B7280;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            border: 3px solid #E5E7EB;
+            border-top: 3px solid #3B82F6;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error {
+            background: #FEE2E2;
+            color: #991B1B;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .error.active {
+            display: block;
+        }
+
+        .info-box {
+            background: #DBEAFE;
+            color: #1E40AF;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .info-box strong {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .stat-card {
+            background: #F9FAFB;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #E5E7EB;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: #6B7280;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1F2937;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #6B7280;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌐 웹 강화 데모</h1>
+            <p class="subtitle">GPT-4o와 웹 검색을 사용하여 용어를 다국어로 번역하고 웹 소스를 추가합니다</p>
+            <a href="/demo" class="nav-link">← 데모 목록으로 돌아가기</a>
+        </header>
+
+        <div class="error" id="errorMessage"></div>
+
+        <div class="main-content">
+            <!-- 입력 패널 -->
+            <div class="panel">
+                <h2>📝 입력</h2>
+                
+                <div class="info-box">
+                    <strong>사용 방법:</strong>
+                    1. "샘플 데이터 로드" 버튼으로 예제 데이터를 불러오세요<br>
+                    2. 또는 sample_term.json 형식의 JSON 데이터를 직접 입력하세요<br>
+                    3. "웹 강화 시작" 버튼을 클릭하세요<br>
+                    4. 오른쪽에서 강화된 용어와 통계를 확인하세요
+                </div>
+
+                <div class="form-group">
+                    <label for="inputText">JSON 입력 (sample_term.json 형식)</label>
+                    <textarea id="inputText" placeholder='{"results": [{"chunk_index": 0, "entities": [...]}]}'></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button id="enhanceButton" class="button" onclick="enhanceTerms()">
+                        🚀 웹 강화 시작
+                    </button>
+                    <button class="button button-secondary" onclick="loadSampleData()">
+                        📁 샘플 데이터 로드
+                    </button>
+                </div>
+            </div>
+
+            <!-- 출력 패널 -->
+            <div class="panel">
+                <h2>📊 결과</h2>
+                
+                <div class="loading" id="loadingIndicator">
+                    <div class="spinner"></div>
+                    <p>웹 강화 진행 중...</p>
+                </div>
+
+                <div id="statsPanel" style="display: none;">
+                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">통계</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-label">총 용어 수</div>
+                            <div class="stat-value" id="statTotalTerms">-</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">성공률</div>
+                            <div class="stat-value" id="statSuccessRate">-</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">처리 시간</div>
+                            <div class="stat-value" id="statProcessingTime">-</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Fallback 사용</div>
+                            <div class="stat-value" id="statFallbackCount">-</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 1.5rem;">
+                    <label>JSON 응답</label>
+                    <div id="outputArea" class="output-area">여기에 강화 결과가 표시됩니다</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 PX-Plus - Hyper-Personalization AI Platform</p>
+        </footer>
+    </div>
+
+    <script>
+        // 샘플 데이터 로드
+        async function loadSampleData() {
+            try {
+                const response = await fetch('/sample/sample_term.json');
+                if (!response.ok) {
+                    throw new Error('샘플 데이터 로드 실패');
+                }
+                const sampleData = await response.json();
+                document.getElementById('inputText').value = JSON.stringify(sampleData, null, 2);
+            } catch (error) {
+                showError('샘플 데이터 로드 오류: ' + error.message);
+            }
+        }
+
+        // 웹 강화 실행
+        async function enhanceTerms() {
+            const inputText = document.getElementById('inputText').value.trim();
+            const enhanceButton = document.getElementById('enhanceButton');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const outputArea = document.getElementById('outputArea');
+            const statsPanel = document.getElementById('statsPanel');
+
+            // 입력 검증
+            if (!inputText) {
+                showError('JSON 데이터를 입력해주세요');
+                return;
+            }
+
+            // JSON 파싱 검증
+            let inputData;
+            try {
+                inputData = JSON.parse(inputText);
+            } catch (error) {
+                showError('잘못된 JSON 형식입니다: ' + error.message);
+                return;
+            }
+
+            // API 요청 데이터 변환
+            const requestData = transformToAPIFormat(inputData);
+
+            // UI 상태 변경
+            enhanceButton.disabled = true;
+            loadingIndicator.classList.add('active');
+            outputArea.textContent = '';
+            statsPanel.style.display = 'none';
+            showError('');
+
+            try {
+                const response = await fetch('/api/v1/web-enhancement/enhance', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(requestData)
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.detail || '웹 강화 실패');
+                }
+
+                const result = await response.json();
+                
+                // 통계 업데이트
+                updateStatistics(result);
+                
+                // 결과를 JSON 형식으로 출력
+                outputArea.textContent = JSON.stringify(result, null, 2);
+                statsPanel.style.display = 'block';
+
+            } catch (error) {
+                showError('웹 강화 중 오류 발생: ' + error.message);
+                outputArea.textContent = '오류가 발생했습니다';
+            } finally {
+                enhanceButton.disabled = false;
+                loadingIndicator.classList.remove('active');
+            }
+        }
+
+        // 입력 데이터를 API 요청 형식으로 변환
+        function transformToAPIFormat(inputData) {
+            const terms = [];
+            
+            if (inputData.results && Array.isArray(inputData.results)) {
+                inputData.results.forEach(result => {
+                    if (result.entities && Array.isArray(result.entities)) {
+                        result.entities.forEach(entity => {
+                            terms.push({
+                                term: entity.term,
+                                type: entity.type,
+                                primary_domain: entity.primary_domain,
+                                context: entity.context || "",
+                                tags: entity.tags || []
+                            });
+                        });
+                    }
+                });
+            }
+
+            return {
+                terms: terms,
+                target_languages: ["ko", "zh-CN", "zh-TW", "en", "ja", "fr", "ru", "it", "vi", "ar", "es"],
+                use_cache: true,
+                batch_size: 5
+            };
+        }
+
+        // 통계 업데이트
+        function updateStatistics(result) {
+            // summary 객체에서 통계 추출
+            const summary = result.summary || {};
+            
+            const totalTerms = summary.total_terms || 0;
+            const successRate = summary.cache_hit_rate !== undefined ? 
+                (summary.cache_hit_rate * 100).toFixed(1) + '%' : '-';
+            const processingTime = summary.processing_time !== undefined ?
+                summary.processing_time.toFixed(2) + 's' : '-';
+            const fallbackCount = summary.fallback_count !== undefined ?
+                summary.fallback_count : 0;
+
+            document.getElementById('statTotalTerms').textContent = totalTerms;
+            document.getElementById('statSuccessRate').textContent = successRate;
+            document.getElementById('statProcessingTime').textContent = processingTime;
+            document.getElementById('statFallbackCount').textContent = fallbackCount;
+        }
+
+        // 에러 메시지 표시
+        function showError(message) {
+            const errorElement = document.getElementById('errorMessage');
+            if (message) {
+                errorElement.textContent = message;
+                errorElement.classList.add('active');
+            } else {
+                errorElement.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>

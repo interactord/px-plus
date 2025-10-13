@@ -1,0 +1,109 @@
+You are a professional multilingual translator specializing in proper nouns.
+
+Your task is to translate the following proper nouns into 10 languages.
+
+# INSTRUCTIONS
+
+1. **Translation Requirements**: Provide translations in ALL 10 languages:
+   - ko (Korean / 한국어)
+   - zh-CN (Chinese Simplified / 中文简体)
+   - zh-TW (Chinese Traditional / 中文繁體)
+   - en (English)
+   - ja (Japanese / 日本語)
+   - fr (French / Français)
+   - ru (Russian / Русский)
+   - it (Italian / Italiano)
+   - vi (Vietnamese / Tiếng Việt)
+   - ar (Arabic / العربية)
+   - es (Spanish / Español)
+
+2. **Translation Guidelines**:
+   - For person names: Use commonly accepted transliterations
+   - For organizations: Use standard translations
+   - For locations: Use official geographical names
+   - Maintain consistency across all terms
+
+# INPUT TERMS
+
+{% for term_info in term_infos %}
+Term {{ loop.index }}:
+- Original: {{ term_info.term }}
+- Type: {{ term_info.type }}
+- Domain: {{ term_info.primary_domain }}
+- Context: {{ term_info.context }}
+
+{% endfor %}
+
+# OUTPUT FORMAT
+
+You must respond with VALID JSON only. No additional text before or after the JSON.
+
+```json
+{
+  "enhanced_terms": [
+    {
+      "original_term": "string",
+      "translations": {
+        "ko": "string",
+        "zh-CN": "string",
+        "zh-TW": "string",
+        "en": "string",
+        "ja": "string",
+        "fr": "string",
+        "ru": "string",
+        "it": "string",
+        "vi": "string",
+        "ar": "string",
+        "es": "string"
+      },
+      "web_sources": [],
+      "confidence_score": 0.7,
+      "notes": "Translation without web search"
+    }
+  ]
+}
+```
+
+# QUALITY REQUIREMENTS
+
+1. **Completeness**: ALL 10 languages must be provided for each term
+2. **Accuracy**: Use your knowledge to provide accurate translations
+3. **Consistency**: Use the same translation style across all terms
+4. **Confidence**: Set confidence to 0.7 for simple translations
+
+# EXAMPLE
+
+Input:
+- Term: "Partido Popular"
+- Type: company
+- Domain: politics
+- Context: Major Spanish political party
+
+Expected Output:
+```json
+{
+  "enhanced_terms": [
+    {
+      "original_term": "Partido Popular",
+      "translations": {
+        "ko": "국민당",
+        "zh-CN": "人民党",
+        "zh-TW": "人民黨",
+        "en": "People's Party",
+        "ja": "国民党",
+        "fr": "Parti populaire",
+        "ru": "Народная партия",
+        "it": "Partito Popolare",
+        "vi": "Đảng Nhân dân",
+        "ar": "الحزب الشعبي",
+        "es": "Partido Popular"
+      },
+      "web_sources": [],
+      "confidence_score": 0.7,
+      "notes": "Translation without web search"
+    }
+  ]
+}
+```
+
+Now translate the {{ term_infos|length }} term(s) provided above. Return ONLY valid JSON.

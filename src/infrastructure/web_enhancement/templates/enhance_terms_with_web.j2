@@ -1,0 +1,129 @@
+You are a multilingual translation expert with real-time web search capabilities.
+
+Your task is to translate the following proper nouns into 10 languages using web search to ensure accuracy and currency.
+
+# INSTRUCTIONS
+
+1. **Web Search First**: For each term, search the web to find:
+   - Official names and translations
+   - Current usage and context
+   - Authoritative sources (official websites, Wikipedia, news articles)
+
+2. **Translation Requirements**: Provide translations in ALL 10 languages:
+   - ko (Korean / 한국어)
+   - zh-CN (Chinese Simplified / 中文简体)
+   - zh-TW (Chinese Traditional / 中文繁體)
+   - en (English)
+   - ja (Japanese / 日本語)
+   - fr (French / Français)
+   - ru (Russian / Русский)
+   - it (Italian / Italiano)
+   - vi (Vietnamese / Tiếng Việt)
+   - ar (Arabic / العربية)
+   - es (Spanish / Español)
+
+3. **Translation Guidelines**:
+   - Use official translations when available (from official websites, Wikipedia)
+   - For person names: Use commonly accepted transliterations
+   - For organizations: Prefer official translations over literal translations
+   - For locations: Use standard geographical names
+   - Maintain consistency with authoritative sources
+
+4. **Source Documentation**: Record 2-3 authoritative web sources you used for verification
+
+# INPUT TERMS
+
+{% for term_info in term_infos %}
+Term {{ loop.index }}:
+- Original: {{ term_info.term }}
+- Type: {{ term_info.type }}
+- Domain: {{ term_info.primary_domain }}
+- Context: {{ term_info.context }}
+- Tags: {{ term_info.tags|join(', ') }}
+
+{% endfor %}
+
+# OUTPUT FORMAT
+
+You must respond with VALID JSON only. No additional text before or after the JSON.
+
+```json
+{
+  "enhanced_terms": [
+    {
+      "original_term": "string",
+      "translations": {
+        "ko": "string",
+        "zh-CN": "string",
+        "zh-TW": "string",
+        "en": "string",
+        "ja": "string",
+        "fr": "string",
+        "ru": "string",
+        "it": "string",
+        "vi": "string",
+        "ar": "string",
+        "es": "string"
+      },
+      "web_sources": [
+        "https://example.com/source1",
+        "https://example.com/source2"
+      ],
+      "confidence_score": 0.95,
+      "notes": "Optional: Any important notes about the translation"
+    }
+  ]
+}
+```
+
+# QUALITY REQUIREMENTS
+
+1. **Completeness**: ALL 10 languages must be provided for each term
+2. **Accuracy**: Translations must be verified against authoritative sources
+3. **Consistency**: Use the same translation style across all terms
+4. **Sources**: Provide 2-3 reliable web sources for verification
+5. **Confidence**: Assign realistic confidence scores (0.0-1.0):
+   - 0.9-1.0: Official translations found
+   - 0.7-0.9: Strong evidence from multiple sources
+   - 0.5-0.7: Reasonable translations with limited sources
+   - Below 0.5: Uncertain, needs review
+
+# EXAMPLE
+
+Input:
+- Term: "Partido Popular"
+- Type: company
+- Domain: politics
+- Context: Major Spanish political party
+
+Expected Output:
+```json
+{
+  "enhanced_terms": [
+    {
+      "original_term": "Partido Popular",
+      "translations": {
+        "ko": "국민당",
+        "zh-CN": "人民党",
+        "zh-TW": "人民黨",
+        "en": "People's Party",
+        "ja": "国民党",
+        "fr": "Parti populaire",
+        "ru": "Народная партия",
+        "it": "Partito Popolare",
+        "vi": "Đảng Nhân dân",
+        "ar": "الحزب الشعبي",
+        "es": "Partido Popular"
+      },
+      "web_sources": [
+        "https://www.pp.es",
+        "https://en.wikipedia.org/wiki/People%27s_Party_(Spain)"
+      ],
+      "confidence_score": 0.96,
+      "notes": "Official name from party website and Wikipedia"
+    }
+  ]
+}
+```
+
+Now translate the {{ term_infos|length }} term(s) provided above. Return ONLY valid JSON.

@@ -90,6 +90,81 @@ async def term_extraction_demo() -> HTMLResponse:
 
 
 @router.get(
+    "/web-enhancement",
+    response_class=HTMLResponse,
+    status_code=status.HTTP_200_OK,
+    summary="웹 강화 데모 페이지",
+    description="""
+    웹 강화 API를 테스트할 수 있는 인터랙티브 데모 페이지를 제공합니다.
+    
+    **주요 기능:**
+    - JSON 입력 및 샘플 데이터 로드
+    - GPT-4o + 웹 검색 기반 다국어 번역 및 웹 소스 추가
+    - 4단계 Fallback 시스템 (GPT-4o → Gemini → Gemini Simple → GPT-4o-mini)
+    - JSON 응답 표시 및 통계 확인
+    - 캐시 및 배치 처리 옵션 설정
+    
+    **사용 방법:**
+    1. 브라우저에서 /demo/web-enhancement 접속
+    2. 샘플 데이터 로드 또는 JSON 직접 입력
+    3. "웹 강화 시작" 버튼 클릭
+    4. JSON 응답 및 통계 확인
+    """,
+    responses={
+        200: {
+            "description": "데모 페이지 HTML 반환",
+            "content": {
+                "text/html": {
+                    "example": "<!DOCTYPE html>..."
+                }
+            }
+        },
+        404: {
+            "description": "데모 페이지 파일을 찾을 수 없음",
+            "content": {
+                "application/json": {
+                    "example": {
+                        "detail": "데모 페이지 파일을 찾을 수 없습니다"
+                    }
+                }
+            }
+        }
+    }
+)
+async def web_enhancement_demo() -> HTMLResponse:
+    """
+    웹 강화 데모 페이지를 반환합니다.
+    
+    Returns:
+        HTMLResponse: HTML 페이지 콘텐츠
+        
+    Raises:
+        HTTPException: 파일을 찾을 수 없는 경우
+    """
+    # HTML 파일 경로
+    html_file = Path("static/web-enhancement-demo.html")
+    
+    # 파일 존재 확인
+    if not html_file.exists():
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"데모 페이지 파일을 찾을 수 없습니다: {html_file}"
+        )
+    
+    # HTML 파일 읽기
+    try:
+        with open(html_file, "r", encoding="utf-8") as f:
+            html_content = f.read()
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"데모 페이지 로드 실패: {str(e)}"
+        )
+    
+    return HTMLResponse(content=html_content, status_code=200)
+
+
+@router.get(
     "/",
     response_class=HTMLResponse,
     status_code=status.HTTP_200_OK,

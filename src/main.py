@@ -65,10 +65,22 @@ app.add_middleware(
 
 # 라우터 등록
 from .presentation.api.routes import term_extraction_router, demo_router
+from .presentation.api.routes.web_enhancement import router as web_enhancement_router
 
 app.include_router(router, tags=["greetings"])
 app.include_router(term_extraction_router)
 app.include_router(demo_router)  # demo_router에 이미 prefix="/demo" 포함
+app.include_router(web_enhancement_router)  # 웹 강화 API
+
+# Static 파일 마운트 (샘플 데이터 등)
+static_dir = Path(__file__).parent.parent / "static"
+if static_dir.exists():
+    app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
+
+# sample 디렉토리 마운트
+sample_dir = Path(__file__).parent.parent / "sample"
+if sample_dir.exists():
+    app.mount("/sample", StaticFiles(directory=str(sample_dir)), name="sample")
 
 # 데모 페이지 라우팅
 @app.get("/demo/document-extractor", tags=["demo"])

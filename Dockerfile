@@ -20,10 +20,11 @@ RUN apt-get update && apt-get install -y \
 
 # Python 의존성 설치
 COPY requirements.txt .
-RUN pip install --no-cache-dir --user -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# spacy 한국어 모델 다운로드
-RUN python -m spacy download ko_core_news_sm
+# spacy 모델 다운로드 (한국어 + 다국어 문장 분리)
+RUN python -m spacy download ko_core_news_sm && \
+    python -m spacy download xx_sent_ud_sm
 
 # ========================================
 # Stage 2: Runtime
@@ -45,11 +46,12 @@ RUN apt-get update && apt-get install -y \
     libgomp1 \
     && rm -rf /var/lib/apt/lists/*
 
-# Python 패키지 복사
-COPY --from=builder /root/.local /home/appuser/.local
+# Python 패키지 복사 (전역 site-packages 포함)
+COPY --from=builder /usr/local/lib/python3.10/site-packages /usr/local/lib/python3.10/site-packages
+COPY --from=builder /usr/local/bin /usr/local/bin
 
 # 환경변수 설정
-ENV PATH=/home/appuser/.local/bin:$PATH \
+ENV PATH=/usr/local/bin:$PATH \
     PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     PORT=8080
@@ -69,9 +71,11 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
     CMD python -c "import requests; requests.get('http://localhost:${PORT}/health', timeout=5)"
 
 # Cloud Run에서 포트를 동적으로 할당하므로 PORT 환경변수 사용
-CMD exec uvicorn src.main:app \
+# LOG_LEVEL을 소문자로 변환 (uvicorn 요구사항)
+CMD sh -c 'LOG_LEVEL_LOWER=$(echo "${LOG_LEVEL:-INFO}" | tr "[:upper:]" "[:lower:]"); \
+    exec uvicorn src.main:app \
     --host 0.0.0.0 \
     --port ${PORT} \
     --workers ${WORKERS:-1} \
-    --log-level ${LOG_LEVEL:-info} \
-    --no-access-log
+    --log-level $LOG_LEVEL_LOWER \
+    --no-access-log'

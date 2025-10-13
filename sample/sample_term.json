@@ -1,0 +1,1055 @@
+{
+    "results": [
+        {
+            "chunk_index": 0,
+            "source_filename": "politics_spanish.txt",
+            "entities": [
+                {
+                    "term": "Naciones Unidas",
+                    "type": "company",
+                    "primary_domain": "international relations",
+                    "tags": [
+                        "#ONU",
+                        "#global",
+                        "#politics"
+                    ],
+                    "context": "International organization for global stability"
+                },
+                {
+                    "term": "OTAN",
+                    "type": "company",
+                    "primary_domain": "defense",
+                    "tags": [
+                        "#NATO",
+                        "#security",
+                        "#alliance"
+                    ],
+                    "context": "Military alliance for collective defense"
+                },
+                {
+                    "term": "Unión Europea",
+                    "type": "company",
+                    "primary_domain": "international relations",
+                    "tags": [
+                        "#EU",
+                        "#integration",
+                        "#cooperation"
+                    ],
+                    "context": "Political and economic union of member states"
+                },
+                {
+                    "term": "OEA",
+                    "type": "company",
+                    "primary_domain": "international relations",
+                    "tags": [
+                        "#OAS",
+                        "#hemispheric",
+                        "#diplomacy"
+                    ],
+                    "context": "Organization for regional solidarity in Americas"
+                },
+                {
+                    "term": "Partido Socialista Obrero Español",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#PSOE",
+                        "#Spain",
+                        "#socialism"
+                    ],
+                    "context": "Spanish political party led by Pedro Sánchez"
+                },
+                {
+                    "term": "Pedro Sánchez",
+                    "type": "person",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#President",
+                        "#Spain",
+                        "#PSOE"
+                    ],
+                    "context": "Current President of Spain"
+                },
+                {
+                    "term": "Partido Popular",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#PP",
+                        "#Spain",
+                        "#conservative"
+                    ],
+                    "context": "Major Spanish political party"
+                },
+                {
+                    "term": "Alberto Núñez Feijóo",
+                    "type": "person",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#PP",
+                        "#leader",
+                        "#Spain"
+                    ],
+                    "context": "Leader of the Partido Popular"
+                },
+                {
+                    "term": "Vox",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Spain",
+                        "#right-wing"
+                    ],
+                    "context": "Right-wing political party in Spain"
+                },
+                {
+                    "term": "Podemos",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Spain",
+                        "#left-wing"
+                    ],
+                    "context": "Left-wing political party in Spain"
+                },
+                {
+                    "term": "Ciudadanos",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Spain",
+                        "#centrist"
+                    ],
+                    "context": "Centrist political party in Spain"
+                },
+                {
+                    "term": "Congreso",
+                    "type": "company",
+                    "primary_domain": "government",
+                    "tags": [
+                        "#Spain",
+                        "#parliament"
+                    ],
+                    "context": "Main legislative body of Spain"
+                },
+                {
+                    "term": "Moncloa",
+                    "type": "company",
+                    "primary_domain": "government",
+                    "tags": [
+                        "#Spain",
+                        "#executive"
+                    ],
+                    "context": "Official residence of the Spanish Prime Minister"
+                },
+                {
+                    "term": "Tribunal Constitucional",
+                    "type": "company",
+                    "primary_domain": "judiciary",
+                    "tags": [
+                        "#Spain",
+                        "#court"
+                    ],
+                    "context": "Highest constitutional court in Spain"
+                },
+                {
+                    "term": "CDU/CSU",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Germany",
+                        "#conservative"
+                    ],
+                    "context": "Major conservative political alliance in Germany"
+                },
+                {
+                    "term": "SPD",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Germany",
+                        "#socialdemocracy"
+                    ],
+                    "context": "Social democratic political party in Germany"
+                },
+                {
+                    "term": "AfD",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Germany",
+                        "#right-wing"
+                    ],
+                    "context": "Right-wing political party in Germany"
+                },
+                {
+                    "term": "Die Linke",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Germany",
+                        "#left-wing"
+                    ],
+                    "context": "Left-wing political party in Germany"
+                },
+                {
+                    "term": "La République En Marche!",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#France",
+                        "#centrist"
+                    ],
+                    "context": "Centrist political party in France"
+                },
+                {
+                    "term": "Les Républicains",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#France",
+                        "#conservative"
+                    ],
+                    "context": "Conservative political party in France"
+                },
+                {
+                    "term": "Rassemblement National",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#France",
+                        "#right-wing"
+                    ],
+                    "context": "Far-right political party in France"
+                },
+                {
+                    "term": "Partido Conservador",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#UK",
+                        "#conservative"
+                    ],
+                    "context": "Main conservative political party in UK"
+                },
+                {
+                    "term": "Partido Laborista",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#UK",
+                        "#labour"
+                    ],
+                    "context": "Major left-wing political party in UK"
+                },
+                {
+                    "term": "Demócratas Liberales",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#UK",
+                        "#liberal"
+                    ],
+                    "context": "Liberal political party in UK"
+                },
+                {
+                    "term": "El País Política",
+                    "type": "company",
+                    "primary_domain": "media",
+                    "tags": [
+                        "#Spain",
+                        "#news"
+                    ],
+                    "context": "Spanish media outlet specialized in politics"
+                },
+                {
+                    "term": "El Mundo Política",
+                    "type": "company",
+                    "primary_domain": "media",
+                    "tags": [
+                        "#Spain",
+                        "#news"
+                    ],
+                    "context": "Spanish newspaper covering politics"
+                },
+                {
+                    "term": "ABC Política",
+                    "type": "company",
+                    "primary_domain": "media",
+                    "tags": [
+                        "#Spain",
+                        "#news"
+                    ],
+                    "context": "Spanish daily newspaper focusing on politics"
+                },
+                {
+                    "term": "La Vanguardia",
+                    "type": "company",
+                    "primary_domain": "media",
+                    "tags": [
+                        "#Spain",
+                        "#news"
+                    ],
+                    "context": "Spanish newspaper with political coverage"
+                },
+                {
+                    "term": "Politico Europa",
+                    "type": "company",
+                    "primary_domain": "media",
+                    "tags": [
+                        "#Europe",
+                        "#news"
+                    ],
+                    "context": "European edition of Politico news outlet"
+                },
+                {
+                    "term": "Real Instituto Elcano",
+                    "type": "company",
+                    "primary_domain": "think tank",
+                    "tags": [
+                        "#Spain",
+                        "#research"
+                    ],
+                    "context": "Spanish think tank for international affairs"
+                },
+                {
+                    "term": "Fundación Alternativas",
+                    "type": "company",
+                    "primary_domain": "think tank",
+                    "tags": [
+                        "#Spain",
+                        "#analysis"
+                    ],
+                    "context": "Independent think tank in Spain"
+                },
+                {
+                    "term": "Casa Mediterráneo",
+                    "type": "company",
+                    "primary_domain": "think tank",
+                    "tags": [
+                        "#Spain",
+                        "#policy"
+                    ],
+                    "context": "Promotes dialogue and understanding in Mediterranean"
+                },
+                {
+                    "term": "Instituto de Estudios Estratégicos",
+                    "type": "company",
+                    "primary_domain": "think tank",
+                    "tags": [
+                        "#Spain",
+                        "#strategic"
+                    ],
+                    "context": "Spain's strategic studies institution"
+                }
+            ],
+            "cached": false,
+            "processing_time": 25.84129548072815,
+            "error": null
+        },
+        {
+            "chunk_index": 0,
+            "source_filename": "politics_spanish.txt",
+            "entities": [
+                {
+                    "term": "Naciones Unidas",
+                    "type": "company",
+                    "primary_domain": "international relations",
+                    "tags": [
+                        "#ONU",
+                        "#global",
+                        "#politics"
+                    ],
+                    "context": "International organization for global stability"
+                },
+                {
+                    "term": "OTAN",
+                    "type": "company",
+                    "primary_domain": "defense",
+                    "tags": [
+                        "#NATO",
+                        "#security",
+                        "#alliance"
+                    ],
+                    "context": "Military alliance for collective defense"
+                },
+                {
+                    "term": "Unión Europea",
+                    "type": "company",
+                    "primary_domain": "international relations",
+                    "tags": [
+                        "#EU",
+                        "#integration",
+                        "#cooperation"
+                    ],
+                    "context": "Political and economic union of member states"
+                },
+                {
+                    "term": "OEA",
+                    "type": "company",
+                    "primary_domain": "international relations",
+                    "tags": [
+                        "#OAS",
+                        "#hemispheric",
+                        "#diplomacy"
+                    ],
+                    "context": "Organization for regional solidarity in Americas"
+                },
+                {
+                    "term": "Partido Socialista Obrero Español",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#PSOE",
+                        "#Spain",
+                        "#socialism"
+                    ],
+                    "context": "Spanish political party led by Pedro Sánchez"
+                },
+                {
+                    "term": "Pedro Sánchez",
+                    "type": "person",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#President",
+                        "#Spain",
+                        "#PSOE"
+                    ],
+                    "context": "Current President of Spain"
+                },
+                {
+                    "term": "Partido Popular",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#PP",
+                        "#Spain",
+                        "#conservative"
+                    ],
+                    "context": "Major Spanish political party"
+                },
+                {
+                    "term": "Alberto Núñez Feijóo",
+                    "type": "person",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#PP",
+                        "#leader",
+                        "#Spain"
+                    ],
+                    "context": "Leader of the Partido Popular"
+                },
+                {
+                    "term": "Vox",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Spain",
+                        "#right-wing"
+                    ],
+                    "context": "Right-wing political party in Spain"
+                },
+                {
+                    "term": "Podemos",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Spain",
+                        "#left-wing"
+                    ],
+                    "context": "Left-wing political party in Spain"
+                },
+                {
+                    "term": "Ciudadanos",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Spain",
+                        "#centrist"
+                    ],
+                    "context": "Centrist political party in Spain"
+                },
+                {
+                    "term": "Congreso",
+                    "type": "company",
+                    "primary_domain": "government",
+                    "tags": [
+                        "#Spain",
+                        "#parliament"
+                    ],
+                    "context": "Main legislative body of Spain"
+                },
+                {
+                    "term": "Moncloa",
+                    "type": "company",
+                    "primary_domain": "government",
+                    "tags": [
+                        "#Spain",
+                        "#executive"
+                    ],
+                    "context": "Official residence of the Spanish Prime Minister"
+                },
+                {
+                    "term": "Tribunal Constitucional",
+                    "type": "company",
+                    "primary_domain": "judiciary",
+                    "tags": [
+                        "#Spain",
+                        "#court"
+                    ],
+                    "context": "Highest constitutional court in Spain"
+                },
+                {
+                    "term": "CDU/CSU",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Germany",
+                        "#conservative"
+                    ],
+                    "context": "Major conservative political alliance in Germany"
+                },
+                {
+                    "term": "SPD",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Germany",
+                        "#socialdemocracy"
+                    ],
+                    "context": "Social democratic political party in Germany"
+                },
+                {
+                    "term": "AfD",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Germany",
+                        "#right-wing"
+                    ],
+                    "context": "Right-wing political party in Germany"
+                },
+                {
+                    "term": "Die Linke",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Germany",
+                        "#left-wing"
+                    ],
+                    "context": "Left-wing political party in Germany"
+                },
+                {
+                    "term": "La République En Marche!",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#France",
+                        "#centrist"
+                    ],
+                    "context": "Centrist political party in France"
+                },
+                {
+                    "term": "Les Républicains",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#France",
+                        "#conservative"
+                    ],
+                    "context": "Conservative political party in France"
+                },
+                {
+                    "term": "Rassemblement National",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#France",
+                        "#right-wing"
+                    ],
+                    "context": "Far-right political party in France"
+                },
+                {
+                    "term": "Partido Conservador",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#UK",
+                        "#conservative"
+                    ],
+                    "context": "Main conservative political party in UK"
+                },
+                {
+                    "term": "Partido Laborista",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#UK",
+                        "#labour"
+                    ],
+                    "context": "Major left-wing political party in UK"
+                },
+                {
+                    "term": "Demócratas Liberales",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#UK",
+                        "#liberal"
+                    ],
+                    "context": "Liberal political party in UK"
+                },
+                {
+                    "term": "El País Política",
+                    "type": "company",
+                    "primary_domain": "media",
+                    "tags": [
+                        "#Spain",
+                        "#news"
+                    ],
+                    "context": "Spanish media outlet specialized in politics"
+                },
+                {
+                    "term": "El Mundo Política",
+                    "type": "company",
+                    "primary_domain": "media",
+                    "tags": [
+                        "#Spain",
+                        "#news"
+                    ],
+                    "context": "Spanish newspaper covering politics"
+                },
+                {
+                    "term": "ABC Política",
+                    "type": "company",
+                    "primary_domain": "media",
+                    "tags": [
+                        "#Spain",
+                        "#news"
+                    ],
+                    "context": "Spanish daily newspaper focusing on politics"
+                },
+                {
+                    "term": "La Vanguardia",
+                    "type": "company",
+                    "primary_domain": "media",
+                    "tags": [
+                        "#Spain",
+                        "#news"
+                    ],
+                    "context": "Spanish newspaper with political coverage"
+                },
+                {
+                    "term": "Politico Europa",
+                    "type": "company",
+                    "primary_domain": "media",
+                    "tags": [
+                        "#Europe",
+                        "#news"
+                    ],
+                    "context": "European edition of Politico news outlet"
+                },
+                {
+                    "term": "Real Instituto Elcano",
+                    "type": "company",
+                    "primary_domain": "think tank",
+                    "tags": [
+                        "#Spain",
+                        "#research"
+                    ],
+                    "context": "Spanish think tank for international affairs"
+                },
+                {
+                    "term": "Fundación Alternativas",
+                    "type": "company",
+                    "primary_domain": "think tank",
+                    "tags": [
+                        "#Spain",
+                        "#analysis"
+                    ],
+                    "context": "Independent think tank in Spain"
+                },
+                {
+                    "term": "Casa Mediterráneo",
+                    "type": "company",
+                    "primary_domain": "think tank",
+                    "tags": [
+                        "#Spain",
+                        "#policy"
+                    ],
+                    "context": "Promotes dialogue and understanding in Mediterranean"
+                },
+                {
+                    "term": "Instituto de Estudios Estratégicos",
+                    "type": "company",
+                    "primary_domain": "think tank",
+                    "tags": [
+                        "#Spain",
+                        "#strategic"
+                    ],
+                    "context": "Spain's strategic studies institution"
+                }
+            ],
+            "cached": false,
+            "processing_time": 25.84129548072815,
+            "error": null
+        },
+        {
+            "chunk_index": 0,
+            "source_filename": "politics_spanish.txt",
+            "entities": [
+                {
+                    "term": "Naciones Unidas",
+                    "type": "company",
+                    "primary_domain": "international relations",
+                    "tags": [
+                        "#ONU",
+                        "#global",
+                        "#politics"
+                    ],
+                    "context": "International organization for global stability"
+                },
+                {
+                    "term": "OTAN",
+                    "type": "company",
+                    "primary_domain": "defense",
+                    "tags": [
+                        "#NATO",
+                        "#security",
+                        "#alliance"
+                    ],
+                    "context": "Military alliance for collective defense"
+                },
+                {
+                    "term": "Unión Europea",
+                    "type": "company",
+                    "primary_domain": "international relations",
+                    "tags": [
+                        "#EU",
+                        "#integration",
+                        "#cooperation"
+                    ],
+                    "context": "Political and economic union of member states"
+                },
+                {
+                    "term": "OEA",
+                    "type": "company",
+                    "primary_domain": "international relations",
+                    "tags": [
+                        "#OAS",
+                        "#hemispheric",
+                        "#diplomacy"
+                    ],
+                    "context": "Organization for regional solidarity in Americas"
+                },
+                {
+                    "term": "Partido Socialista Obrero Español",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#PSOE",
+                        "#Spain",
+                        "#socialism"
+                    ],
+                    "context": "Spanish political party led by Pedro Sánchez"
+                },
+                {
+                    "term": "Pedro Sánchez",
+                    "type": "person",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#President",
+                        "#Spain",
+                        "#PSOE"
+                    ],
+                    "context": "Current President of Spain"
+                },
+                {
+                    "term": "Partido Popular",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#PP",
+                        "#Spain",
+                        "#conservative"
+                    ],
+                    "context": "Major Spanish political party"
+                },
+                {
+                    "term": "Alberto Núñez Feijóo",
+                    "type": "person",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#PP",
+                        "#leader",
+                        "#Spain"
+                    ],
+                    "context": "Leader of the Partido Popular"
+                },
+                {
+                    "term": "Vox",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Spain",
+                        "#right-wing"
+                    ],
+                    "context": "Right-wing political party in Spain"
+                },
+                {
+                    "term": "Podemos",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Spain",
+                        "#left-wing"
+                    ],
+                    "context": "Left-wing political party in Spain"
+                },
+                {
+                    "term": "Ciudadanos",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Spain",
+                        "#centrist"
+                    ],
+                    "context": "Centrist political party in Spain"
+                },
+                {
+                    "term": "Congreso",
+                    "type": "company",
+                    "primary_domain": "government",
+                    "tags": [
+                        "#Spain",
+                        "#parliament"
+                    ],
+                    "context": "Main legislative body of Spain"
+                },
+                {
+                    "term": "Moncloa",
+                    "type": "company",
+                    "primary_domain": "government",
+                    "tags": [
+                        "#Spain",
+                        "#executive"
+                    ],
+                    "context": "Official residence of the Spanish Prime Minister"
+                },
+                {
+                    "term": "Tribunal Constitucional",
+                    "type": "company",
+                    "primary_domain": "judiciary",
+                    "tags": [
+                        "#Spain",
+                        "#court"
+                    ],
+                    "context": "Highest constitutional court in Spain"
+                },
+                {
+                    "term": "CDU/CSU",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Germany",
+                        "#conservative"
+                    ],
+                    "context": "Major conservative political alliance in Germany"
+                },
+                {
+                    "term": "SPD",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Germany",
+                        "#socialdemocracy"
+                    ],
+                    "context": "Social democratic political party in Germany"
+                },
+                {
+                    "term": "AfD",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Germany",
+                        "#right-wing"
+                    ],
+                    "context": "Right-wing political party in Germany"
+                },
+                {
+                    "term": "Die Linke",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#Germany",
+                        "#left-wing"
+                    ],
+                    "context": "Left-wing political party in Germany"
+                },
+                {
+                    "term": "La République En Marche!",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#France",
+                        "#centrist"
+                    ],
+                    "context": "Centrist political party in France"
+                },
+                {
+                    "term": "Les Républicains",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#France",
+                        "#conservative"
+                    ],
+                    "context": "Conservative political party in France"
+                },
+                {
+                    "term": "Rassemblement National",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#France",
+                        "#right-wing"
+                    ],
+                    "context": "Far-right political party in France"
+                },
+                {
+                    "term": "Partido Conservador",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#UK",
+                        "#conservative"
+                    ],
+                    "context": "Main conservative political party in UK"
+                },
+                {
+                    "term": "Partido Laborista",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#UK",
+                        "#labour"
+                    ],
+                    "context": "Major left-wing political party in UK"
+                },
+                {
+                    "term": "Demócratas Liberales",
+                    "type": "company",
+                    "primary_domain": "politics",
+                    "tags": [
+                        "#UK",
+                        "#liberal"
+                    ],
+                    "context": "Liberal political party in UK"
+                },
+                {
+                    "term": "El País Política",
+                    "type": "company",
+                    "primary_domain": "media",
+                    "tags": [
+                        "#Spain",
+                        "#news"
+                    ],
+                    "context": "Spanish media outlet specialized in politics"
+                },
+                {
+                    "term": "El Mundo Política",
+                    "type": "company",
+                    "primary_domain": "media",
+                    "tags": [
+                        "#Spain",
+                        "#news"
+                    ],
+                    "context": "Spanish newspaper covering politics"
+                },
+                {
+                    "term": "ABC Política",
+                    "type": "company",
+                    "primary_domain": "media",
+                    "tags": [
+                        "#Spain",
+                        "#news"
+                    ],
+                    "context": "Spanish daily newspaper focusing on politics"
+                },
+                {
+                    "term": "La Vanguardia",
+                    "type": "company",
+                    "primary_domain": "media",
+                    "tags": [
+                        "#Spain",
+                        "#news"
+                    ],
+                    "context": "Spanish newspaper with political coverage"
+                },
+                {
+                    "term": "Politico Europa",
+                    "type": "company",
+                    "primary_domain": "media",
+                    "tags": [
+                        "#Europe",
+                        "#news"
+                    ],
+                    "context": "European edition of Politico news outlet"
+                },
+                {
+                    "term": "Real Instituto Elcano",
+                    "type": "company",
+                    "primary_domain": "think tank",
+                    "tags": [
+                        "#Spain",
+                        "#research"
+                    ],
+                    "context": "Spanish think tank for international affairs"
+                },
+                {
+                    "term": "Fundación Alternativas",
+                    "type": "company",
+                    "primary_domain": "think tank",
+                    "tags": [
+                        "#Spain",
+                        "#analysis"
+                    ],
+                    "context": "Independent think tank in Spain"
+                },
+                {
+                    "term": "Casa Mediterráneo",
+                    "type": "company",
+                    "primary_domain": "think tank",
+                    "tags": [
+                        "#Spain",
+                        "#policy"
+                    ],
+                    "context": "Promotes dialogue and understanding in Mediterranean"
+                },
+                {
+                    "term": "Instituto de Estudios Estratégicos",
+                    "type": "company",
+                    "primary_domain": "think tank",
+                    "tags": [
+                        "#Spain",
+                        "#strategic"
+                    ],
+                    "context": "Spain's strategic studies institution"
+                }
+            ],
+            "cached": false,
+            "processing_time": 25.84129548072815,
+            "error": null
+        }
+    ],
+    "summary": {
+        "total_chunks": 3,
+        "processed_chunks": 3,
+        "failed_chunks": 0,
+        "cache_hits": 0,
+        "cache_hit_rate": 0,
+        "total_entities": 99,
+        "total_processing_time": 43.325,
+        "average_processing_time": 14.442
+    }
+}
