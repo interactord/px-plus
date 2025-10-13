@@ -74,7 +74,7 @@ docker-down: ## Docker Compose 환경 중지
 build: ## Docker 이미지 빌드
 	@echo "$(BLUE)Docker 이미지 빌드 시작...$(NC)"
 	@echo "이미지: $(FULL_IMAGE_NAME)"
-	docker build -t $(IMAGE_NAME):latest -t $(FULL_IMAGE_NAME) .
+	docker build --platform linux/amd64 -t $(IMAGE_NAME):latest -t $(FULL_IMAGE_NAME) .
 	@echo "$(GREEN)✓ 빌드 완료$(NC)"
 
 .PHONY: build-no-cache
@@ -112,7 +112,6 @@ deploy: env-to-yaml ## 프로덕션 배포
 			--cpu $(CPU) \
 			--memory $(MEMORY) \
 			--timeout $(TIMEOUT) \
-			--set-env-vars ENVIRONMENT=production \
 			--env-vars-file config/env-vars-production.yaml; \
 		echo "$(GREEN)✓ 배포 완료$(NC)"; \
 		$(MAKE) describe; \
@@ -131,13 +130,6 @@ deploy-full: build push deploy ## 전체 배포 프로세스 (빌드 + 푸시 + 
 env-to-yaml: ## .env.production → YAML 변환
 	@echo "$(BLUE)프로덕션 환경변수를 YAML로 변환 중...$(NC)"
 	@mkdir -p config
-	@if [ -f .env.production ]; then \
-		python3 scripts/env-to-yaml.py .env.production > config/env-vars-production.yaml 2>/dev/null; \
-		echo "$(GREEN)✓ config/env-vars-production.yaml 생성 완료$(NC)"; \
-	else \
-		echo "$(RED)✗ .env.production 파일이 없습니다.$(NC)"; \
-		exit 1; \
-	fig
 	@if [ -f .env.production ]; then \
 		python3 scripts/env-to-yaml.py .env.production > config/env-vars-production.yaml 2>/dev/null; \
 		echo "$(GREEN)✓ config/env-vars-production.yaml 생성 완료$(NC)"; \

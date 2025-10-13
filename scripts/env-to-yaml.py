@@ -102,18 +102,12 @@ def generate_yaml(env_vars: Dict[str, str], sensitive_keys: List[str]) -> str:
         "# ========================================",
         "# 이 파일은 자동 생성되었습니다. 직접 수정하지 마세요.",
         "",
-        "env:",
     ]
-    
-    # 일반 환경변수
+
+    # 일반 환경변수 (KEY: "value" 형식)
     for key, value in sorted(env_vars.items()):
-        # 값에 특수문자가 있으면 따옴표로 감싸기
-        if any(char in value for char in [' ', ':', '#', ',', '[', ']', '{', '}']):
-            yaml_lines.append(f"  - name: {key}")
-            yaml_lines.append(f'    value: "{value}"')
-        else:
-            yaml_lines.append(f"  - name: {key}")
-            yaml_lines.append(f"    value: {value}")
+        # 모든 값을 따옴표로 감싸서 문자열로 처리
+        yaml_lines.append(f'{key}: "{value}"')
     
     # 민감한 변수는 주석으로 표시
     if sensitive_keys:
