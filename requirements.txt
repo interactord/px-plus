@@ -10,6 +10,7 @@ python-docx==1.2.0
 python-dotenv==1.1.1
 python-multipart==0.0.20
 python-pptx==1.0.2
+redis==5.2.1
 rfs-framework==4.6.6
 spacy==3.8.7
 spacy-legacy==3.0.12
