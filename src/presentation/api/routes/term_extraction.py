@@ -60,13 +60,33 @@ async def get_model_port() -> ModelPort:
     """
     AI 모델 포트를 반환합니다.
     
-    TODO: 실제 구현에서는 컨테이너에서 가져오거나 설정에서 생성
+    환경 변수에서 OPENAI_API_KEY를 읽어 OpenAIChatAdapter를 생성합니다.
+    
+    Returns:
+        ModelPort: OpenAI Chat 어댑터 인스턴스
+        
+    Raises:
+        HTTPException: API 키가 설정되지 않은 경우
     """
-    # 여기서는 placeholder만 제공
-    # 실제로는 src/shared/container 등에서 주입되어야 함
-    raise NotImplementedError(
-        "ModelPort 의존성 주입이 필요합니다. "
-        "src/shared/container에서 OpenAIChatAdapter 인스턴스를 주입하세요."
+    import os
+    from fastapi import HTTPException, status
+    from ....infrastructure.ai_model.adapters.openai_chat_adapter import OpenAIChatAdapter
+    
+    # 환경 변수에서 API 키 읽기
+    api_key = os.getenv("OPENAI_API_KEY")
+    
+    if not api_key or api_key == "your-openai-api-key-here":
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="OPENAI_API_KEY 환경 변수가 설정되지 않았습니다. .env 파일을 확인하세요."
+        )
+    
+    # OpenAI Chat 어댑터 생성
+    return OpenAIChatAdapter(
+        api_key=api_key,
+        model_name="gpt-4o",
+        base_url="https://api.openai.com/v1",
+        timeout=60
     )
 
 
@@ -74,14 +94,32 @@ async def get_template_port() -> TemplatePort:
     """
     템플릿 포트를 반환합니다.
     
-    TODO: 실제 구현에서는 컨테이너에서 가져오거나 설정에서 생성
+    프로젝트의 템플릿 디렉토리를 사용하여 Jinja2TemplateAdapter를 생성합니다.
+    
+    Returns:
+        TemplatePort: Jinja2 템플릿 어댑터 인스턴스
+        
+    Raises:
+        HTTPException: 템플릿 디렉토리를 찾을 수 없는 경우
     """
-    # 여기서는 placeholder만 제공
-    # 실제로는 src/shared/container 등에서 주입되어야 함
-    raise NotImplementedError(
-        "TemplatePort 의존성 주입이 필요합니다. "
-        "src/shared/container에서 Jinja2TemplateAdapter 인스턴스를 주입하세요."
-    )
+    from pathlib import Path
+    from fastapi import HTTPException, status
+    from ....infrastructure.ai_model.adapters.jinja2_template_adapter import Jinja2TemplateAdapter
+    
+    # 템플릿 디렉토리 경로 설정
+    # src/presentation/api/routes → src/infrastructure/term_extraction/templates
+    current_file = Path(__file__)
+    project_root = current_file.parent.parent.parent.parent
+    template_dir = project_root / "infrastructure" / "term_extraction" / "templates"
+    
+    if not template_dir.exists():
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"템플릿 디렉토리를 찾을 수 없습니다: {template_dir}"
+        )
+    
+    # Jinja2 템플릿 어댑터 생성
+    return Jinja2TemplateAdapter(template_dir=str(template_dir))
 
 
 async def get_extraction_service(
