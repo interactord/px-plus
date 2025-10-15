@@ -83,18 +83,8 @@ class TermInfo:
         if not primary_domain or not primary_domain.strip():
             return Failure("주요 도메인이 비어있습니다")
         
-        # 타입 검증
-        valid_types = {
-            "person", "company", "location", "organization",
-            "event", "product", "other"
-        }
-        
+        # 타입 정규화 (검증 없이 소문자로 변환만)
         normalized_type = type.strip().lower()
-        if normalized_type not in valid_types:
-            return Failure(
-                f"유효하지 않은 타입: {type}. "
-                f"허용된 값: {', '.join(sorted(valid_types))}"
-            )
         
         # 도메인 기본 검증 (길이와 형식만)
         normalized_domain = primary_domain.strip().lower()
