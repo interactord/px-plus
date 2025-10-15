@@ -39,7 +39,7 @@ from ....domain.web_enhancement.ports.web_enhancement_port import WebEnhancement
 from ....domain.ai_model.entities.model_request import ModelRequest
 from ....domain.ai_model.entities.model_config import ModelConfig
 from ...ai_model.adapters.jinja2_template_adapter import Jinja2TemplateAdapter
-from ...ai_model.adapters.gemini_web_search_adapter import GeminiWebSearchAdapter
+from ...ai_model.adapters.gemini_sdk_adapter import GeminiSDKAdapter
 
 
 class GeminiWebEnhancementAdapter(WebEnhancementPort):
@@ -77,11 +77,12 @@ class GeminiWebEnhancementAdapter(WebEnhancementPort):
             max_tokens: 최대 토큰 수
             dynamic_threshold: 동적 검색 임계값 (0.0-1.0)
         """
-        self._gemini_adapter = GeminiWebSearchAdapter(
+        self._gemini_adapter = GeminiSDKAdapter(
             api_key=api_key,
             model_name=model_name,
             enable_grounding=True,
-            dynamic_threshold=dynamic_threshold
+            temperature=temperature,
+            max_tokens=max_tokens
         )
         
         # 템플릿 경로 설정

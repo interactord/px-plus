@@ -87,21 +87,22 @@ class ModelAdapterFactory:
 
     @staticmethod
     def _create_reasoning_adapter(config: AdapterConfig) -> ModelPort:
-        """Reasoning 어댑터 생성"""
+        """Reasoning 어댑터 생성 (SDK 기반)"""
         return OpenAIReasoningAdapter(
             api_key=config.api_key,
             model_name=config.model_name or "o1-preview",
-            base_url=config.base_url,
+            max_tokens=4000,
             timeout=config.timeout if config.timeout else 120
         )
 
     @staticmethod
     def _create_chat_adapter(config: AdapterConfig) -> ModelPort:
-        """Chat 어댑터 생성"""
+        """Chat 어댑터 생성 (SDK 기반)"""
         return OpenAIChatAdapter(
             api_key=config.api_key,
             model_name=config.model_name or "gpt-4o",
-            base_url=config.base_url,
+            temperature=0.7,
+            max_tokens=4000,
             timeout=config.timeout
         )
 

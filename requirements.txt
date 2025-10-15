@@ -16,3 +16,6 @@ spacy==3.8.7
 spacy-legacy==3.0.12
 spacy-loggers==1.0.5
 uvicorn==0.37.0
+
+# Google Gemini SDK (공식 라이브러리)
+google-genai>=1.33.0
