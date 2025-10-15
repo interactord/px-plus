@@ -1,0 +1,3011 @@
+{
+    "enhanced_terms": [
+        {
+            "original_term": "Naciones Unidas",
+            "term_type": "company",
+            "primary_domain": "international relations",
+            "context": "International organization for global stability",
+            "tags": [
+                "#ONU",
+                "#global",
+                "#politics"
+            ],
+            "translations": {
+                "ko": "유엔",
+                "zh-CN": "联合国",
+                "zh-TW": "聯合國",
+                "en": "United Nations",
+                "ja": "国際連合",
+                "fr": "Nations Unies",
+                "ru": "Организация Объединённых Наций",
+                "it": "Nazioni Unite",
+                "vi": "Liên Hợp Quốc",
+                "ar": "الأمم المتحدة",
+                "es": "Naciones Unidas"
+            },
+            "web_sources": [
+                "https://www.un.org/",
+                "https://es.wikipedia.org/wiki/Organización_de_las_Naciones_Unidas"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.98,
+            "search_timestamp": "2025-10-13T13:21:05.504783"
+        },
+        {
+            "original_term": "OTAN",
+            "term_type": "company",
+            "primary_domain": "defense",
+            "context": "Military alliance for collective defense",
+            "tags": [
+                "#NATO",
+                "#security",
+                "#alliance"
+            ],
+            "translations": {
+                "ko": "북대서양 조약 기구",
+                "zh-CN": "北大西洋公约组织",
+                "zh-TW": "北大西洋公約組織",
+                "en": "NATO",
+                "ja": "北大西洋条約機構",
+                "fr": "OTAN",
+                "ru": "НАТО",
+                "it": "NATO",
+                "vi": "NATO",
+                "ar": "الناتو",
+                "es": "OTAN"
+            },
+            "web_sources": [
+                "https://www.nato.int/",
+                "https://es.wikipedia.org/wiki/OTAN"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.99,
+            "search_timestamp": "2025-10-13T13:21:05.504799"
+        },
+        {
+            "original_term": "Unión Europea",
+            "term_type": "company",
+            "primary_domain": "international relations",
+            "context": "Political and economic union of member states",
+            "tags": [
+                "#EU",
+                "#integration",
+                "#cooperation"
+            ],
+            "translations": {
+                "ko": "유럽 연합",
+                "zh-CN": "欧洲联盟",
+                "zh-TW": "歐洲聯盟",
+                "en": "European Union",
+                "ja": "欧州連合",
+                "fr": "Union européenne",
+                "ru": "Европейский Союз",
+                "it": "Unione Europea",
+                "vi": "Liên minh Châu Âu",
+                "ar": "الاتحاد الأوروبي",
+                "es": "Unión Europea"
+            },
+            "web_sources": [
+                "https://europa.eu/",
+                "https://es.wikipedia.org/wiki/Unión_Europea"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.98,
+            "search_timestamp": "2025-10-13T13:21:05.504809"
+        },
+        {
+            "original_term": "OEA",
+            "term_type": "company",
+            "primary_domain": "international relations",
+            "context": "Organization for regional solidarity in Americas",
+            "tags": [
+                "#OAS",
+                "#hemispheric",
+                "#diplomacy"
+            ],
+            "translations": {
+                "ko": "미주 기구",
+                "zh-CN": "美洲国家组织",
+                "zh-TW": "美洲國家組織",
+                "en": "Organization of American States",
+                "ja": "米州機構",
+                "fr": "Organisation des États américains",
+                "ru": "Организация американских государств",
+                "it": "Organizzazione degli Stati Americani",
+                "vi": "Tổ chức các Quốc gia Châu Mỹ",
+                "ar": "منظمة الدول الأمريكية",
+                "es": "Organización de los Estados Americanos"
+            },
+            "web_sources": [
+                "http://www.oas.org/",
+                "https://es.wikipedia.org/wiki/Organización_de_los_Estados_Americanos"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.97,
+            "search_timestamp": "2025-10-13T13:21:05.504816"
+        },
+        {
+            "original_term": "Partido Socialista Obrero Español",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Spanish political party led by Pedro Sánchez",
+            "tags": [
+                "#PSOE",
+                "#Spain",
+                "#socialism"
+            ],
+            "translations": {
+                "ko": "스페인 사회노동당",
+                "zh-CN": "西班牙工人社会党",
+                "zh-TW": "西班牙工人社會黨",
+                "en": "Spanish Socialist Workers' Party",
+                "ja": "スペイン社会労働党",
+                "fr": "Parti socialiste ouvrier espagnol",
+                "ru": "Испанская социалистическая рабочая партия",
+                "it": "Partito Socialista Operaio Spagnolo",
+                "vi": "Đảng Công nhân Xã hội Tây Ban Nha",
+                "ar": "حزب العمال الاشتراكي الإسباني",
+                "es": "Partido Socialista Obrero Español"
+            },
+            "web_sources": [
+                "https://www.psoe.es/",
+                "https://es.wikipedia.org/wiki/Partido_Socialista_Obrero_Español"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.96,
+            "search_timestamp": "2025-10-13T13:21:05.504822"
+        },
+        {
+            "original_term": "Pedro Sánchez",
+            "term_type": "person",
+            "primary_domain": "politics",
+            "context": "Current President of Spain",
+            "tags": [
+                "#President",
+                "#Spain",
+                "#PSOE"
+            ],
+            "translations": {
+                "ko": "페드로 산체스",
+                "zh-CN": "佩德罗·桑切斯",
+                "zh-TW": "佩德羅·桑切斯",
+                "en": "Pedro Sánchez",
+                "ja": "ペドロ・サンチェス",
+                "fr": "Pedro Sánchez",
+                "ru": "Педро Санчес",
+                "it": "Pedro Sánchez",
+                "vi": "Pedro Sánchez",
+                "ar": "بيدرو سانشيز",
+                "es": "Pedro Sánchez"
+            },
+            "web_sources": [
+                "https://en.wikipedia.org/wiki/Pedro_S%C3%A1nchez",
+                "https://www.lamoncloa.gob.es/presidente/Paginas/index.aspx"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 1,
+            "search_timestamp": "2025-10-13T13:21:28.130454"
+        },
+        {
+            "original_term": "Partido Popular",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Major Spanish political party",
+            "tags": [
+                "#PP",
+                "#Spain",
+                "#conservative"
+            ],
+            "translations": {
+                "ko": "국민당",
+                "zh-CN": "人民党",
+                "zh-TW": "人民黨",
+                "en": "People's Party",
+                "ja": "国民党",
+                "fr": "Parti populaire",
+                "ru": "Народная партия",
+                "it": "Partito Popolare",
+                "vi": "Đảng Nhân dân",
+                "ar": "حزب الشعب",
+                "es": "Partido Popular"
+            },
+            "web_sources": [
+                "https://www.pp.es/",
+                "https://en.wikipedia.org/wiki/People%27s_Party_(Spain)"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:21:28.130470"
+        },
+        {
+            "original_term": "Alberto Núñez Feijóo",
+            "term_type": "person",
+            "primary_domain": "politics",
+            "context": "Leader of the Partido Popular",
+            "tags": [
+                "#PP",
+                "#leader",
+                "#Spain"
+            ],
+            "translations": {
+                "ko": "알베르토 누녜스 페이호",
+                "zh-CN": "阿尔贝托·努涅斯·费霍",
+                "zh-TW": "阿爾貝托·努涅斯·費霍",
+                "en": "Alberto Núñez Feijóo",
+                "ja": "アルベルト・ヌーニェス・フェイホー",
+                "fr": "Alberto Núñez Feijóo",
+                "ru": "Альберто Нуньес Фейхоо",
+                "it": "Alberto Núñez Feijóo",
+                "vi": "Alberto Núñez Feijóo",
+                "ar": "ألبرتو نونييز فייخو",
+                "es": "Alberto Núñez Feijóo"
+            },
+            "web_sources": [
+                "https://www.pp.es/alberto-nunez-feijoo",
+                "https://en.wikipedia.org/wiki/Alberto_N%C3%BA%C3%B1ez_Feij%C3%B3o"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 1,
+            "search_timestamp": "2025-10-13T13:21:28.130478"
+        },
+        {
+            "original_term": "Vox",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Right-wing political party in Spain",
+            "tags": [
+                "#Spain",
+                "#right-wing"
+            ],
+            "translations": {
+                "ko": "Vox",
+                "zh-CN": "呼声党",
+                "zh-TW": "聲音黨",
+                "en": "Vox",
+                "ja": "Vox",
+                "fr": "Vox",
+                "ru": "Вокс",
+                "it": "Vox",
+                "vi": "Vox",
+                "ar": "فوكس",
+                "es": "Vox"
+            },
+            "web_sources": [
+                "https://voxespana.es/",
+                "https://en.wikipedia.org/wiki/Vox_(Spanish_political_party)"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.9,
+            "search_timestamp": "2025-10-13T13:21:28.130486"
+        },
+        {
+            "original_term": "Podemos",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Left-wing political party in Spain",
+            "tags": [
+                "#Spain",
+                "#left-wing"
+            ],
+            "translations": {
+                "ko": "포데모스",
+                "zh-CN": "我们能",
+                "zh-TW": "我們能",
+                "en": "Podemos (We Can)",
+                "ja": "ポデモス",
+                "fr": "Podemos",
+                "ru": "Подемос",
+                "it": "Podemos",
+                "vi": "Podemos",
+                "ar": "بوديموس",
+                "es": "Podemos"
+            },
+            "web_sources": [
+                "https://podemos.info/",
+                "https://en.wikipedia.org/wiki/Podemos_(Spanish_political_party)"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.9,
+            "search_timestamp": "2025-10-13T13:21:28.130492"
+        },
+        {
+            "original_term": "Ciudadanos",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Centrist political party in Spain",
+            "tags": [
+                "#Spain",
+                "#centrist"
+            ],
+            "translations": {
+                "ko": "시우다다노스",
+                "zh-CN": "公民党",
+                "zh-TW": "公民黨",
+                "en": "Citizens",
+                "ja": "シウダダノス",
+                "fr": "Citoyens",
+                "ru": "Граждане",
+                "it": "Cittadini",
+                "vi": "Công dân",
+                "ar": "المواطنون",
+                "es": "Ciudadanos"
+            },
+            "web_sources": [
+                "https://www.ciudadanos-cs.org/",
+                "https://en.wikipedia.org/wiki/Citizens_(Spanish_political_party)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:21:04.488860"
+        },
+        {
+            "original_term": "Congreso",
+            "term_type": "company",
+            "primary_domain": "government",
+            "context": "Main legislative body of Spain",
+            "tags": [
+                "#Spain",
+                "#parliament"
+            ],
+            "translations": {
+                "ko": "국회",
+                "zh-CN": "国会",
+                "zh-TW": "國會",
+                "en": "Congress",
+                "ja": "国会",
+                "fr": "Congrès",
+                "ru": "Конгресс",
+                "it": "Congresso",
+                "vi": "Quốc hội",
+                "ar": "الكونغرس",
+                "es": "Congreso"
+            },
+            "web_sources": [
+                "https://www.congreso.es/",
+                "https://en.wikipedia.org/wiki/Cortes_Generales"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.92,
+            "search_timestamp": "2025-10-13T13:21:04.488875"
+        },
+        {
+            "original_term": "Moncloa",
+            "term_type": "company",
+            "primary_domain": "government",
+            "context": "Official residence of the Spanish Prime Minister",
+            "tags": [
+                "#Spain",
+                "#executive"
+            ],
+            "translations": {
+                "ko": "몬클로아",
+                "zh-CN": "蒙克洛亚",
+                "zh-TW": "蒙克洛亞",
+                "en": "Moncloa",
+                "ja": "モンクロア",
+                "fr": "Moncloa",
+                "ru": "Монклоа",
+                "it": "Moncloa",
+                "vi": "Moncloa",
+                "ar": "مونكلوا",
+                "es": "Moncloa"
+            },
+            "web_sources": [
+                "https://www.lamoncloa.gob.es/",
+                "https://en.wikipedia.org/wiki/Palace_of_Moncloa"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:21:04.488882"
+        },
+        {
+            "original_term": "Tribunal Constitucional",
+            "term_type": "company",
+            "primary_domain": "judiciary",
+            "context": "Highest constitutional court in Spain",
+            "tags": [
+                "#Spain",
+                "#court"
+            ],
+            "translations": {
+                "ko": "헌법재판소",
+                "zh-CN": "宪法法院",
+                "zh-TW": "憲法法院",
+                "en": "Constitutional Court",
+                "ja": "憲法裁判所",
+                "fr": "Cour constitutionnelle",
+                "ru": "Конституционный суд",
+                "it": "Corte costituzionale",
+                "vi": "Tòa án Hiến pháp",
+                "ar": "المحكمة الدستورية",
+                "es": "Tribunal Constitucional"
+            },
+            "web_sources": [
+                "https://www.tribunalconstitucional.es/",
+                "https://en.wikipedia.org/wiki/Constitutional_Court_of_Spain"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.96,
+            "search_timestamp": "2025-10-13T13:21:04.488888"
+        },
+        {
+            "original_term": "CDU/CSU",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Major conservative political alliance in Germany",
+            "tags": [
+                "#Germany",
+                "#conservative"
+            ],
+            "translations": {
+                "ko": "기독교민주연합/기독교사회연합",
+                "zh-CN": "基民盟/基社盟",
+                "zh-TW": "基民盟/基社盟",
+                "en": "CDU/CSU",
+                "ja": "CDU/CSU",
+                "fr": "CDU/CSU",
+                "ru": "ХДС/ХСС",
+                "it": "CDU/CSU",
+                "vi": "CDU/CSU",
+                "ar": "الاتحاد الديمقراطي المسيحي/الاتحاد الاجتماعي المسيحي",
+                "es": "CDU/CSU"
+            },
+            "web_sources": [
+                "https://www.cdu.de/",
+                "https://en.wikipedia.org/wiki/CDU/CSU"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:21:04.488894"
+        },
+        {
+            "original_term": "SPD",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Social democratic political party in Germany",
+            "tags": [
+                "#Germany",
+                "#socialdemocracy"
+            ],
+            "translations": {
+                "ko": "독일 사회민주당",
+                "zh-CN": "德国社会民主党",
+                "zh-TW": "德國社會民主黨",
+                "en": "Social Democratic Party of Germany",
+                "ja": "ドイツ社会民主党",
+                "fr": "Parti social-démocrate d'Allemagne",
+                "ru": "Социал-демократическая партия Германии",
+                "it": "Partito Socialdemocratico di Germania",
+                "vi": "Đảng Dân chủ Xã hội Đức",
+                "ar": "الحزب الديمقراطي الاجتماعي الألماني",
+                "es": "Partido Socialdemócrata de Alemania"
+            },
+            "web_sources": [
+                "https://www.spd.de",
+                "https://en.wikipedia.org/wiki/Social_Democratic_Party_of_Germany"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.98,
+            "search_timestamp": "2025-10-13T13:21:42.799577"
+        },
+        {
+            "original_term": "AfD",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Right-wing political party in Germany",
+            "tags": [
+                "#Germany",
+                "#right-wing"
+            ],
+            "translations": {
+                "ko": "독일을 위한 대안",
+                "zh-CN": "德国选择党",
+                "zh-TW": "德國選擇黨",
+                "en": "Alternative for Germany",
+                "ja": "ドイツのための選択肢",
+                "fr": "Alternative pour l'Allemagne",
+                "ru": "Альтернатива для Германии",
+                "it": "Alternativa per la Germania",
+                "vi": "Lựa chọn cho nước Đức",
+                "ar": "البديل من أجل ألمانيا",
+                "es": "Alternativa para Alemania"
+            },
+            "web_sources": [
+                "https://www.afd.de",
+                "https://en.wikipedia.org/wiki/Alternative_for_Germany"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.98,
+            "search_timestamp": "2025-10-13T13:21:42.799595"
+        },
+        {
+            "original_term": "Die Linke",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Left-wing political party in Germany",
+            "tags": [
+                "#Germany",
+                "#left-wing"
+            ],
+            "translations": {
+                "ko": "좌파당",
+                "zh-CN": "左翼党",
+                "zh-TW": "左翼黨",
+                "en": "The Left",
+                "ja": "左翼党",
+                "fr": "La Gauche",
+                "ru": "Левые",
+                "it": "La Sinistra",
+                "vi": "Đảng Cánh tả",
+                "ar": "حزب اليسار",
+                "es": "La Izquierda"
+            },
+            "web_sources": [
+                "https://www.die-linke.de",
+                "https://en.wikipedia.org/wiki/The_Left_(Germany)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.98,
+            "search_timestamp": "2025-10-13T13:21:42.799606"
+        },
+        {
+            "original_term": "La République En Marche!",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Centrist political party in France",
+            "tags": [
+                "#France",
+                "#centrist"
+            ],
+            "translations": {
+                "ko": "전진하는 공화국",
+                "zh-CN": "共和国前进",
+                "zh-TW": "共和國前進",
+                "en": "The Republic On the Move",
+                "ja": "共和国前進",
+                "fr": "La République En Marche",
+                "ru": "Республика на марше",
+                "it": "La Repubblica in Marcia",
+                "vi": "Nền Cộng hòa Tiến lên",
+                "ar": "الجمهورية إلى الأمام",
+                "es": "La República en Marcha"
+            },
+            "web_sources": [
+                "https://en-marche.fr",
+                "https://en.wikipedia.org/wiki/La_République_En_Marche!"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.98,
+            "search_timestamp": "2025-10-13T13:21:42.799614"
+        },
+        {
+            "original_term": "Les Républicains",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Conservative political party in France",
+            "tags": [
+                "#France",
+                "#conservative"
+            ],
+            "translations": {
+                "ko": "공화당",
+                "zh-CN": "共和党",
+                "zh-TW": "共和黨",
+                "en": "The Republicans",
+                "ja": "共和党",
+                "fr": "Les Républicains",
+                "ru": "Республиканцы",
+                "it": "I Repubblicani",
+                "vi": "Đảng Cộng hòa",
+                "ar": "الجمهوريون",
+                "es": "Los Republicanos"
+            },
+            "web_sources": [
+                "https://www.republicains.fr",
+                "https://en.wikipedia.org/wiki/The_Republicans_(France)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.98,
+            "search_timestamp": "2025-10-13T13:21:42.799620"
+        },
+        {
+            "original_term": "Rassemblement National",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Far-right political party in France",
+            "tags": [
+                "#France",
+                "#right-wing"
+            ],
+            "translations": {
+                "ko": "국민연합",
+                "zh-CN": "国民联盟",
+                "zh-TW": "國民聯盟",
+                "en": "National Rally",
+                "ja": "国民連合",
+                "fr": "Rassemblement National",
+                "ru": "Национальное объединение",
+                "it": "Rassemblement National",
+                "vi": "Tập hợp Quốc gia",
+                "ar": "التجمع الوطني",
+                "es": "Reagrupamiento Nacional"
+            },
+            "web_sources": [
+                "https://rassemblementnational.fr",
+                "https://en.wikipedia.org/wiki/National_Rally_(France)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.98,
+            "search_timestamp": "2025-10-13T13:21:42.549636"
+        },
+        {
+            "original_term": "Partido Conservador",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Main conservative political party in UK",
+            "tags": [
+                "#UK",
+                "#conservative"
+            ],
+            "translations": {
+                "ko": "보수당",
+                "zh-CN": "保守党",
+                "zh-TW": "保守黨",
+                "en": "Conservative Party",
+                "ja": "保守党",
+                "fr": "Parti conservateur",
+                "ru": "Консервативная партия",
+                "it": "Partito Conservatore",
+                "vi": "Đảng Bảo thủ",
+                "ar": "حزب المحافظين",
+                "es": "Partido Conservador"
+            },
+            "web_sources": [
+                "https://www.conservatives.com",
+                "https://en.wikipedia.org/wiki/Conservative_Party_(UK)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.98,
+            "search_timestamp": "2025-10-13T13:21:42.549652"
+        },
+        {
+            "original_term": "Partido Laborista",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Major left-wing political party in UK",
+            "tags": [
+                "#UK",
+                "#labour"
+            ],
+            "translations": {
+                "ko": "노동당",
+                "zh-CN": "工党",
+                "zh-TW": "工黨",
+                "en": "Labour Party",
+                "ja": "労働党",
+                "fr": "Parti travailliste",
+                "ru": "Лейбористская партия",
+                "it": "Partito Laburista",
+                "vi": "Đảng Lao động",
+                "ar": "حزب العمال",
+                "es": "Partido Laborista"
+            },
+            "web_sources": [
+                "https://labour.org.uk",
+                "https://en.wikipedia.org/wiki/Labour_Party_(UK)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.98,
+            "search_timestamp": "2025-10-13T13:21:42.549659"
+        },
+        {
+            "original_term": "Demócratas Liberales",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Liberal political party in UK",
+            "tags": [
+                "#UK",
+                "#liberal"
+            ],
+            "translations": {
+                "ko": "자유민주당",
+                "zh-CN": "自由民主党",
+                "zh-TW": "自由民主黨",
+                "en": "Liberal Democrats",
+                "ja": "自由民主党",
+                "fr": "Démocrates libéraux",
+                "ru": "Либеральные демократы",
+                "it": "Democratici Liberali",
+                "vi": "Đảng Dân chủ Tự do",
+                "ar": "الديمقراطيون الليبراليون",
+                "es": "Demócratas Liberales"
+            },
+            "web_sources": [
+                "https://www.libdems.org.uk",
+                "https://en.wikipedia.org/wiki/Liberal_Democrats_(UK)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.98,
+            "search_timestamp": "2025-10-13T13:21:42.549666"
+        },
+        {
+            "original_term": "El País Política",
+            "term_type": "company",
+            "primary_domain": "media",
+            "context": "Spanish media outlet specialized in politics",
+            "tags": [
+                "#Spain",
+                "#news"
+            ],
+            "translations": {
+                "ko": "엘 파이스 정치",
+                "zh-CN": "国家政治",
+                "zh-TW": "國家政治",
+                "en": "El País Politics",
+                "ja": "エル・パイス政治",
+                "fr": "El País Politique",
+                "ru": "Эль Паис Политика",
+                "it": "El País Politica",
+                "vi": "Chính trị El País",
+                "ar": "إل باييس السياسة",
+                "es": "El País Política"
+            },
+            "web_sources": [
+                "https://elpais.com",
+                "https://en.wikipedia.org/wiki/El_Pa%C3%ADs"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.92,
+            "search_timestamp": "2025-10-13T13:21:42.549673"
+        },
+        {
+            "original_term": "El Mundo Política",
+            "term_type": "company",
+            "primary_domain": "media",
+            "context": "Spanish newspaper covering politics",
+            "tags": [
+                "#Spain",
+                "#news"
+            ],
+            "translations": {
+                "ko": "엘 문도 폴리티카",
+                "zh-CN": "世界报政治",
+                "zh-TW": "世界報政治",
+                "en": "El Mundo Politics",
+                "ja": "エル・ムンド政治",
+                "fr": "El Mundo Politique",
+                "ru": "Эль Мундо Политика",
+                "it": "El Mundo Politica",
+                "vi": "El Mundo Chính trị",
+                "ar": "إل موندو السياسية",
+                "es": "El Mundo Política"
+            },
+            "web_sources": [
+                "https://www.elmundo.es",
+                "https://es.wikipedia.org/wiki/El_Mundo"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.92,
+            "search_timestamp": "2025-10-13T13:21:43.673568"
+        },
+        {
+            "original_term": "ABC Política",
+            "term_type": "company",
+            "primary_domain": "media",
+            "context": "Spanish daily newspaper focusing on politics",
+            "tags": [
+                "#Spain",
+                "#news"
+            ],
+            "translations": {
+                "ko": "ABC 폴리티카",
+                "zh-CN": "ABC政治",
+                "zh-TW": "ABC政治",
+                "en": "ABC Politics",
+                "ja": "ABC政治",
+                "fr": "ABC Politique",
+                "ru": "ABC Политика",
+                "it": "ABC Politica",
+                "vi": "ABC Chính trị",
+                "ar": "إيه بي سي السياسية",
+                "es": "ABC Política"
+            },
+            "web_sources": [
+                "https://www.abc.es",
+                "https://es.wikipedia.org/wiki/ABC_(periódico)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.92,
+            "search_timestamp": "2025-10-13T13:21:43.673584"
+        },
+        {
+            "original_term": "La Vanguardia",
+            "term_type": "company",
+            "primary_domain": "media",
+            "context": "Spanish newspaper with political coverage",
+            "tags": [
+                "#Spain",
+                "#news"
+            ],
+            "translations": {
+                "ko": "라 반과르디아",
+                "zh-CN": "先锋报",
+                "zh-TW": "先鋒報",
+                "en": "La Vanguardia",
+                "ja": "ラ・バングアルディア",
+                "fr": "La Vanguardia",
+                "ru": "Ла Вангуардия",
+                "it": "La Vanguardia",
+                "vi": "La Vanguardia",
+                "ar": "لا فانغارديا",
+                "es": "La Vanguardia"
+            },
+            "web_sources": [
+                "https://www.lavanguardia.com",
+                "https://es.wikipedia.org/wiki/La_Vanguardia"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:21:43.673592"
+        },
+        {
+            "original_term": "Politico Europa",
+            "term_type": "company",
+            "primary_domain": "media",
+            "context": "European edition of Politico news outlet",
+            "tags": [
+                "#Europe",
+                "#news"
+            ],
+            "translations": {
+                "ko": "폴리티코 유럽",
+                "zh-CN": "政治欧洲",
+                "zh-TW": "政治歐洲",
+                "en": "Politico Europe",
+                "ja": "ポリティコ・ヨーロッパ",
+                "fr": "Politico Europe",
+                "ru": "Политико Европа",
+                "it": "Politico Europa",
+                "vi": "Politico Châu Âu",
+                "ar": "بوليتيكو أوروبا",
+                "es": "Politico Europa"
+            },
+            "web_sources": [
+                "https://www.politico.eu",
+                "https://en.wikipedia.org/wiki/Politico"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:21:43.673632"
+        },
+        {
+            "original_term": "Real Instituto Elcano",
+            "term_type": "company",
+            "primary_domain": "think tank",
+            "context": "Spanish think tank for international affairs",
+            "tags": [
+                "#Spain",
+                "#research"
+            ],
+            "translations": {
+                "ko": "레알 인스티투토 엘카노",
+                "zh-CN": "皇家埃尔卡诺研究所",
+                "zh-TW": "皇家埃爾卡諾研究所",
+                "en": "Elcano Royal Institute",
+                "ja": "エルカノ王立研究所",
+                "fr": "Institut Royal Elcano",
+                "ru": "Королевский институт Элькано",
+                "it": "Istituto Reale Elcano",
+                "vi": "Viện Hoàng gia Elcano",
+                "ar": "المعهد الملكي إلكانو",
+                "es": "Real Instituto Elcano"
+            },
+            "web_sources": [
+                "https://www.realinstitutoelcano.org",
+                "https://es.wikipedia.org/wiki/Real_Instituto_Elcano"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:21:43.673646"
+        },
+        {
+            "original_term": "Fundación Alternativas",
+            "term_type": "company",
+            "primary_domain": "think tank",
+            "context": "Independent think tank in Spain",
+            "tags": [
+                "#Spain",
+                "#analysis"
+            ],
+            "translations": {
+                "ko": "알테르나티바스 재단",
+                "zh-CN": "替代基金会",
+                "zh-TW": "替代基金會",
+                "en": "Alternatives Foundation",
+                "ja": "アルテルナティバス財団",
+                "fr": "Fondation Alternatives",
+                "ru": "Фонд Альтернатив",
+                "it": "Fondazione Alternativas",
+                "vi": "Quỹ Alternativas",
+                "ar": "مؤسسة البدائل",
+                "es": "Fundación Alternativas"
+            },
+            "web_sources": [
+                "https://www.fundacionalternativas.org",
+                "https://es.wikipedia.org/wiki/Fundaci%C3%B3n_Alternativas"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:02.448729"
+        },
+        {
+            "original_term": "Casa Mediterráneo",
+            "term_type": "company",
+            "primary_domain": "think tank",
+            "context": "Promotes dialogue and understanding in Mediterranean",
+            "tags": [
+                "#Spain",
+                "#policy"
+            ],
+            "translations": {
+                "ko": "카사 메디테라네오",
+                "zh-CN": "地中海之家",
+                "zh-TW": "地中海之家",
+                "en": "Mediterranean House",
+                "ja": "カサ・メディテラネオ",
+                "fr": "Maison de la Méditerranée",
+                "ru": "Дом Средиземноморья",
+                "it": "Casa Mediterraneo",
+                "vi": "Nhà Địa Trung Hải",
+                "ar": "بيت البحر الأبيض المتوسط",
+                "es": "Casa Mediterráneo"
+            },
+            "web_sources": [
+                "https://www.casa-mediterraneo.es",
+                "https://es.wikipedia.org/wiki/Casa_Mediterr%C3%A1neo"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:02.448745"
+        },
+        {
+            "original_term": "Instituto de Estudios Estratégicos",
+            "term_type": "company",
+            "primary_domain": "think tank",
+            "context": "Spain's strategic studies institution",
+            "tags": [
+                "#Spain",
+                "#strategic"
+            ],
+            "translations": {
+                "ko": "전략 연구소",
+                "zh-CN": "战略研究所",
+                "zh-TW": "戰略研究所",
+                "en": "Institute for Strategic Studies",
+                "ja": "戦略研究所",
+                "fr": "Institut d'Études Stratégiques",
+                "ru": "Институт стратегических исследований",
+                "it": "Istituto di Studi Strategici",
+                "vi": "Viện Nghiên cứu Chiến lược",
+                "ar": "معهد الدراسات الاستراتيجية",
+                "es": "Instituto de Estudios Estratégicos"
+            },
+            "web_sources": [
+                "https://www.ieee.es",
+                "https://es.wikipedia.org/wiki/Instituto_Español_de_Estudios_Estratégicos"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:02.448752"
+        },
+        {
+            "original_term": "Naciones Unidas",
+            "term_type": "company",
+            "primary_domain": "international relations",
+            "context": "International organization for global stability",
+            "tags": [
+                "#ONU",
+                "#global",
+                "#politics"
+            ],
+            "translations": {
+                "ko": "유엔",
+                "zh-CN": "联合国",
+                "zh-TW": "聯合國",
+                "en": "United Nations",
+                "ja": "国際連合",
+                "fr": "Nations Unies",
+                "ru": "Организация Объединённых Наций",
+                "it": "Nazioni Unite",
+                "vi": "Liên Hợp Quốc",
+                "ar": "الأمم المتحدة",
+                "es": "Naciones Unidas"
+            },
+            "web_sources": [
+                "https://www.un.org",
+                "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_de_las_Naciones_Unidas"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 1,
+            "search_timestamp": "2025-10-13T13:22:02.448759"
+        },
+        {
+            "original_term": "OTAN",
+            "term_type": "company",
+            "primary_domain": "defense",
+            "context": "Military alliance for collective defense",
+            "tags": [
+                "#NATO",
+                "#security",
+                "#alliance"
+            ],
+            "translations": {
+                "ko": "북대서양 조약 기구",
+                "zh-CN": "北大西洋公约组织",
+                "zh-TW": "北大西洋公約組織",
+                "en": "NATO",
+                "ja": "北大西洋条約機構",
+                "fr": "OTAN",
+                "ru": "НАТО",
+                "it": "NATO",
+                "vi": "NATO",
+                "ar": "حلف شمال الأطلسي",
+                "es": "OTAN"
+            },
+            "web_sources": [
+                "https://www.nato.int",
+                "https://es.wikipedia.org/wiki/OTAN"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 1,
+            "search_timestamp": "2025-10-13T13:22:02.448765"
+        },
+        {
+            "original_term": "Unión Europea",
+            "term_type": "company",
+            "primary_domain": "international relations",
+            "context": "Political and economic union of member states",
+            "tags": [
+                "#EU",
+                "#integration",
+                "#cooperation"
+            ],
+            "translations": {
+                "ko": "유럽 연합",
+                "zh-CN": "欧盟",
+                "zh-TW": "歐盟",
+                "en": "European Union",
+                "ja": "欧州連合",
+                "fr": "Union européenne",
+                "ru": "Европейский союз",
+                "it": "Unione Europea",
+                "vi": "Liên minh Châu Âu",
+                "ar": "الاتحاد الأوروبي",
+                "es": "Unión Europea"
+            },
+            "web_sources": [
+                "https://www.europarl.europa.eu/portal/en",
+                "https://www.un.org/unispal/document/european-union-statement-security-council-meeting/"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 1,
+            "search_timestamp": "2025-10-13T13:22:28.996619"
+        },
+        {
+            "original_term": "OEA",
+            "term_type": "company",
+            "primary_domain": "international relations",
+            "context": "Organization for regional solidarity in Americas",
+            "tags": [
+                "#OAS",
+                "#hemispheric",
+                "#diplomacy"
+            ],
+            "translations": {
+                "ko": "미주기구",
+                "zh-CN": "美洲国家组织",
+                "zh-TW": "美洲國家組織",
+                "en": "Organization of American States",
+                "ja": "米州機構",
+                "fr": "Organisation des États américains",
+                "ru": "Организация американских государств",
+                "it": "Organizzazione degli Stati Americani",
+                "vi": "Tổ chức các quốc gia châu Mỹ",
+                "ar": "منظمة الدول الأمريكية",
+                "es": "Organización de los Estados Americanos"
+            },
+            "web_sources": [
+                "https://www.oas.org/en/about/index.asp",
+                "https://en.wikipedia.org/wiki/Organization_of_American_States"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:28.996634"
+        },
+        {
+            "original_term": "Partido Socialista Obrero Español",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Spanish political party led by Pedro Sánchez",
+            "tags": [
+                "#PSOE",
+                "#Spain",
+                "#socialism"
+            ],
+            "translations": {
+                "ko": "스페인 사회노동당",
+                "zh-CN": "西班牙工人社会党",
+                "zh-TW": "西班牙工人社會黨",
+                "en": "Spanish Socialist Workers' Party",
+                "ja": "スペイン社会労働党",
+                "fr": "Parti socialiste ouvrier espagnol",
+                "ru": "Испанская социалистическая рабочая партия",
+                "it": "Partito Socialista Operaio Spagnolo",
+                "vi": "Đảng Công nhân Xã hội chủ nghĩa Tây Ban Nha",
+                "ar": "حزب العمال الاشتراكي الإسباني",
+                "es": "Partido Socialista Obrero Español"
+            },
+            "web_sources": [
+                "https://www.psoe.es/",
+                "https://en.wikipedia.org/wiki/Spanish_Socialist_Workers%27_Party"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:28.996643"
+        },
+        {
+            "original_term": "Pedro Sánchez",
+            "term_type": "person",
+            "primary_domain": "politics",
+            "context": "Current President of Spain",
+            "tags": [
+                "#President",
+                "#Spain",
+                "#PSOE"
+            ],
+            "translations": {
+                "ko": "페드로 산체스",
+                "zh-CN": "佩德罗·桑切斯",
+                "zh-TW": "佩德羅·桑切斯",
+                "en": "Pedro Sánchez",
+                "ja": "ペドロ・サンチェス",
+                "fr": "Pedro Sánchez",
+                "ru": "Педро Санчес",
+                "it": "Pedro Sánchez",
+                "vi": "Pedro Sánchez",
+                "ar": "بيدرو سانشيز",
+                "es": "Pedro Sánchez"
+            },
+            "web_sources": [
+                "https://www.lamoncloa.gob.es/presidente/Paginas/index.aspx",
+                "https://en.wikipedia.org/wiki/Pedro_S%C3%A1nchez"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 1,
+            "search_timestamp": "2025-10-13T13:22:28.996649"
+        },
+        {
+            "original_term": "Partido Popular",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Major Spanish political party",
+            "tags": [
+                "#PP",
+                "#Spain",
+                "#conservative"
+            ],
+            "translations": {
+                "ko": "국민당",
+                "zh-CN": "人民党",
+                "zh-TW": "人民黨",
+                "en": "People's Party",
+                "ja": "国民党",
+                "fr": "Parti populaire",
+                "ru": "Народная партия",
+                "it": "Partito Popolare",
+                "vi": "Đảng Nhân dân",
+                "ar": "الحزب الشعبي",
+                "es": "Partido Popular"
+            },
+            "web_sources": [
+                "https://www.pp.es/",
+                "https://en.wikipedia.org/wiki/People%27s_Party_(Spain)"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.96,
+            "search_timestamp": "2025-10-13T13:22:28.996655"
+        },
+        {
+            "original_term": "Alberto Núñez Feijóo",
+            "term_type": "person",
+            "primary_domain": "politics",
+            "context": "Leader of the Partido Popular",
+            "tags": [
+                "#PP",
+                "#leader",
+                "#Spain"
+            ],
+            "translations": {
+                "ko": "알베르토 누녜스 페이호",
+                "zh-CN": "阿尔贝托·努涅斯·费霍",
+                "zh-TW": "阿爾貝托·努涅斯·費霍",
+                "en": "Alberto Núñez Feijóo",
+                "ja": "アルベルト・ヌーニェス・フェイホー",
+                "fr": "Alberto Núñez Feijóo",
+                "ru": "Альберто Нуньес Фейхоо",
+                "it": "Alberto Núñez Feijóo",
+                "vi": "Alberto Núñez Feijóo",
+                "ar": "ألبيرتو نونييز فייخو",
+                "es": "Alberto Núñez Feijóo"
+            },
+            "web_sources": [
+                "https://en.wikipedia.org/wiki/Alberto_N%C3%BA%C3%B1ez_Feij%C3%B3o",
+                "https://www.pp.es/"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:11.267208"
+        },
+        {
+            "original_term": "Vox",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Right-wing political party in Spain",
+            "tags": [
+                "#Spain",
+                "#right-wing"
+            ],
+            "translations": {
+                "ko": "Vox (스페인 정당)",
+                "zh-CN": "呼声党",
+                "zh-TW": "呼聲黨",
+                "en": "Vox",
+                "ja": "Vox (スペインの政党)",
+                "fr": "Vox",
+                "ru": "Вокс",
+                "it": "Vox",
+                "vi": "Vox (Đảng chính trị Tây Ban Nha)",
+                "ar": "فوكس",
+                "es": "Vox"
+            },
+            "web_sources": [
+                "https://en.wikipedia.org/wiki/Vox_(Spanish_political_party)",
+                "https://voxespana.es/"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:11.267224"
+        },
+        {
+            "original_term": "Podemos",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Left-wing political party in Spain",
+            "tags": [
+                "#Spain",
+                "#left-wing"
+            ],
+            "translations": {
+                "ko": "포데모스",
+                "zh-CN": "我们能",
+                "zh-TW": "我們能",
+                "en": "Podemos",
+                "ja": "ポデモス",
+                "fr": "Podemos",
+                "ru": "Подемос",
+                "it": "Podemos",
+                "vi": "Podemos",
+                "ar": "بوديموس",
+                "es": "Podemos"
+            },
+            "web_sources": [
+                "https://en.wikipedia.org/wiki/Podemos_(Spanish_political_party)",
+                "https://podemos.info/"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:11.267233"
+        },
+        {
+            "original_term": "Ciudadanos",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Centrist political party in Spain",
+            "tags": [
+                "#Spain",
+                "#centrist"
+            ],
+            "translations": {
+                "ko": "시우다다노스",
+                "zh-CN": "公民党",
+                "zh-TW": "公民黨",
+                "en": "Citizens",
+                "ja": "シウダダノス",
+                "fr": "Ciudadanos",
+                "ru": "Граждане",
+                "it": "Ciudadanos",
+                "vi": "Ciudadanos",
+                "ar": "مواطنون",
+                "es": "Ciudadanos"
+            },
+            "web_sources": [
+                "https://en.wikipedia.org/wiki/Citizens_(Spanish_political_party)",
+                "https://www.ciudadanos-cs.org/"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:11.267240"
+        },
+        {
+            "original_term": "Congreso",
+            "term_type": "company",
+            "primary_domain": "government",
+            "context": "Main legislative body of Spain",
+            "tags": [
+                "#Spain",
+                "#parliament"
+            ],
+            "translations": {
+                "ko": "국회",
+                "zh-CN": "议会",
+                "zh-TW": "議會",
+                "en": "Congress",
+                "ja": "国会",
+                "fr": "Congrès",
+                "ru": "Конгресс",
+                "it": "Congresso",
+                "vi": "Quốc hội",
+                "ar": "المؤتمر",
+                "es": "Congreso"
+            },
+            "web_sources": [
+                "https://www.congreso.es/",
+                "https://dictionary.cambridge.org/dictionary/spanish-english/congreso"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:11.267246"
+        },
+        {
+            "original_term": "Moncloa",
+            "term_type": "company",
+            "primary_domain": "government",
+            "context": "Official residence of the Spanish Prime Minister",
+            "tags": [
+                "#Spain",
+                "#executive"
+            ],
+            "translations": {
+                "ko": "몽클로아",
+                "zh-CN": "蒙克洛亚",
+                "zh-TW": "蒙克洛亞",
+                "en": "Moncloa",
+                "ja": "モンクローア",
+                "fr": "Moncloa",
+                "ru": "Монклоа",
+                "it": "Moncloa",
+                "vi": "Moncloa",
+                "ar": "مونكلوا",
+                "es": "Moncloa"
+            },
+            "web_sources": [
+                "https://en.wikipedia.org/wiki/Palace_of_Moncloa",
+                "https://www.lamoncloa.gob.es/lang/en/Paginas/index.aspx"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:50.259028"
+        },
+        {
+            "original_term": "Tribunal Constitucional",
+            "term_type": "company",
+            "primary_domain": "judiciary",
+            "context": "Highest constitutional court in Spain",
+            "tags": [
+                "#Spain",
+                "#court"
+            ],
+            "translations": {
+                "ko": "헌법재판소",
+                "zh-CN": "宪法法院",
+                "zh-TW": "憲法法院",
+                "en": "Constitutional Court",
+                "ja": "憲法裁判所",
+                "fr": "Tribunal constitutionnel",
+                "ru": "Конституционный суд",
+                "it": "Corte Costituzionale",
+                "vi": "Tòa án Hiến pháp",
+                "ar": "المحكمة الدستورية",
+                "es": "Tribunal Constitucional"
+            },
+            "web_sources": [
+                "https://www.tribunalconstitucional.es/",
+                "https://en.wikipedia.org/wiki/Constitutional_Court_of_Spain"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:50.259044"
+        },
+        {
+            "original_term": "CDU/CSU",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Major conservative political alliance in Germany",
+            "tags": [
+                "#Germany",
+                "#conservative"
+            ],
+            "translations": {
+                "ko": "CDU/CSU",
+                "zh-CN": "基民盟/基社盟",
+                "zh-TW": "基民盟/基社盟",
+                "en": "CDU/CSU",
+                "ja": "CDU/CSU",
+                "fr": "CDU/CSU",
+                "ru": "ХДС/ХСС",
+                "it": "CDU/CSU",
+                "vi": "CDU/CSU",
+                "ar": "CDU/CSU",
+                "es": "CDU/CSU"
+            },
+            "web_sources": [
+                "https://www.cducsu.de/",
+                "https://en.wikipedia.org/wiki/CDU/CSU"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:50.259052"
+        },
+        {
+            "original_term": "SPD",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Social democratic political party in Germany",
+            "tags": [
+                "#Germany",
+                "#socialdemocracy"
+            ],
+            "translations": {
+                "ko": "SPD",
+                "zh-CN": "社民党",
+                "zh-TW": "社民黨",
+                "en": "SPD",
+                "ja": "SPD",
+                "fr": "SPD",
+                "ru": "СДПГ",
+                "it": "SPD",
+                "vi": "SPD",
+                "ar": "SPD",
+                "es": "SPD"
+            },
+            "web_sources": [
+                "https://www.spd.de/",
+                "https://en.wikipedia.org/wiki/Social_Democratic_Party_of_Germany"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:50.259059"
+        },
+        {
+            "original_term": "AfD",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Right-wing political party in Germany",
+            "tags": [
+                "#Germany",
+                "#right-wing"
+            ],
+            "translations": {
+                "ko": "AfD",
+                "zh-CN": "德国另类选择党",
+                "zh-TW": "德國另類選擇黨",
+                "en": "AfD",
+                "ja": "AfD",
+                "fr": "AfD",
+                "ru": "АдГ",
+                "it": "AfD",
+                "vi": "AfD",
+                "ar": "حزب البديل من أجل ألمانيا",
+                "es": "AfD"
+            },
+            "web_sources": [
+                "https://www.afd.de/",
+                "https://en.wikipedia.org/wiki/Alternative_for_Germany"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:50.259065"
+        },
+        {
+            "original_term": "Die Linke",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Left-wing political party in Germany",
+            "tags": [
+                "#Germany",
+                "#left-wing"
+            ],
+            "translations": {
+                "ko": "디 링케",
+                "zh-CN": "左翼党",
+                "zh-TW": "左翼黨",
+                "en": "The Left",
+                "ja": "左翼党",
+                "fr": "La Gauche",
+                "ru": "Левые",
+                "it": "La Sinistra",
+                "vi": "Đảng Cánh Tả",
+                "ar": "اليسار",
+                "es": "La Izquierda"
+            },
+            "web_sources": [
+                "https://www.die-linke.de",
+                "https://en.wikipedia.org/wiki/The_Left_(Germany)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:39.556071"
+        },
+        {
+            "original_term": "La République En Marche!",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Centrist political party in France",
+            "tags": [
+                "#France",
+                "#centrist"
+            ],
+            "translations": {
+                "ko": "라 레퓌블리크 앙 마르슈",
+                "zh-CN": "共和国前进",
+                "zh-TW": "共和國前進",
+                "en": "The Republic On the Move",
+                "ja": "共和国前進",
+                "fr": "La République En Marche",
+                "ru": "Республика Вперед",
+                "it": "La Repubblica In Marcia",
+                "vi": "Nền Cộng Hòa Tiến Bước",
+                "ar": "الجمهورية إلى الأمام",
+                "es": "La República En Marcha"
+            },
+            "web_sources": [
+                "https://en-marche.fr",
+                "https://en.wikipedia.org/wiki/La_R%C3%A9publique_En_Marche!"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:39.556089"
+        },
+        {
+            "original_term": "Les Républicains",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Conservative political party in France",
+            "tags": [
+                "#France",
+                "#conservative"
+            ],
+            "translations": {
+                "ko": "레 레퓌블리캥",
+                "zh-CN": "共和党",
+                "zh-TW": "共和黨",
+                "en": "The Republicans",
+                "ja": "共和党",
+                "fr": "Les Républicains",
+                "ru": "Республиканцы",
+                "it": "I Repubblicani",
+                "vi": "Đảng Cộng Hòa",
+                "ar": "الجمهوريون",
+                "es": "Los Republicanos"
+            },
+            "web_sources": [
+                "https://www.republicains.fr",
+                "https://en.wikipedia.org/wiki/The_Republicans_(France)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:39.556099"
+        },
+        {
+            "original_term": "Rassemblement National",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Far-right political party in France",
+            "tags": [
+                "#France",
+                "#right-wing"
+            ],
+            "translations": {
+                "ko": "라상블망 나시오날",
+                "zh-CN": "国民联盟",
+                "zh-TW": "國民聯盟",
+                "en": "National Rally",
+                "ja": "国民連合",
+                "fr": "Rassemblement National",
+                "ru": "Национальное объединение",
+                "it": "Raggruppamento Nazionale",
+                "vi": "Tập hợp Quốc gia",
+                "ar": "التجمع الوطني",
+                "es": "Reagrupamiento Nacional"
+            },
+            "web_sources": [
+                "https://rassemblementnational.fr",
+                "https://en.wikipedia.org/wiki/National_Rally_(France)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:39.556106"
+        },
+        {
+            "original_term": "Partido Conservador",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Main conservative political party in UK",
+            "tags": [
+                "#UK",
+                "#conservative"
+            ],
+            "translations": {
+                "ko": "보수당",
+                "zh-CN": "保守党",
+                "zh-TW": "保守黨",
+                "en": "Conservative Party",
+                "ja": "保守党",
+                "fr": "Parti conservateur",
+                "ru": "Консервативная партия",
+                "it": "Partito Conservatore",
+                "vi": "Đảng Bảo thủ",
+                "ar": "حزب المحافظين",
+                "es": "Partido Conservador"
+            },
+            "web_sources": [
+                "https://www.conservatives.com",
+                "https://en.wikipedia.org/wiki/Conservative_Party_(UK)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:22:39.556113"
+        },
+        {
+            "original_term": "Partido Laborista",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Major left-wing political party in UK",
+            "tags": [
+                "#UK",
+                "#labour"
+            ],
+            "translations": {
+                "ko": "노동당",
+                "zh-CN": "工党",
+                "zh-TW": "工黨",
+                "en": "Labour Party",
+                "ja": "労働党",
+                "fr": "Parti travailliste",
+                "ru": "Лейбористская партия",
+                "it": "Partito Laburista",
+                "vi": "Đảng Lao động",
+                "ar": "حزب العمال",
+                "es": "Partido Laborista"
+            },
+            "web_sources": [
+                "https://www.labour.org.uk",
+                "https://en.wikipedia.org/wiki/Labour_Party_(UK)"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:00.772299"
+        },
+        {
+            "original_term": "Demócratas Liberales",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Liberal political party in UK",
+            "tags": [
+                "#UK",
+                "#liberal"
+            ],
+            "translations": {
+                "ko": "자유민주당",
+                "zh-CN": "自由民主党",
+                "zh-TW": "自由民主黨",
+                "en": "Liberal Democrats",
+                "ja": "自由民主党",
+                "fr": "Libéraux-démocrates",
+                "ru": "Либеральные демократы",
+                "it": "Liberal Democratici",
+                "vi": "Dân chủ Tự do",
+                "ar": "الديمقراطيون الليبراليون",
+                "es": "Demócratas Liberales"
+            },
+            "web_sources": [
+                "https://www.libdems.org.uk",
+                "https://en.wikipedia.org/wiki/Liberal_Democrats_(UK)"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:00.772315"
+        },
+        {
+            "original_term": "El País Política",
+            "term_type": "company",
+            "primary_domain": "media",
+            "context": "Spanish media outlet specialized in politics",
+            "tags": [
+                "#Spain",
+                "#news"
+            ],
+            "translations": {
+                "ko": "엘 파이스 정치",
+                "zh-CN": "《国家报》政治",
+                "zh-TW": "《國家報》政治",
+                "en": "El País Politics",
+                "ja": "エル・パイス政治",
+                "fr": "El País Politique",
+                "ru": "El País Политика",
+                "it": "El País Politica",
+                "vi": "El País Chính trị",
+                "ar": "ال بايس سياسة",
+                "es": "El País Política"
+            },
+            "web_sources": [
+                "https://elpais.com/",
+                "https://en.wikipedia.org/wiki/El_Pa%C3%ADs"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.85,
+            "search_timestamp": "2025-10-13T13:23:00.772324"
+        },
+        {
+            "original_term": "El Mundo Política",
+            "term_type": "company",
+            "primary_domain": "media",
+            "context": "Spanish newspaper covering politics",
+            "tags": [
+                "#Spain",
+                "#news"
+            ],
+            "translations": {
+                "ko": "엘 문도 정치",
+                "zh-CN": "《世界报》政治",
+                "zh-TW": "《世界報》政治",
+                "en": "El Mundo Politics",
+                "ja": "エル・ムンド政治",
+                "fr": "El Mundo Politique",
+                "ru": "El Mundo Политика",
+                "it": "El Mundo Politica",
+                "vi": "El Mundo Chính trị",
+                "ar": "الموندو سياسة",
+                "es": "El Mundo Política"
+            },
+            "web_sources": [
+                "https://www.elmundo.es/",
+                "https://en.wikipedia.org/wiki/El_Mundo_(Spain)"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.85,
+            "search_timestamp": "2025-10-13T13:23:00.772331"
+        },
+        {
+            "original_term": "ABC Política",
+            "term_type": "company",
+            "primary_domain": "media",
+            "context": "Spanish daily newspaper focusing on politics",
+            "tags": [
+                "#Spain",
+                "#news"
+            ],
+            "translations": {
+                "ko": "ABC 정치",
+                "zh-CN": "ABC 政治",
+                "zh-TW": "ABC 政治",
+                "en": "ABC Politics",
+                "ja": "ABC 政治",
+                "fr": "ABC Politique",
+                "ru": "ABC Политика",
+                "it": "ABC Politica",
+                "vi": "ABC Chính trị",
+                "ar": "ايه بي سي سياسة",
+                "es": "ABC Política"
+            },
+            "web_sources": [
+                "https://www.abc.es/",
+                "https://en.wikipedia.org/wiki/ABC_(newspaper)"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.85,
+            "search_timestamp": "2025-10-13T13:23:00.772337"
+        },
+        {
+            "original_term": "La Vanguardia",
+            "term_type": "company",
+            "primary_domain": "media",
+            "context": "Spanish newspaper with political coverage",
+            "tags": [
+                "#Spain",
+                "#news"
+            ],
+            "translations": {
+                "ko": "라 반과르디아",
+                "zh-CN": "先锋报",
+                "zh-TW": "先鋒報",
+                "en": "La Vanguardia",
+                "ja": "ラ・バングアルディア",
+                "fr": "La Vanguardia",
+                "ru": "Ла Вангуардия",
+                "it": "La Vanguardia",
+                "vi": "La Vanguardia",
+                "ar": "لا فانغارديا",
+                "es": "La Vanguardia"
+            },
+            "web_sources": [
+                "https://www.lavanguardia.com",
+                "https://en.wikipedia.org/wiki/La_Vanguardia"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:23.567230"
+        },
+        {
+            "original_term": "Politico Europa",
+            "term_type": "company",
+            "primary_domain": "media",
+            "context": "European edition of Politico news outlet",
+            "tags": [
+                "#Europe",
+                "#news"
+            ],
+            "translations": {
+                "ko": "폴리티코 유럽",
+                "zh-CN": "欧洲政治",
+                "zh-TW": "歐洲政治",
+                "en": "Politico Europe",
+                "ja": "ポリティコ・ヨーロッパ",
+                "fr": "Politico Europe",
+                "ru": "Политико Европа",
+                "it": "Politico Europa",
+                "vi": "Politico Châu Âu",
+                "ar": "بوليتيكو أوروبا",
+                "es": "Politico Europa"
+            },
+            "web_sources": [
+                "https://www.politico.eu",
+                "https://en.wikipedia.org/wiki/Politico_(website)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:23.567245"
+        },
+        {
+            "original_term": "Real Instituto Elcano",
+            "term_type": "company",
+            "primary_domain": "think tank",
+            "context": "Spanish think tank for international affairs",
+            "tags": [
+                "#Spain",
+                "#research"
+            ],
+            "translations": {
+                "ko": "레알 인스티투토 엘카노",
+                "zh-CN": "皇家埃尔卡诺研究所",
+                "zh-TW": "皇家埃爾卡諾研究所",
+                "en": "Elcano Royal Institute",
+                "ja": "エルカノ王立研究所",
+                "fr": "Institut royal Elcano",
+                "ru": "Королевский институт Элькано",
+                "it": "Istituto Reale Elcano",
+                "vi": "Viện Hoàng gia Elcano",
+                "ar": "المعهد الملكي إلكانو",
+                "es": "Real Instituto Elcano"
+            },
+            "web_sources": [
+                "https://www.realinstitutoelcano.org",
+                "https://en.wikipedia.org/wiki/Elcano_Royal_Institute"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:23.567253"
+        },
+        {
+            "original_term": "Fundación Alternativas",
+            "term_type": "company",
+            "primary_domain": "think tank",
+            "context": "Independent think tank in Spain",
+            "tags": [
+                "#Spain",
+                "#analysis"
+            ],
+            "translations": {
+                "ko": "푼다시온 알테르나티바스",
+                "zh-CN": "替代基金会",
+                "zh-TW": "替代基金會",
+                "en": "Alternatives Foundation",
+                "ja": "ファンダシオン・アルテルナティバス",
+                "fr": "Fondation Alternatives",
+                "ru": "Фонд Альтернативы",
+                "it": "Fondazione Alternativas",
+                "vi": "Quỹ Alternativas",
+                "ar": "مؤسسة البدائل",
+                "es": "Fundación Alternativas"
+            },
+            "web_sources": [
+                "https://www.fundacionalternativas.org",
+                "https://en.wikipedia.org/wiki/Fundaci%C3%B3n_Alternativas"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:23.567260"
+        },
+        {
+            "original_term": "Casa Mediterráneo",
+            "term_type": "company",
+            "primary_domain": "think tank",
+            "context": "Promotes dialogue and understanding in Mediterranean",
+            "tags": [
+                "#Spain",
+                "#policy"
+            ],
+            "translations": {
+                "ko": "카사 메디테라네오",
+                "zh-CN": "地中海之家",
+                "zh-TW": "地中海之家",
+                "en": "Casa Mediterráneo",
+                "ja": "カサ・メディテラネオ",
+                "fr": "Maison de la Méditerranée",
+                "ru": "Дом Средиземноморья",
+                "it": "Casa Mediterraneo",
+                "vi": "Nhà Địa Trung Hải",
+                "ar": "بيت البحر الأبيض المتوسط",
+                "es": "Casa Mediterráneo"
+            },
+            "web_sources": [
+                "https://www.casa-mediterraneo.es",
+                "https://en.wikipedia.org/wiki/Casa_Mediterr%C3%A1neo"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:23.567266"
+        },
+        {
+            "original_term": "Instituto de Estudios Estratégicos",
+            "term_type": "company",
+            "primary_domain": "think tank",
+            "context": "Spain's strategic studies institution",
+            "tags": [
+                "#Spain",
+                "#strategic"
+            ],
+            "translations": {
+                "ko": "전략 연구소",
+                "zh-CN": "战略研究所",
+                "zh-TW": "戰略研究所",
+                "en": "Institute for Strategic Studies",
+                "ja": "戦略研究所",
+                "fr": "Institut d'études stratégiques",
+                "ru": "Институт стратегических исследований",
+                "it": "Istituto di Studi Strategici",
+                "vi": "Viện Nghiên cứu Chiến lược",
+                "ar": "معهد الدراسات الاستراتيجية",
+                "es": "Instituto de Estudios Estratégicos"
+            },
+            "web_sources": [
+                "https://ieee.es/",
+                "https://en.wikipedia.org/wiki/Instituto_Espa%C3%B1ol_de_Estudios_Estrat%C3%A9gicos"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:28.632694"
+        },
+        {
+            "original_term": "Naciones Unidas",
+            "term_type": "company",
+            "primary_domain": "international relations",
+            "context": "International organization for global stability",
+            "tags": [
+                "#ONU",
+                "#global",
+                "#politics"
+            ],
+            "translations": {
+                "ko": "국제 연합",
+                "zh-CN": "联合国",
+                "zh-TW": "聯合國",
+                "en": "United Nations",
+                "ja": "国際連合",
+                "fr": "Nations Unies",
+                "ru": "Организация Объединённых Наций",
+                "it": "Nazioni Unite",
+                "vi": "Liên Hợp Quốc",
+                "ar": "الأمم المتحدة",
+                "es": "Naciones Unidas"
+            },
+            "web_sources": [
+                "https://www.un.org/en/",
+                "https://www.un.org/es/"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 1,
+            "search_timestamp": "2025-10-13T13:23:28.632711"
+        },
+        {
+            "original_term": "OTAN",
+            "term_type": "company",
+            "primary_domain": "defense",
+            "context": "Military alliance for collective defense",
+            "tags": [
+                "#NATO",
+                "#security",
+                "#alliance"
+            ],
+            "translations": {
+                "ko": "북대서양 조약 기구",
+                "zh-CN": "北大西洋公约组织",
+                "zh-TW": "北大西洋公約組織",
+                "en": "NATO (North Atlantic Treaty Organization)",
+                "ja": "北大西洋条約機構",
+                "fr": "OTAN (Organisation du traité de l'Atlantique Nord)",
+                "ru": "НАТО (Организация Североатлантического договора)",
+                "it": "NATO (Organizzazione del Trattato dell'Atlantico del Nord)",
+                "vi": "NATO (Tổ chức Hiệp ước Bắc Đại Tây Dương)",
+                "ar": "الناتو (منظمة حلف شمال الأطلسي)",
+                "es": "OTAN (Organización del Tratado del Atlántico Norte)"
+            },
+            "web_sources": [
+                "https://www.nato.int/",
+                "https://fr.wikipedia.org/wiki/Organisation_du_trait%C3%A9_de_l%27Atlantique_nord"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 1,
+            "search_timestamp": "2025-10-13T13:23:28.632745"
+        },
+        {
+            "original_term": "Unión Europea",
+            "term_type": "company",
+            "primary_domain": "international relations",
+            "context": "Political and economic union of member states",
+            "tags": [
+                "#EU",
+                "#integration",
+                "#cooperation"
+            ],
+            "translations": {
+                "ko": "유럽 ​​연합",
+                "zh-CN": "欧盟",
+                "zh-TW": "歐盟",
+                "en": "European Union",
+                "ja": "欧州連合",
+                "fr": "Union européenne",
+                "ru": "Европейский союз",
+                "it": "Unione Europea",
+                "vi": "Liên minh Châu Âu",
+                "ar": "الاتحاد الأوروبي",
+                "es": "Unión Europea"
+            },
+            "web_sources": [
+                "https://european-union.europa.eu/index_en",
+                "https://es.wikipedia.org/wiki/Uni%C3%B3n_Europea"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 1,
+            "search_timestamp": "2025-10-13T13:23:28.632759"
+        },
+        {
+            "original_term": "OEA",
+            "term_type": "company",
+            "primary_domain": "international relations",
+            "context": "Organization for regional solidarity in Americas",
+            "tags": [
+                "#OAS",
+                "#hemispheric",
+                "#diplomacy"
+            ],
+            "translations": {
+                "ko": "미주기구",
+                "zh-CN": "美洲国家组织",
+                "zh-TW": "美洲國家組織",
+                "en": "OAS (Organization of American States)",
+                "ja": "米州機構",
+                "fr": "OEA (Organisation des États Américains)",
+                "ru": "ОАГ (Организация американских государств)",
+                "it": "OSA (Organizzazione degli Stati Americani)",
+                "vi": "OAS (Tổ chức các Quốc gia Châu Mỹ)",
+                "ar": "منظمة الدول الأمريكية",
+                "es": "OEA (Organización de los Estados Americanos)"
+            },
+            "web_sources": [
+                "https://www.oas.org/en/",
+                "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_de_los_Estados_Americanos"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 1,
+            "search_timestamp": "2025-10-13T13:23:28.632769"
+        },
+        {
+            "original_term": "Partido Socialista Obrero Español",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Spanish political party led by Pedro Sánchez",
+            "tags": [
+                "#PSOE",
+                "#Spain",
+                "#socialism"
+            ],
+            "translations": {
+                "ko": "스페인 사회노동당",
+                "zh-CN": "西班牙工人社会党",
+                "zh-TW": "西班牙工人社會黨",
+                "en": "Spanish Socialist Workers' Party",
+                "ja": "スペイン社会労働党",
+                "fr": "Parti socialiste ouvrier espagnol",
+                "ru": "Испанская социалистическая рабочая партия",
+                "it": "Partito Socialista Operaio Spagnolo",
+                "vi": "Đảng Công nhân Xã hội chủ nghĩa Tây Ban Nha",
+                "ar": "حزب العمال الاشتراكي الإسباني",
+                "es": "Partido Socialista Obrero Español"
+            },
+            "web_sources": [
+                "https://www.psoe.es/",
+                "https://en.wikipedia.org/wiki/Spanish_Socialist_Workers%27_Party",
+                "https://www.pes.eu/member/partido-socialista-obrero-espanol/"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.98,
+            "search_timestamp": "2025-10-13T13:23:37.585166"
+        },
+        {
+            "original_term": "Pedro Sánchez",
+            "term_type": "person",
+            "primary_domain": "politics",
+            "context": "Current President of Spain",
+            "tags": [
+                "#President",
+                "#Spain",
+                "#PSOE"
+            ],
+            "translations": {
+                "ko": "페드로 산체스",
+                "zh-CN": "佩德罗·桑切斯",
+                "zh-TW": "佩德羅·桑切斯",
+                "en": "Pedro Sánchez",
+                "ja": "ペドロ・サンチェス",
+                "fr": "Pedro Sánchez",
+                "ru": "Педро Санчес",
+                "it": "Pedro Sánchez",
+                "vi": "Pedro Sánchez",
+                "ar": "بيدرو سانشيز",
+                "es": "Pedro Sánchez"
+            },
+            "web_sources": [
+                "https://en.wikipedia.org/wiki/Pedro_S%C3%A1nchez",
+                "https://www.psoe.es/"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 1,
+            "search_timestamp": "2025-10-13T13:23:37.585182"
+        },
+        {
+            "original_term": "Partido Popular",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Major Spanish political party",
+            "tags": [
+                "#PP",
+                "#Spain",
+                "#conservative"
+            ],
+            "translations": {
+                "ko": "국민당",
+                "zh-CN": "人民党",
+                "zh-TW": "人民黨",
+                "en": "People's Party",
+                "ja": "国民党",
+                "fr": "Parti populaire",
+                "ru": "Народная партия",
+                "it": "Partito Popolare",
+                "vi": "Đảng Nhân dân",
+                "ar": "حزب الشعب",
+                "es": "Partido Popular"
+            },
+            "web_sources": [
+                "https://www.pp.es/",
+                "https://en.wikipedia.org/wiki/People%27s_Party_(Spain)"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.96,
+            "search_timestamp": "2025-10-13T13:23:37.585191"
+        },
+        {
+            "original_term": "Alberto Núñez Feijóo",
+            "term_type": "person",
+            "primary_domain": "politics",
+            "context": "Leader of the Partido Popular",
+            "tags": [
+                "#PP",
+                "#leader",
+                "#Spain"
+            ],
+            "translations": {
+                "ko": "알베르토 누녜스 페이호",
+                "zh-CN": "阿尔贝托·努涅斯·费霍",
+                "zh-TW": "阿爾貝托·努涅斯·費霍",
+                "en": "Alberto Núñez Feijóo",
+                "ja": "アルベルト・ヌーニェス・フェイホー",
+                "fr": "Alberto Núñez Feijóo",
+                "ru": "Альберто Нуньес Фейхоо",
+                "it": "Alberto Núñez Feijóo",
+                "vi": "Alberto Núñez Feijóo",
+                "ar": "ألبيرتو نونييث فייخو",
+                "es": "Alberto Núñez Feijóo"
+            },
+            "web_sources": [
+                "https://en.wikipedia.org/wiki/Alberto_N%C3%BA%C3%B1ez_Feij%C3%B3o",
+                "https://www.pp.es/"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 1,
+            "search_timestamp": "2025-10-13T13:23:37.585198"
+        },
+        {
+            "original_term": "Vox",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Right-wing political party in Spain",
+            "tags": [
+                "#Spain",
+                "#right-wing"
+            ],
+            "translations": {
+                "ko": "Vox",
+                "zh-CN": "呼声党",
+                "zh-TW": "呼聲黨",
+                "en": "Vox",
+                "ja": "Vox",
+                "fr": "Vox",
+                "ru": "Вокс",
+                "it": "Vox",
+                "vi": "Vox",
+                "ar": "فوكس",
+                "es": "Vox"
+            },
+            "web_sources": [
+                "https://www.voxespana.es/",
+                "https://en.wikipedia.org/wiki/Vox_(Spanish_political_party)"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:37.585204"
+        },
+        {
+            "original_term": "Podemos",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Left-wing political party in Spain",
+            "tags": [
+                "#Spain",
+                "#left-wing"
+            ],
+            "translations": {
+                "ko": "포데모스",
+                "zh-CN": "我们能党",
+                "zh-TW": "我們能黨",
+                "en": "Podemos",
+                "ja": "ポデモス",
+                "fr": "Podemos",
+                "ru": "Подемос",
+                "it": "Podemos",
+                "vi": "Podemos",
+                "ar": "بوديموس",
+                "es": "Podemos"
+            },
+            "web_sources": [
+                "https://podemos.info",
+                "https://en.wikipedia.org/wiki/Podemos_(Spanish_political_party)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.98,
+            "search_timestamp": "2025-10-13T13:23:50.570657"
+        },
+        {
+            "original_term": "Ciudadanos",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Centrist political party in Spain",
+            "tags": [
+                "#Spain",
+                "#centrist"
+            ],
+            "translations": {
+                "ko": "시우다다노스",
+                "zh-CN": "公民党",
+                "zh-TW": "公民黨",
+                "en": "Citizens",
+                "ja": "シウダダノス",
+                "fr": "Citoyens",
+                "ru": "Сьюдаданос",
+                "it": "Cittadini",
+                "vi": "Công dân",
+                "ar": "سيودادانوس",
+                "es": "Ciudadanos"
+            },
+            "web_sources": [
+                "https://www.ciudadanos-cs.org",
+                "https://en.wikipedia.org/wiki/Citizens_(Spanish_political_party)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.97,
+            "search_timestamp": "2025-10-13T13:23:50.570671"
+        },
+        {
+            "original_term": "Congreso",
+            "term_type": "company",
+            "primary_domain": "government",
+            "context": "Main legislative body of Spain",
+            "tags": [
+                "#Spain",
+                "#parliament"
+            ],
+            "translations": {
+                "ko": "국회",
+                "zh-CN": "国会",
+                "zh-TW": "國會",
+                "en": "Congress",
+                "ja": "国会",
+                "fr": "Congrès",
+                "ru": "Конгресс",
+                "it": "Congresso",
+                "vi": "Quốc hội",
+                "ar": "الكونغرس",
+                "es": "Congreso"
+            },
+            "web_sources": [
+                "https://www.congreso.es",
+                "https://en.wikipedia.org/wiki/Cortes_Generales"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:50.570679"
+        },
+        {
+            "original_term": "Moncloa",
+            "term_type": "company",
+            "primary_domain": "government",
+            "context": "Official residence of the Spanish Prime Minister",
+            "tags": [
+                "#Spain",
+                "#executive"
+            ],
+            "translations": {
+                "ko": "몬클로아",
+                "zh-CN": "蒙克洛亚",
+                "zh-TW": "蒙克洛亞",
+                "en": "Moncloa",
+                "ja": "モンクロア",
+                "fr": "Moncloa",
+                "ru": "Монклоа",
+                "it": "Moncloa",
+                "vi": "Moncloa",
+                "ar": "مونكلوا",
+                "es": "Moncloa"
+            },
+            "web_sources": [
+                "https://www.lamoncloa.gob.es",
+                "https://en.wikipedia.org/wiki/Palace_of_Moncloa"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.96,
+            "search_timestamp": "2025-10-13T13:23:50.570686"
+        },
+        {
+            "original_term": "Tribunal Constitucional",
+            "term_type": "company",
+            "primary_domain": "judiciary",
+            "context": "Highest constitutional court in Spain",
+            "tags": [
+                "#Spain",
+                "#court"
+            ],
+            "translations": {
+                "ko": "헌법 재판소",
+                "zh-CN": "宪法法院",
+                "zh-TW": "憲法法院",
+                "en": "Constitutional Court",
+                "ja": "憲法裁判所",
+                "fr": "Tribunal constitutionnel",
+                "ru": "Конституционный суд",
+                "it": "Corte costituzionale",
+                "vi": "Tòa án Hiến pháp",
+                "ar": "المحكمة الدستورية",
+                "es": "Tribunal Constitucional"
+            },
+            "web_sources": [
+                "https://www.tribunalconstitucional.es",
+                "https://en.wikipedia.org/wiki/Constitutional_Court_of_Spain"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.97,
+            "search_timestamp": "2025-10-13T13:23:50.570692"
+        },
+        {
+            "original_term": "CDU/CSU",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Major conservative political alliance in Germany",
+            "tags": [
+                "#Germany",
+                "#conservative"
+            ],
+            "translations": {
+                "ko": "기독교민주연합/기독교사회연합",
+                "zh-CN": "基民盟/基社盟",
+                "zh-TW": "基民盟/基社盟",
+                "en": "CDU/CSU",
+                "ja": "CDU/CSU",
+                "fr": "CDU/CSU",
+                "ru": "ХДС/ХСС",
+                "it": "CDU/CSU",
+                "vi": "CDU/CSU",
+                "ar": "الاتحاد الديمقراطي المسيحي/الاتحاد الاجتماعي المسيحي",
+                "es": "CDU/CSU"
+            },
+            "web_sources": [
+                "https://www.cdu.de",
+                "https://en.wikipedia.org/wiki/CDU/CSU",
+                "https://www.csu.de"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:53.108372"
+        },
+        {
+            "original_term": "SPD",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Social democratic political party in Germany",
+            "tags": [
+                "#Germany",
+                "#socialdemocracy"
+            ],
+            "translations": {
+                "ko": "사회민주당",
+                "zh-CN": "社民党",
+                "zh-TW": "社民黨",
+                "en": "SPD",
+                "ja": "SPD",
+                "fr": "SPD",
+                "ru": "СДПГ",
+                "it": "SPD",
+                "vi": "SPD",
+                "ar": "الحزب الديمقراطي الاجتماعي",
+                "es": "SPD"
+            },
+            "web_sources": [
+                "https://www.spd.de",
+                "https://en.wikipedia.org/wiki/Social_Democratic_Party_of_Germany"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:53.108386"
+        },
+        {
+            "original_term": "AfD",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Right-wing political party in Germany",
+            "tags": [
+                "#Germany",
+                "#right-wing"
+            ],
+            "translations": {
+                "ko": "독일을 위한 대안",
+                "zh-CN": "德国另类选择",
+                "zh-TW": "德國另類選擇",
+                "en": "AfD",
+                "ja": "AfD",
+                "fr": "AfD",
+                "ru": "АдГ",
+                "it": "AfD",
+                "vi": "AfD",
+                "ar": "البديل من أجل ألمانيا",
+                "es": "AfD"
+            },
+            "web_sources": [
+                "https://www.afd.de",
+                "https://en.wikipedia.org/wiki/Alternative_for_Germany"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:53.108393"
+        },
+        {
+            "original_term": "Die Linke",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Left-wing political party in Germany",
+            "tags": [
+                "#Germany",
+                "#left-wing"
+            ],
+            "translations": {
+                "ko": "좌파당",
+                "zh-CN": "左翼党",
+                "zh-TW": "左翼黨",
+                "en": "The Left",
+                "ja": "左翼党",
+                "fr": "Die Linke",
+                "ru": "Левые",
+                "it": "Die Linke",
+                "vi": "Die Linke",
+                "ar": "حزب اليسار",
+                "es": "Die Linke"
+            },
+            "web_sources": [
+                "https://www.die-linke.de",
+                "https://en.wikipedia.org/wiki/The_Left_(Germany)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:53.108399"
+        },
+        {
+            "original_term": "La République En Marche!",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Centrist political party in France",
+            "tags": [
+                "#France",
+                "#centrist"
+            ],
+            "translations": {
+                "ko": "전진하는 공화국",
+                "zh-CN": "共和国前进",
+                "zh-TW": "共和國前進",
+                "en": "La République En Marche!",
+                "ja": "共和国前進",
+                "fr": "La République En Marche!",
+                "ru": "Республика вперёд!",
+                "it": "La République En Marche!",
+                "vi": "La République En Marche!",
+                "ar": "الجمهورية إلى الأمام",
+                "es": "La République En Marche!"
+            },
+            "web_sources": [
+                "https://en-marche.fr",
+                "https://en.wikipedia.org/wiki/La_République_En_Marche!"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:53.108405"
+        },
+        {
+            "original_term": "Les Républicains",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Conservative political party in France",
+            "tags": [
+                "#France",
+                "#conservative"
+            ],
+            "translations": {
+                "ko": "공화당",
+                "zh-CN": "共和党",
+                "zh-TW": "共和黨",
+                "en": "The Republicans",
+                "ja": "共和党",
+                "fr": "Les Républicains",
+                "ru": "Республиканцы",
+                "it": "I Repubblicani",
+                "vi": "Đảng Những người Cộng hòa",
+                "ar": "الجمهوريون",
+                "es": "Los Republicanos"
+            },
+            "web_sources": [
+                "https://www.republicains.fr",
+                "https://en.wikipedia.org/wiki/The_Republicans_(France)"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:51.424136"
+        },
+        {
+            "original_term": "Rassemblement National",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Far-right political party in France",
+            "tags": [
+                "#France",
+                "#right-wing"
+            ],
+            "translations": {
+                "ko": "국민연합",
+                "zh-CN": "国民联盟",
+                "zh-TW": "國民聯盟",
+                "en": "National Rally",
+                "ja": "国民連合",
+                "fr": "Rassemblement National",
+                "ru": "Национальное объединение",
+                "it": "Raggruppamento Nazionale",
+                "vi": "Tập hợp Quốc gia",
+                "ar": "التجمع الوطني",
+                "es": "Agrupación Nacional"
+            },
+            "web_sources": [
+                "https://rassemblementnational.fr/",
+                "https://en.wikipedia.org/wiki/National_Rally"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:51.424152"
+        },
+        {
+            "original_term": "Partido Conservador",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Main conservative political party in UK",
+            "tags": [
+                "#UK",
+                "#conservative"
+            ],
+            "translations": {
+                "ko": "보수당",
+                "zh-CN": "保守党",
+                "zh-TW": "保守黨",
+                "en": "Conservative Party",
+                "ja": "保守党",
+                "fr": "Parti conservateur",
+                "ru": "Консервативная партия",
+                "it": "Partito Conservatore",
+                "vi": "Đảng Bảo thủ",
+                "ar": "حزب المحافظين",
+                "es": "Partido Conservador"
+            },
+            "web_sources": [
+                "https://www.conservatives.com/",
+                "https://en.wikipedia.org/wiki/Conservative_Party_(UK)"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:51.424160"
+        },
+        {
+            "original_term": "Partido Laborista",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Major left-wing political party in UK",
+            "tags": [
+                "#UK",
+                "#labour"
+            ],
+            "translations": {
+                "ko": "노동당",
+                "zh-CN": "工党",
+                "zh-TW": "工黨",
+                "en": "Labour Party",
+                "ja": "労働党",
+                "fr": "Parti travailliste",
+                "ru": "Лейбористская партия",
+                "it": "Partito Laburista",
+                "vi": "Đảng Lao động",
+                "ar": "حزب العمال",
+                "es": "Partido Laborista"
+            },
+            "web_sources": [
+                "https://labour.org.uk/",
+                "https://en.wikipedia.org/wiki/Labour_Party_(UK)"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:51.424167"
+        },
+        {
+            "original_term": "Demócratas Liberales",
+            "term_type": "company",
+            "primary_domain": "politics",
+            "context": "Liberal political party in UK",
+            "tags": [
+                "#UK",
+                "#liberal"
+            ],
+            "translations": {
+                "ko": "자유민주당",
+                "zh-CN": "自由民主党",
+                "zh-TW": "自由民主黨",
+                "en": "Liberal Democrats",
+                "ja": "自由民主党",
+                "fr": "Libéraux-démocrates",
+                "ru": "Либеральные демократы",
+                "it": "Liberal Democratici",
+                "vi": "Dân chủ Tự do",
+                "ar": "الديمقراطيون الأحرار",
+                "es": "Liberal Demócratas"
+            },
+            "web_sources": [
+                "https://www.libdems.org.uk/",
+                "https://en.wikipedia.org/wiki/Liberal_Democrats_(UK)"
+            ],
+            "source": "gemini_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:23:51.424174"
+        },
+        {
+            "original_term": "El País Política",
+            "term_type": "company",
+            "primary_domain": "media",
+            "context": "Spanish media outlet specialized in politics",
+            "tags": [
+                "#Spain",
+                "#news"
+            ],
+            "translations": {
+                "ko": "엘 파이스 정치",
+                "zh-CN": "国家报政治",
+                "zh-TW": "國家報政治",
+                "en": "El País Politics",
+                "ja": "エル・パイス政治",
+                "fr": "El País Politique",
+                "ru": "Эль Паис Политика",
+                "it": "El País Politica",
+                "vi": "Chính trị El País",
+                "ar": "السياسة في إل باييس",
+                "es": "El País Política"
+            },
+            "web_sources": [
+                "https://elpais.com",
+                "https://en.wikipedia.org/wiki/El_Pa%C3%ADs"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:24:09.935899"
+        },
+        {
+            "original_term": "El Mundo Política",
+            "term_type": "company",
+            "primary_domain": "media",
+            "context": "Spanish newspaper covering politics",
+            "tags": [
+                "#Spain",
+                "#news"
+            ],
+            "translations": {
+                "ko": "엘 문도 정치",
+                "zh-CN": "世界报政治",
+                "zh-TW": "世界報政治",
+                "en": "El Mundo Politics",
+                "ja": "エル・ムンド政治",
+                "fr": "El Mundo Politique",
+                "ru": "Эль Мундо Политика",
+                "it": "El Mundo Politica",
+                "vi": "Chính trị El Mundo",
+                "ar": "السياسة في إل موندو",
+                "es": "El Mundo Política"
+            },
+            "web_sources": [
+                "https://elmundo.es",
+                "https://en.wikipedia.org/wiki/El_Mundo_(Spain)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:24:09.935913"
+        },
+        {
+            "original_term": "ABC Política",
+            "term_type": "company",
+            "primary_domain": "media",
+            "context": "Spanish daily newspaper focusing on politics",
+            "tags": [
+                "#Spain",
+                "#news"
+            ],
+            "translations": {
+                "ko": "ABC 정치",
+                "zh-CN": "ABC政治",
+                "zh-TW": "ABC政治",
+                "en": "ABC Politics",
+                "ja": "ABC政治",
+                "fr": "ABC Politique",
+                "ru": "ABC Политика",
+                "it": "ABC Politica",
+                "vi": "Chính trị ABC",
+                "ar": "السياسة في ABC",
+                "es": "ABC Política"
+            },
+            "web_sources": [
+                "https://abc.es",
+                "https://en.wikipedia.org/wiki/ABC_(newspaper)"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:24:09.935921"
+        },
+        {
+            "original_term": "La Vanguardia",
+            "term_type": "company",
+            "primary_domain": "media",
+            "context": "Spanish newspaper with political coverage",
+            "tags": [
+                "#Spain",
+                "#news"
+            ],
+            "translations": {
+                "ko": "라 반구아르디아",
+                "zh-CN": "先锋报",
+                "zh-TW": "先鋒報",
+                "en": "La Vanguardia",
+                "ja": "ラ・バンガルディア",
+                "fr": "La Vanguardia",
+                "ru": "Ла Вангуардия",
+                "it": "La Vanguardia",
+                "vi": "La Vanguardia",
+                "ar": "لا فانغارديا",
+                "es": "La Vanguardia"
+            },
+            "web_sources": [
+                "https://lavanguardia.com",
+                "https://en.wikipedia.org/wiki/La_Vanguardia"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:24:09.935927"
+        },
+        {
+            "original_term": "Politico Europa",
+            "term_type": "company",
+            "primary_domain": "media",
+            "context": "European edition of Politico news outlet",
+            "tags": [
+                "#Europe",
+                "#news"
+            ],
+            "translations": {
+                "ko": "폴리티코 유럽",
+                "zh-CN": "欧洲政治",
+                "zh-TW": "歐洲政治",
+                "en": "Politico Europe",
+                "ja": "ポリティコ・ヨーロッパ",
+                "fr": "Politico Europe",
+                "ru": "Политико Европа",
+                "it": "Politico Europa",
+                "vi": "Politico Châu Âu",
+                "ar": "بوليتيكو أوروبا",
+                "es": "Politico Europa"
+            },
+            "web_sources": [
+                "https://www.politico.eu",
+                "https://en.wikipedia.org/wiki/Politico_Europe"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:24:09.935933"
+        },
+        {
+            "original_term": "Real Instituto Elcano",
+            "term_type": "company",
+            "primary_domain": "think tank",
+            "context": "Spanish think tank for international affairs",
+            "tags": [
+                "#Spain",
+                "#research"
+            ],
+            "translations": {
+                "ko": "엘카노 왕립 연구소",
+                "zh-CN": "埃尔卡诺皇家研究所",
+                "zh-TW": "埃爾卡諾皇家研究所",
+                "en": "Elcano Royal Institute",
+                "ja": "エルカーノ王立研究所",
+                "fr": "Institut royal Elcano",
+                "ru": "Королевский институт Элькано",
+                "it": "Istituto Reale Elcano",
+                "vi": "Viện Hoàng gia Elcano",
+                "ar": "المعهد الملكي إلكانو",
+                "es": "Real Instituto Elcano"
+            },
+            "web_sources": [
+                "https://www.realinstitutoelcano.org",
+                "https://en.wikipedia.org/wiki/Elcano_Royal_Institute"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:24:11.754435"
+        },
+        {
+            "original_term": "Fundación Alternativas",
+            "term_type": "company",
+            "primary_domain": "think tank",
+            "context": "Independent think tank in Spain",
+            "tags": [
+                "#Spain",
+                "#analysis"
+            ],
+            "translations": {
+                "ko": "알테르나티바스 재단",
+                "zh-CN": "替代基金会",
+                "zh-TW": "替代基金會",
+                "en": "Alternatives Foundation",
+                "ja": "アルテルナティバス財団",
+                "fr": "Fondation Alternatives",
+                "ru": "Фонд Альтернативы",
+                "it": "Fondazione Alternativas",
+                "vi": "Quỹ Alternativas",
+                "ar": "مؤسسة البدائل",
+                "es": "Fundación Alternativas"
+            },
+            "web_sources": [
+                "https://www.fundacionalternativas.org",
+                "https://es.wikipedia.org/wiki/Fundaci%C3%B3n_Alternativas"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:24:11.754451"
+        },
+        {
+            "original_term": "Casa Mediterráneo",
+            "term_type": "company",
+            "primary_domain": "think tank",
+            "context": "Promotes dialogue and understanding in Mediterranean",
+            "tags": [
+                "#Spain",
+                "#policy"
+            ],
+            "translations": {
+                "ko": "카사 메디테라네오",
+                "zh-CN": "地中海之家",
+                "zh-TW": "地中海之家",
+                "en": "Mediterranean House",
+                "ja": "カサ・メディテラネオ",
+                "fr": "Maison de la Méditerranée",
+                "ru": "Дом Средиземноморья",
+                "it": "Casa Mediterraneo",
+                "vi": "Nhà Địa Trung Hải",
+                "ar": "بيت البحر الأبيض المتوسط",
+                "es": "Casa Mediterráneo"
+            },
+            "web_sources": [
+                "https://www.casa-mediterraneo.es",
+                "https://es.wikipedia.org/wiki/Casa_Mediterr%C3%A1neo"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:24:11.754460"
+        },
+        {
+            "original_term": "Instituto de Estudios Estratégicos",
+            "term_type": "company",
+            "primary_domain": "think tank",
+            "context": "Spain's strategic studies institution",
+            "tags": [
+                "#Spain",
+                "#strategic"
+            ],
+            "translations": {
+                "ko": "전략 연구소",
+                "zh-CN": "战略研究所",
+                "zh-TW": "戰略研究所",
+                "en": "Institute for Strategic Studies",
+                "ja": "戦略研究所",
+                "fr": "Institut d'études stratégiques",
+                "ru": "Институт стратегических исследований",
+                "it": "Istituto di Studi Strategici",
+                "vi": "Viện Nghiên cứu Chiến lược",
+                "ar": "معهد الدراسات الاستراتيجية",
+                "es": "Instituto de Estudios Estratégicos"
+            },
+            "web_sources": [
+                "https://www.ieee.es",
+                "https://es.wikipedia.org/wiki/Instituto_Español_de_Estudios_Estratégicos"
+            ],
+            "source": "gpt4o_web",
+            "confidence_score": 0.95,
+            "search_timestamp": "2025-10-13T13:24:11.754466"
+        }
+    ],
+    "summary": {
+        "total_terms": 99,
+        "enhanced_terms": 99,
+        "failed_terms": 0,
+        "cache_hits": 0,
+        "cache_hit_rate": 0,
+        "total_batches": 20,
+        "fallback_count": 8,
+        "processing_time": 199.87
+    },
+    "errors": null
+}
