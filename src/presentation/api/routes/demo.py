@@ -165,6 +165,81 @@ async def web_enhancement_demo() -> HTMLResponse:
 
 
 @router.get(
+    "/markdown-table",
+    response_class=HTMLResponse,
+    status_code=status.HTTP_200_OK,
+    summary="마크다운 테이블 생성 데모 페이지",
+    description="""
+    용어 추출 결과를 마크다운 테이블로 변환하는 데모 페이지를 제공합니다.
+
+    **주요 기능:**
+    - JSON 데이터 입력 (textarea 또는 샘플 로드)
+    - 11개 언어 중 선택적 컬럼 구성
+    - 서버 API를 통한 마크다운 테이블 생성
+    - 클립보드 복사 및 .md 파일 다운로드
+
+    **사용 방법:**
+    1. 브라우저에서 /demo/markdown-table 접속
+    2. JSON 데이터 입력 또는 샘플 로드
+    3. 번역 언어 선택 (기본: 한/영)
+    4. "마크다운 테이블 생성" 버튼 클릭
+    5. 생성된 마크다운 확인 및 다운로드
+    """,
+    responses={
+        200: {
+            "description": "데모 페이지 HTML 반환",
+            "content": {
+                "text/html": {
+                    "example": "<!DOCTYPE html>..."
+                }
+            }
+        },
+        404: {
+            "description": "데모 페이지 파일을 찾을 수 없음",
+            "content": {
+                "application/json": {
+                    "example": {
+                        "detail": "데모 페이지 파일을 찾을 수 없습니다"
+                    }
+                }
+            }
+        }
+    }
+)
+async def markdown_table_demo() -> HTMLResponse:
+    """
+    마크다운 테이블 생성 데모 페이지를 반환합니다.
+
+    Returns:
+        HTMLResponse: HTML 페이지 콘텐츠
+
+    Raises:
+        HTTPException: 파일을 찾을 수 없는 경우
+    """
+    # HTML 파일 경로
+    html_file = Path("static/markdown-table-demo.html")
+
+    # 파일 존재 확인
+    if not html_file.exists():
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"데모 페이지 파일을 찾을 수 없습니다: {html_file}"
+        )
+
+    # HTML 파일 읽기
+    try:
+        with open(html_file, "r", encoding="utf-8") as f:
+            html_content = f.read()
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"데모 페이지 로드 실패: {str(e)}"
+        )
+
+    return HTMLResponse(content=html_content, status_code=200)
+
+
+@router.get(
     "/",
     response_class=HTMLResponse,
     status_code=status.HTTP_200_OK,

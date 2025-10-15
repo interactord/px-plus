@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📊 마크다운 테이블 생성 데모</title>
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --success-color: #28A745;
+            --danger-color: #DC3545;
+            --bg-light: #F8F9FA;
+            --border-color: #DEE2E6;
+            --text-dark: #212529;
+            --shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        header p {
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            resize: vertical;
+            transition: border-color 0.2s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #357ABD;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .btn-success {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #218838;
+        }
+
+        .btn-large {
+            font-size: 16px;
+            padding: 14px 30px;
+            width: 100%;
+        }
+
+        .selection-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .language-grid label {
+            display: flex;
+            align-items: center;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+        }
+
+        .language-grid label:hover {
+            background: var(--bg-light);
+            border-color: var(--primary-color);
+        }
+
+        .language-grid input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .language-grid input[type="checkbox"]:checked + span {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .statistics {
+            display: flex;
+            gap: 30px;
+            margin-top: 15px;
+            padding: 15px;
+            background: var(--bg-light);
+            border-radius: 4px;
+        }
+
+        .statistics span {
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .statistics strong {
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+
+        .output-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        #loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: var(--primary-color);
+            font-size: 16px;
+        }
+
+        .spinner {
+            border: 3px solid var(--bg-light);
+            border-top: 3px solid var(--primary-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .alert {
+            padding: 12px 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .alert-danger {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            .language-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .statistics {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>📊 마크다운 테이블 생성 데모</h1>
+            <p>용어 추출 결과를 마크다운 테이블로 변환합니다</p>
+        </header>
+
+        <!-- Alert Messages -->
+        <div id="alert-success" class="alert alert-success"></div>
+        <div id="alert-danger" class="alert alert-danger"></div>
+
+        <!-- Input Section -->
+        <section id="input-section">
+            <h2>1. JSON 데이터 입력</h2>
+            <textarea id="json-input" rows="10" placeholder='{"enhanced_terms": [...]}'></textarea>
+            <div class="buttons">
+                <button class="btn-secondary" onclick="loadSampleData()">📄 샘플 데이터 로드</button>
+                <button class="btn-secondary" onclick="clearInput()">🗑️ 입력 초기화</button>
+            </div>
+        </section>
+
+        <!-- Language Options Section -->
+        <section id="language-options">
+            <h2>2. 번역 언어 선택 (최대 11개)</h2>
+            <div class="selection-buttons">
+                <button class="btn-secondary" onclick="selectAllLanguages()">✅ 전체 선택</button>
+                <button class="btn-secondary" onclick="deselectAllLanguages()">❌ 선택 해제</button>
+                <button class="btn-secondary" onclick="selectDefaultLanguages()">🔄 기본 선택 (한/영)</button>
+            </div>
+            <div class="language-grid">
+                <label>
+                    <input type="checkbox" value="ko" checked>
+                    <span>한국어 (ko)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="en" checked>
+                    <span>English (en)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="zh-CN">
+                    <span>简体中文 (zh-CN)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="zh-TW">
+                    <span>繁體中文 (zh-TW)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="ja">
+                    <span>日本語 (ja)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="fr">
+                    <span>Français (fr)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="ru">
+                    <span>Русский (ru)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="it">
+                    <span>Italiano (it)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="vi">
+                    <span>Tiếng Việt (vi)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="ar">
+                    <span>العربية (ar)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="es">
+                    <span>Español (es)</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Submit Section -->
+        <section id="submit-section">
+            <button class="btn-primary btn-large" onclick="generateMarkdown()">
+                🚀 마크다운 테이블 생성
+            </button>
+        </section>
+
+        <!-- Loading Section -->
+        <div id="loading">
+            <div class="spinner"></div>
+            <p>마크다운 테이블 생성 중...</p>
+        </div>
+
+        <!-- Output Section -->
+        <section id="output-section">
+            <h2>3. 생성된 마크다운 테이블</h2>
+            <div class="output-buttons">
+                <button class="btn-success" onclick="copyToClipboard()">📋 클립보드에 복사</button>
+                <button class="btn-success" onclick="downloadMarkdown()">💾 .md 파일 다운로드</button>
+            </div>
+            <textarea id="markdown-output" rows="20" readonly placeholder="생성된 마크다운 테이블이 여기에 표시됩니다..."></textarea>
+            <div class="statistics">
+                <span>용어 개수: <strong id="term-count">0</strong></span>
+                <span>컬럼 개수: <strong id="column-count">0</strong></span>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // 샘플 데이터 로드
+        async function loadSampleData() {
+            try {
+                const response = await fetch('/sample/sample_web.json');
+                if (!response.ok) {
+                    throw new Error('샘플 데이터를 불러올 수 없습니다');
+                }
+                const data = await response.json();
+                document.getElementById('json-input').value = JSON.stringify(data, null, 2);
+                showAlert('success', '✅ 샘플 데이터가 로드되었습니다');
+            } catch (error) {
+                showAlert('danger', `❌ 샘플 데이터 로드 실패: ${error.message}`);
+            }
+        }
+
+        // 입력 초기화
+        function clearInput() {
+            document.getElementById('json-input').value = '';
+            document.getElementById('markdown-output').value = '';
+            document.getElementById('term-count').textContent = '0';
+            document.getElementById('column-count').textContent = '0';
+            showAlert('success', '🗑️ 입력이 초기화되었습니다');
+        }
+
+        // 전체 선택
+        function selectAllLanguages() {
+            document.querySelectorAll('.language-grid input[type="checkbox"]').forEach(cb => {
+                cb.checked = true;
+            });
+            showAlert('success', '✅ 모든 언어가 선택되었습니다');
+        }
+
+        // 선택 해제
+        function deselectAllLanguages() {
+            document.querySelectorAll('.language-grid input[type="checkbox"]').forEach(cb => {
+                cb.checked = false;
+            });
+            showAlert('success', '❌ 모든 선택이 해제되었습니다');
+        }
+
+        // 기본 선택 (한/영)
+        function selectDefaultLanguages() {
+            document.querySelectorAll('.language-grid input[type="checkbox"]').forEach(cb => {
+                cb.checked = (cb.value === 'ko' || cb.value === 'en');
+            });
+            showAlert('success', '🔄 기본 언어(한/영)가 선택되었습니다');
+        }
+
+        // 마크다운 생성
+        async function generateMarkdown() {
+            try {
+                // 입력 데이터 가져오기
+                const jsonInput = document.getElementById('json-input').value.trim();
+                if (!jsonInput) {
+                    throw new Error('JSON 데이터를 입력해주세요');
+                }
+
+                const termsData = JSON.parse(jsonInput);
+
+                // 선택된 언어 가져오기
+                const selectedLanguages = Array.from(
+                    document.querySelectorAll('.language-grid input[type="checkbox"]:checked')
+                ).map(cb => cb.value);
+
+                // 유효성 검증
+                if (selectedLanguages.length === 0) {
+                    throw new Error('최소 1개 이상의 언어를 선택해주세요');
+                }
+
+                if (selectedLanguages.length > 11) {
+                    throw new Error('최대 11개까지 선택 가능합니다');
+                }
+
+                // 로딩 표시
+                showLoading(true);
+
+                // API 요청
+                const response = await fetch('/api/v1/markdown/generate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        terms_data: termsData,
+                        selected_languages: selectedLanguages
+                    })
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.detail || `API 오류: ${response.status}`);
+                }
+
+                // 응답 처리
+                const result = await response.json();
+
+                // 마크다운 표시
+                document.getElementById('markdown-output').value = result.markdown_table;
+
+                // 통계 업데이트
+                document.getElementById('term-count').textContent = result.term_count;
+                document.getElementById('column-count').textContent = result.column_count;
+
+                // 성공 메시지
+                showAlert('success', `✅ 마크다운 테이블이 생성되었습니다! (용어 ${result.term_count}개, 컬럼 ${result.column_count}개)`);
+
+            } catch (error) {
+                console.error('마크다운 생성 실패:', error);
+                showAlert('danger', `❌ 오류 발생: ${error.message}`);
+            } finally {
+                showLoading(false);
+            }
+        }
+
+        // 클립보드 복사
+        async function copyToClipboard() {
+            const markdown = document.getElementById('markdown-output').value;
+            if (!markdown) {
+                showAlert('danger', '❌ 생성된 마크다운이 없습니다');
+                return;
+            }
+
+            try {
+                await navigator.clipboard.writeText(markdown);
+                showAlert('success', '✅ 클립보드에 복사되었습니다');
+            } catch (error) {
+                showAlert('danger', `❌ 복사 실패: ${error.message}`);
+            }
+        }
+
+        // 파일 다운로드
+        function downloadMarkdown() {
+            const markdown = document.getElementById('markdown-output').value;
+            if (!markdown) {
+                showAlert('danger', '❌ 생성된 마크다운이 없습니다');
+                return;
+            }
+
+            const blob = new Blob([markdown], { type: 'text/markdown' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `terms-table-${new Date().toISOString().slice(0,10)}.md`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showAlert('success', '✅ 마크다운 파일이 다운로드되었습니다');
+        }
+
+        // 로딩 표시
+        function showLoading(show) {
+            document.getElementById('loading').style.display = show ? 'block' : 'none';
+            document.querySelector('#submit-section button').disabled = show;
+        }
+
+        // 알림 표시
+        function showAlert(type, message) {
+            const alertId = type === 'success' ? 'alert-success' : 'alert-danger';
+            const alertEl = document.getElementById(alertId);
+            alertEl.textContent = message;
+            alertEl.style.display = 'block';
+
+            // 3초 후 자동 숨김
+            setTimeout(() => {
+                alertEl.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

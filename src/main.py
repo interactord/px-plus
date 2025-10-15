@@ -7,6 +7,10 @@ Result 패턴을 활용한 안전한 에러 처리
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+# .env 파일 로드 (환경 변수 설정)
+load_dotenv()
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -66,11 +70,13 @@ app.add_middleware(
 # 라우터 등록
 from .presentation.api.routes import term_extraction_router, demo_router
 from .presentation.api.routes.web_enhancement import router as web_enhancement_router
+from .presentation.api.routes.markdown import router as markdown_router
 
 app.include_router(router, tags=["greetings"])
 app.include_router(term_extraction_router)
 app.include_router(demo_router)  # demo_router에 이미 prefix="/demo" 포함
 app.include_router(web_enhancement_router)  # 웹 강화 API
+app.include_router(markdown_router)  # 마크다운 생성 API
 
 # Static 파일 마운트 (샘플 데이터 등)
 static_dir = Path(__file__).parent.parent / "static"

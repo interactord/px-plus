@@ -81,11 +81,12 @@ async def get_model_port() -> ModelPort:
             detail="OPENAI_API_KEY 환경 변수가 설정되지 않았습니다. .env 파일을 확인하세요."
         )
     
-    # OpenAI Chat 어댑터 생성
+    # OpenAI Chat 어댑터 생성 (SDK 기반)
     return OpenAIChatAdapter(
         api_key=api_key,
         model_name="gpt-4o",
-        base_url="https://api.openai.com/v1",
+        temperature=0.7,
+        max_tokens=4000,
         timeout=60
     )
 
