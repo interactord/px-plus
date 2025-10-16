@@ -30,10 +30,13 @@ except ImportError:
     Result = Union[Success[T], Failure[E]]
 
 from ....domain.web_enhancement.services.web_enhancement_service import WebEnhancementService
+from ....domain.web_enhancement.services.async_web_enhancement_service import AsyncWebEnhancementService
 from ..adapters.gpt4o_web_enhancement_adapter import GPT4oWebEnhancementAdapter
 from ..adapters.gemini_web_enhancement_adapter import GeminiWebEnhancementAdapter
 from ..adapters.gemini_simple_translation_adapter import GeminiSimpleTranslationAdapter
 from ..adapters.gpt4o_mini_translation_adapter import GPT4oMiniTranslationAdapter
+from ..adapters.async_gpt4o_web_enhancement_adapter import AsyncGPT4oWebEnhancementAdapter
+from ..adapters.async_gemini_web_enhancement_adapter import AsyncGeminiWebEnhancementAdapter
 
 
 class EnhancementServiceFactory:
@@ -79,39 +82,80 @@ class EnhancementServiceFactory:
         if not google_key:
             return Failure("GOOGLE_API_KEY가 설정되지 않았습니다")
         
-        # Primary 어댑터 생성
-        primary_result = cls._create_adapter(primary, openai_key, google_key)
-        if not primary_result.is_success():
-            return Failure(f"Primary 어댑터 생성 실패: {primary_result.unwrap_error()}")
-        
-        # Fallback 어댑터 생성
-        fallback_result = cls._create_adapter(fallback, openai_key, google_key)
-        if not fallback_result.is_success():
-            return Failure(f"Fallback 어댑터 생성 실패: {fallback_result.unwrap_error()}")
-        
-        # 일반 번역 어댑터 생성 (Gemini Flash)
-        simple_translation_adapter = GeminiSimpleTranslationAdapter(
+        # Gemini + 웹검색 어댑터만 생성 (다른 폴백 비활성화)
+        gemini_adapter = GeminiWebEnhancementAdapter(
             api_key=google_key,
             model_name="gemini-2.0-flash-exp",
             temperature=0.3,
-            max_tokens=3000
+            max_tokens=4000,
+            dynamic_threshold=0.7
         )
-        
-        # 최종 폴백 어댑터 생성 (GPT-4o-mini)
-        final_fallback_adapter = GPT4oMiniTranslationAdapter(
-            api_key=openai_key,
-            model_name="gpt-4o-mini",
-            temperature=0.3,
-            max_tokens=3000
-        )
-        
-        # 서비스 생성 (4단계 폴백)
+
+        # 서비스 생성 (Gemini + 웹검색만 활성화, 폴백 없음)
         service = WebEnhancementService(
-            primary_adapter=primary_result.unwrap(),
-            fallback_adapter=fallback_result.unwrap(),
-            simple_translation_adapter=simple_translation_adapter,
-            final_fallback_adapter=final_fallback_adapter,
+            primary_adapter=gemini_adapter,
+            fallback_adapter=None,  # 폴백 비활성화
+            simple_translation_adapter=None,  # 폴백 비활성화
+            final_fallback_adapter=None,  # 폴백 비활성화
             fallback_delay=2.0
+        )
+        
+        return Success(service)
+
+    
+    @classmethod
+    def create_async_service(
+        cls,
+        openai_api_key: Optional[str] = None,
+        google_api_key: Optional[str] = None,
+        primary: str = "gpt4o",
+        fallback: str = "gemini"
+    ) -> Result[AsyncWebEnhancementService, str]:
+        """
+        비동기 웹 강화 서비스 생성
+        
+        Args:
+            openai_api_key: OpenAI API 키 (None이면 환경 변수)
+            google_api_key: Google API 키 (None이면 환경 변수)
+            primary: Primary 어댑터 타입 ("gpt4o" or "gemini")
+            fallback: Fallback 어댑터 타입 ("gpt4o" or "gemini")
+        
+        Returns:
+            Result[AsyncWebEnhancementService, str]: 생성된 비동기 서비스 또는 에러
+        """
+        # API 키 가져오기
+        openai_key = openai_api_key or os.getenv("OPENAI_API_KEY")
+        google_key = google_api_key or os.getenv("GOOGLE_API_KEY")
+        
+        if not openai_key:
+            return Failure("OPENAI_API_KEY가 설정되지 않았습니다")
+        
+        if not google_key:
+            return Failure("GOOGLE_API_KEY가 설정되지 않았습니다")
+        
+        # Primary 어댑터 생성 (AsyncGPT-4o + 웹검색)
+        primary_adapter = AsyncGPT4oWebEnhancementAdapter(
+            api_key=openai_key,
+            model_name="gpt-4o",
+            temperature=0.3,
+            max_tokens=4000
+        )
+        
+        # Fallback 어댑터 생성 (AsyncGemini + 웹검색)
+        fallback_adapter = AsyncGeminiWebEnhancementAdapter(
+            api_key=google_key,
+            model_name="gemini-2.0-flash-exp",
+            temperature=0.3,
+            max_tokens=4000
+        )
+        
+        # 비동기 서비스 생성
+        service = AsyncWebEnhancementService(
+            primary_adapter=primary_adapter,
+            fallback_adapter=fallback_adapter,
+            simple_translation_adapter=None,  # 선택사항
+            final_fallback_adapter=None,  # 선택사항
+            fallback_delay=0.0  # 비동기에서는 지연 불필요
         )
         
         return Success(service)

@@ -11,8 +11,8 @@ import os
 
 from ....application.web_enhancement.dto.enhancement_request_dto import EnhancementRequestDTO
 from ....application.web_enhancement.dto.enhancement_response_dto import EnhancementResponseDTO
-from ....application.web_enhancement.services.batch_enhancement_service import BatchEnhancementService
-from ....application.web_enhancement.services.cached_enhancement_service import CachedEnhancementService
+from ....application.web_enhancement.services.async_batch_enhancement_service import AsyncBatchEnhancementService
+from ....application.web_enhancement.services.async_cached_enhancement_service import AsyncCachedEnhancementService
 from ....infrastructure.web_enhancement.factories.enhancement_service_factory import EnhancementServiceFactory
 
 
@@ -36,7 +36,7 @@ class EnhanceRequest(BaseModel):
     )
     use_cache: bool = Field(default=True, description="캐시 사용 여부")
     batch_size: int = Field(default=5, ge=1, le=10, description="배치 크기")
-    concurrent_batches: int = Field(default=3, ge=1, le=5, description="동시 배치 수")
+    concurrent_batches: int = Field(default=10, ge=1, le=15, description="동시 배치 수")
 
 
 class EnhanceResponse(BaseModel):
@@ -54,21 +54,13 @@ router = APIRouter(
 
 
 # 의존성 주입 함수
-def get_cached_enhancement_service() -> CachedEnhancementService:
+def get_cached_enhancement_service() -> AsyncCachedEnhancementService:
     """
-    CachedEnhancementService 의존성 주입
-    
-    환경 변수:
-    - OPENAI_API_KEY: OpenAI API 키 (필수)
-    - GOOGLE_API_KEY: Google API 키 (필수)
-    - REDIS_URL: Redis 연결 URL (기본: redis://localhost:6379)
-    - CACHE_TTL: 캐시 TTL 초 (기본: 86400)
-    
-    Returns:
-        CachedEnhancementService: 캐시 강화 서비스
+    비동기 캐시 강화 서비스 의존성
     """
-    # 1. 웹 강화 도메인 서비스 생성
-    service_result = EnhancementServiceFactory.create_service()
+    # 1. 비동기 웹 강화 서비스 생성 (Factory 사용)
+    factory = EnhancementServiceFactory()
+    service_result = factory.create_async_service()
     
     if not service_result.is_success():
         raise HTTPException(
@@ -76,22 +68,22 @@ def get_cached_enhancement_service() -> CachedEnhancementService:
             detail=f"서비스 생성 실패: {service_result.unwrap_error()}"
         )
     
-    web_enhancement_service = service_result.unwrap()
+    async_web_enhancement_service = service_result.unwrap()
     
-    # 2. 배치 서비스 생성
-    batch_service = BatchEnhancementService(web_enhancement_service)
+    # 2. 비동기 배치 서비스 생성
+    async_batch_service = AsyncBatchEnhancementService(async_web_enhancement_service)
     
-    # 3. 캐시 서비스 생성
+    # 3. 비동기 캐시 서비스 생성
     redis_url = os.getenv("REDIS_URL", "redis://localhost:6379")
     cache_ttl = int(os.getenv("CACHE_TTL", "86400"))
     
-    cached_service = CachedEnhancementService(
-        batch_service=batch_service,
+    async_cached_service = AsyncCachedEnhancementService(
+        async_batch_service=async_batch_service,
         redis_url=redis_url,
         ttl=cache_ttl
     )
     
-    return cached_service
+    return async_cached_service
 
 
 @router.post(
@@ -114,13 +106,13 @@ def get_cached_enhancement_service() -> CachedEnhancementService:
     
     처리 방식:
     - 배치 크기: 5개 용어 (Single-shot 최적)
-    - 동시 배치: 3개 (라운드 로빈)
+    - 동시 배치: 10개 (라운드 로빈, 비동기 최적화)
     - 캐시 TTL: 24시간
     """
 )
 async def enhance_terms(
     request: EnhanceRequest,
-    service: CachedEnhancementService = Depends(get_cached_enhancement_service)
+    service: AsyncCachedEnhancementService = Depends(get_cached_enhancement_service)
 ):
     """
     용어 웹 강화 API
@@ -203,7 +195,7 @@ async def enhance_terms(
     description="Redis 캐시 통계 조회"
 )
 async def get_cache_stats(
-    service: CachedEnhancementService = Depends(get_cached_enhancement_service)
+    service: AsyncCachedEnhancementService = Depends(get_cached_enhancement_service)
 ):
     """
     캐시 통계 조회
@@ -214,7 +206,7 @@ async def get_cache_stats(
     Returns:
         dict: 캐시 통계
     """
-    stats_result = service.get_cache_stats()
+    stats_result = await service.get_cache_stats()
     
     if not stats_result.is_success():
         raise HTTPException(
@@ -231,7 +223,7 @@ async def get_cache_stats(
     description="웹 강화 캐시 전체 삭제"
 )
 async def clear_cache(
-    service: CachedEnhancementService = Depends(get_cached_enhancement_service)
+    service: AsyncCachedEnhancementService = Depends(get_cached_enhancement_service)
 ):
     """
     캐시 삭제
@@ -242,7 +234,7 @@ async def clear_cache(
     Returns:
         dict: 삭제 결과
     """
-    clear_result = service.clear_cache()
+    clear_result = await service.clear_cache()
     
     if not clear_result.is_success():
         raise HTTPException(
@@ -264,7 +256,7 @@ async def clear_cache(
     description="API 및 Redis 연결 상태 확인"
 )
 async def health_check(
-    service: CachedEnhancementService = Depends(get_cached_enhancement_service)
+    service: AsyncCachedEnhancementService = Depends(get_cached_enhancement_service)
 ):
     """
     헬스 체크
@@ -276,7 +268,7 @@ async def health_check(
         dict: 헬스 체크 결과
     """
     # Redis 연결 확인
-    redis_result = service.check_connection()
+    redis_result = await service.check_connection()
     
     return {
         "status": "healthy" if redis_result.is_success() else "degraded",
