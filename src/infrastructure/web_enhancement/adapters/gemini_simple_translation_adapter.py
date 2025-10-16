@@ -6,6 +6,7 @@ Gemini 2.0 Flash 기반 일반 번역 어댑터 (웹 검색 없음)
 """
 
 import json
+import os
 from typing import List
 from pathlib import Path
 

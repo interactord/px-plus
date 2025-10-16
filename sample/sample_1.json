@@ -2,1795 +2,3161 @@
     "results": [
         {
             "chunk_index": 0,
-            "source_filename": "Android_Security_Guidelines.md",
+            "source_filename": "Android_Security_Testing_Environment.md",
             "entities": [
                 {
                     "term": "Android",
                     "type": "product",
-                    "primary_domain": "software",
+                    "primary_domain": "operating_system",
                     "tags": [
-                        "#platform",
+                        "#OS",
                         "#mobile"
                     ],
-                    "context": "Mobile operating system developed by Google"
+                    "context": "Mobile operating system"
                 },
                 {
-                    "term": "Kotlin",
-                    "type": "technical_term",
-                    "primary_domain": "programming language",
-                    "tags": [
-                        "#language",
-                        "#development"
-                    ],
-                    "context": "Statically typed programming language for JVM and Android"
-                },
-                {
-                    "term": "Compose",
-                    "type": "technical_term",
-                    "primary_domain": "UI framework",
-                    "tags": [
-                        "#UI",
-                        "#framework"
-                    ],
-                    "context": "UI toolkit for building native Android interfaces"
-                },
-                {
-                    "term": "Hilt",
-                    "type": "technical_term",
+                    "term": "OpenSW",
+                    "type": "product",
                     "primary_domain": "software",
                     "tags": [
-                        "#dependency_injection",
-                        "#framework"
+                        "#opensource"
                     ],
-                    "context": "Dependency injection library for Android"
+                    "context": "Open source software tools"
                 },
                 {
-                    "term": "Room",
-                    "type": "technical_term",
-                    "primary_domain": "database",
+                    "term": "Android Studio",
+                    "type": "product",
+                    "primary_domain": "IDE",
                     "tags": [
-                        "#persistence",
-                        "#database"
+                        "#development",
+                        "#software"
                     ],
-                    "context": "Android library for SQLite database persistence"
+                    "context": "Official Android development environment"
                 },
                 {
-                    "term": "Clean Architecture",
-                    "type": "technical_term",
-                    "primary_domain": "software architecture",
+                    "term": "SDK Tools",
+                    "type": "product",
+                    "primary_domain": "software",
                     "tags": [
-                        "#architecture",
-                        "#design"
+                        "#development"
                     ],
-                    "context": "Software design philosophy for separation of concerns"
+                    "context": "Software development kit for Android"
                 },
                 {
-                    "term": "MVI",
-                    "type": "technical_term",
-                    "primary_domain": "design pattern",
+                    "term": "Docker",
+                    "type": "product",
+                    "primary_domain": "software",
                     "tags": [
-                        "#pattern",
-                        "#architecture"
+                        "#containers",
+                        "#DevOps"
                     ],
-                    "context": "Model-View-Intent architecture pattern for frontend"
+                    "context": "Platform to develop and run applications"
                 },
                 {
-                    "term": "Flow",
-                    "type": "technical_term",
-                    "primary_domain": "asynchronous programming",
+                    "term": "Linux",
+                    "type": "product",
+                    "primary_domain": "operating_system",
                     "tags": [
-                        "#coroutines",
-                        "#asynchronous"
+                        "#OS",
+                        "#open_source"
                     ],
-                    "context": "Kotlin library for reactive streams"
+                    "context": "Open-source operating system"
+                },
+                {
+                    "term": "macOS",
+                    "type": "product",
+                    "primary_domain": "operating_system",
+                    "tags": [
+                        "#OS",
+                        "#Apple"
+                    ],
+                    "context": "Apple's operating system for Mac"
+                },
+                {
+                    "term": "Windows",
+                    "type": "product",
+                    "primary_domain": "operating_system",
+                    "tags": [
+                        "#OS",
+                        "#Microsoft"
+                    ],
+                    "context": "Operating system by Microsoft"
+                },
+                {
+                    "term": "MobSF",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#security",
+                        "#analysis"
+                    ],
+                    "context": "Mobile Security Framework for app analysis"
+                },
+                {
+                    "term": "QARK",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#security",
+                        "#Android"
+                    ],
+                    "context": "Android-specific security analysis tool"
+                },
+                {
+                    "term": "SonarQube",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#code_quality",
+                        "#analysis"
+                    ],
+                    "context": "Code quality analysis platform"
+                },
+                {
+                    "term": "SpotBugs",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#bugs",
+                        "#analysis"
+                    ],
+                    "context": "Tool to spot bug patterns in code"
+                },
+                {
+                    "term": "Frida",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#analysis",
+                        "#runtime"
+                    ],
+                    "context": "Dynamic instrumentation toolkit"
+                },
+                {
+                    "term": "Xposed",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#customization",
+                        "#Android"
+                    ],
+                    "context": "Framework for modules to customize Android"
+                },
+                {
+                    "term": "OWASP ZAP",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#security",
+                        "#web"
+                    ],
+                    "context": "Web application security scanner"
+                },
+                {
+                    "term": "Burp Suite",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#security",
+                        "#proxy"
+                    ],
+                    "context": "Network security tool for web applications"
+                },
+                {
+                    "term": "Drozer",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#security",
+                        "#Android"
+                    ],
+                    "context": "Android security assessment tool"
+                },
+                {
+                    "term": "APKTool",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#reverse_engineering",
+                        "#Android"
+                    ],
+                    "context": "Tool to decompile and rebuild APK files"
+                },
+                {
+                    "term": "JADX",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#decompiler",
+                        "#Android"
+                    ],
+                    "context": "DEX to Java decompiler"
+                }
+            ],
+            "cached": false,
+            "processing_time": 17.780532836914062,
+            "error": null
+        },
+        {
+            "chunk_index": 1,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "MobSF",
+                    "type": "product",
+                    "primary_domain": "mobile security",
+                    "tags": [
+                        "#MobileSecurity",
+                        "#Framework",
+                        "#MobSF"
+                    ],
+                    "context": "Mobile Security Framework for analyzing mobile applications"
+                },
+                {
+                    "term": "Docker",
+                    "type": "product",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#Containers",
+                        "#DevOps",
+                        "#Docker"
+                    ],
+                    "context": "Platform for developing, shipping, and running applications"
+                },
+                {
+                    "term": "Ubuntu",
+                    "type": "product",
+                    "primary_domain": "operating systems",
+                    "tags": [
+                        "#Linux",
+                        "#Ubuntu",
+                        "#OS"
+                    ],
+                    "context": "Popular Linux distribution for servers and desktops"
+                },
+                {
+                    "term": "Linux",
+                    "type": "product",
+                    "primary_domain": "operating systems",
+                    "tags": [
+                        "#OS",
+                        "#Linux"
+                    ],
+                    "context": "Open-source operating system kernel used widely"
+                },
+                {
+                    "term": "Python",
+                    "type": "product",
+                    "primary_domain": "programming languages",
+                    "tags": [
+                        "#Python",
+                        "#Programming"
+                    ],
+                    "context": "Popular programming language for diverse applications"
+                },
+                {
+                    "term": "git",
+                    "type": "product",
+                    "primary_domain": "version control",
+                    "tags": [
+                        "#Git",
+                        "#VersionControl"
+                    ],
+                    "context": "Version control system for tracking changes in source code"
+                },
+                {
+                    "term": "API",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#API",
+                        "#Integration"
+                    ],
+                    "context": "Set of protocols for building software applications"
+                }
+            ],
+            "cached": false,
+            "processing_time": 7.489195823669434,
+            "error": null
+        },
+        {
+            "chunk_index": 2,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "file_hash",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#hashing",
+                        "#file"
+                    ],
+                    "context": "Variable for file hash storage"
+                },
+                {
+                    "term": "scan_type",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#scan",
+                        "#parameter"
+                    ],
+                    "context": "Variable for defining scan type"
+                },
+                {
+                    "term": "app.apk",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#APK",
+                        "#application"
+                    ],
+                    "context": "Filename of the Android application package"
+                },
+                {
+                    "term": "session.post",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#HTTP",
+                        "#request"
+                    ],
+                    "context": "Python method for HTTP POST request"
+                },
+                {
+                    "term": "server",
+                    "type": "technical_term",
+                    "primary_domain": "networking",
+                    "tags": [
+                        "#server",
+                        "#API"
+                    ],
+                    "context": "Variable for server address"
+                },
+                {
+                    "term": "report_json",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#report",
+                        "#JSON"
+                    ],
+                    "context": "API endpoint for JSON report"
+                },
+                {
+                    "term": "download_pdf",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#report",
+                        "#PDF"
+                    ],
+                    "context": "API endpoint for PDF download"
+                },
+                {
+                    "term": "upload_apk",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#upload",
+                        "#APK"
+                    ],
+                    "context": "Method to upload APK file"
+                }
+            ],
+            "cached": false,
+            "processing_time": 4.275982141494751,
+            "error": null
+        },
+        {
+            "chunk_index": 3,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "MobSFAnalyzer",
+                    "type": "product",
+                    "primary_domain": "security_analysis",
+                    "tags": [
+                        "#security",
+                        "#analysis",
+                        "#software",
+                        "#APK",
+                        "#tool"
+                    ],
+                    "context": "Tool for analyzing APK files for security purposes"
                 },
                 {
                     "term": "APK",
                     "type": "technical_term",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#Android",
+                        "#file",
+                        "#app",
+                        "#package",
+                        "#format"
+                    ],
+                    "context": "File format used to distribute Android applications"
+                },
+                {
+                    "term": "os.makedirs",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#Python",
+                        "#OS",
+                        "#filesystem",
+                        "#directory"
+                    ],
+                    "context": "Python function for creating directories"
+                },
+                {
+                    "term": "json.dump",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#Python",
+                        "#JSON",
+                        "#serialization",
+                        "#file",
+                        "#write"
+                    ],
+                    "context": "Python function to serialize data to JSON format"
+                },
+                {
+                    "term": "time.sleep",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#Python",
+                        "#time",
+                        "#delay",
+                        "#function"
+                    ],
+                    "context": "Python function to pause execution for a set time"
+                },
+                {
+                    "term": "QARK",
+                    "type": "product",
+                    "primary_domain": "security_analysis",
+                    "tags": [
+                        "#security",
+                        "#framework",
+                        "#analysis",
+                        "#Android",
+                        "#tool"
+                    ],
+                    "context": "Security analysis tool for Android applications"
+                },
+                {
+                    "term": "pip3",
+                    "type": "technical_term",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#Python",
+                        "#package",
+                        "#install",
+                        "#dependency"
+                    ],
+                    "context": "Package manager for installing Python packages"
+                },
+                {
+                    "term": "git",
+                    "type": "technical_term",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#version",
+                        "#control",
+                        "#repository",
+                        "#source"
+                    ],
+                    "context": "Version control system to manage code repositories"
+                },
+                {
+                    "term": "json",
+                    "type": "technical_term",
+                    "primary_domain": "data_format",
+                    "tags": [
+                        "#data",
+                        "#serialization",
+                        "#format",
+                        "#structuring"
+                    ],
+                    "context": "JavaScript Object Notation, a lightweight data-interchange format"
+                },
+                {
+                    "term": "bash",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#script",
+                        "#shell",
+                        "#command-line",
+                        "#automation"
+                    ],
+                    "context": "Unix shell and command language for task automation"
+                }
+            ],
+            "cached": false,
+            "processing_time": 10.757680892944336,
+            "error": null
+        },
+        {
+            "chunk_index": 4,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "python3",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#scripting_language"
+                    ],
+                    "context": "A versatile and popular programming language"
+                },
+                {
+                    "term": "json",
+                    "type": "technical_term",
+                    "primary_domain": "data_format",
+                    "tags": [
+                        "#data_structure"
+                    ],
+                    "context": "A lightweight data-interchange format"
+                },
+                {
+                    "term": "QARK",
+                    "type": "product",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#vulnerability_analysis"
+                    ],
+                    "context": "A tool for Android application security evaluation"
+                },
+                {
+                    "term": "SonarQube",
+                    "type": "product",
+                    "primary_domain": "software_analytics",
+                    "tags": [
+                        "#code_quality"
+                    ],
+                    "context": "A tool for continuous inspection of code quality"
+                }
+            ],
+            "cached": false,
+            "processing_time": 3.884800672531128,
+            "error": null
+        },
+        {
+            "chunk_index": 5,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "Docker Compose",
+                    "type": "technical_term",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#containerization",
+                        "#orchestration"
+                    ],
+                    "context": "Tool for defining and running multi-container Docker applications"
+                },
+                {
+                    "term": "SonarQube",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#code_quality",
+                        "#analysis"
+                    ],
+                    "context": "Platform for continuous inspection of code quality"
+                },
+                {
+                    "term": "PostgreSQL",
+                    "type": "technical_term",
+                    "primary_domain": "database",
+                    "tags": [
+                        "#database",
+                        "#SQL"
+                    ],
+                    "context": "Open-source relational database management system"
+                },
+                {
+                    "term": "Gradle",
+                    "type": "technical_term",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#build",
+                        "#automation"
+                    ],
+                    "context": "Build automation tool for multi-language software development"
+                },
+                {
+                    "term": "Kotlin",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#language",
+                        "#JVM"
+                    ],
+                    "context": "Modern statically-typed programming language used for Android development"
+                },
+                {
+                    "term": "Java",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#language",
+                        "#OOP"
+                    ],
+                    "context": "Widely-used object-oriented programming language"
+                },
+                {
+                    "term": "SpotBugs",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#bug_analysis",
+                        "#static_analysis"
+                    ],
+                    "context": "Static analysis tool for identifying bugs in Java code"
+                },
+                {
+                    "term": "Detekt",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#static_analysis",
+                        "#Kotlin"
+                    ],
+                    "context": "Static code analysis tool for Kotlin"
+                }
+            ],
+            "cached": false,
+            "processing_time": 6.661993980407715,
+            "error": null
+        },
+        {
+            "chunk_index": 6,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "sonar.login",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#DevOps",
+                        "#CI"
+                    ],
+                    "context": "SonarQube property for authentication token"
+                },
+                {
+                    "term": "sonar.sources",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#Java",
+                        "#Kotlin"
+                    ],
+                    "context": "SonarQube property specifying source directories"
+                },
+                {
+                    "term": "sonar.tests",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#testing"
+                    ],
+                    "context": "SonarQube property specifying test directories"
+                },
+                {
+                    "term": "sonar.java.binaries",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#Java",
+                        "#binaries"
+                    ],
+                    "context": "SonarQube property for Java binary files location"
+                },
+                {
+                    "term": "sonar.android.lint.report",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#Android",
+                        "#lint"
+                    ],
+                    "context": "SonarQube property for Android lint report"
+                },
+                {
+                    "term": "sonar.kotlin.detekt.reportPaths",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#Kotlin",
+                        "#Detekt"
+                    ],
+                    "context": "SonarQube property for Kotlin Detekt report paths"
+                },
+                {
+                    "term": "SpotBugs",
+                    "type": "product",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#static analysis",
+                        "#tool"
+                    ],
+                    "context": "A static analysis tool for Java code"
+                },
+                {
+                    "term": "spotbugs-gradle-plugin",
+                    "type": "product",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#plugin",
+                        "#Gradle"
+                    ],
+                    "context": "Gradle plugin for integrating SpotBugs"
+                },
+                {
+                    "term": "detekt-gradle-plugin",
+                    "type": "product",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#plugin",
+                        "#Kotlin"
+                    ],
+                    "context": "Gradle plugin for integrating Detekt"
+                },
+                {
+                    "term": "Detekt",
+                    "type": "product",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#Kotlin",
+                        "#lint"
+                    ],
+                    "context": "A static code analysis tool for Kotlin"
+                },
+                {
+                    "term": "Kotlin",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#programming language"
+                    ],
+                    "context": "A modern programming language targeting JVM"
+                },
+                {
+                    "term": "Java",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#programming language"
+                    ],
+                    "context": "A popular programming language for enterprise solutions"
+                }
+            ],
+            "cached": false,
+            "processing_time": 5.630191326141357,
+            "error": null
+        },
+        {
+            "chunk_index": 7,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "Android",
+                    "type": "product",
+                    "primary_domain": "mobile platform",
+                    "tags": [
+                        "#platform"
+                    ],
+                    "context": "A mobile operating system developed by Google"
+                },
+                {
+                    "term": "AVD",
+                    "type": "technical_term",
+                    "primary_domain": "emulation",
+                    "tags": [
+                        "#android",
+                        "#emulator"
+                    ],
+                    "context": "Android Virtual Device for emulation"
+                },
+                {
+                    "term": "API Level",
+                    "type": "technical_term",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#android",
+                        "#versioning"
+                    ],
+                    "context": "Specifies the API version for Android"
+                },
+                {
+                    "term": "ABI",
+                    "type": "technical_term",
+                    "primary_domain": "architecture",
+                    "tags": [
+                        "#android",
+                        "#architecture"
+                    ],
+                    "context": "Application Binary Interface for devices"
+                },
+                {
+                    "term": "Pixel 4",
+                    "type": "product",
+                    "primary_domain": "mobile device",
+                    "tags": [
+                        "#smartphone",
+                        "#android"
+                    ],
+                    "context": "A smartphone model by Google"
+                },
+                {
+                    "term": "sdkmanager",
+                    "type": "technical_term",
+                    "primary_domain": "development tools",
+                    "tags": [
+                        "#android",
+                        "#sdk"
+                    ],
+                    "context": "Tool to download Android SDK components"
+                },
+                {
+                    "term": "avdmanager",
+                    "type": "technical_term",
+                    "primary_domain": "development tools",
+                    "tags": [
+                        "#android",
+                        "#emulator"
+                    ],
+                    "context": "Tool for managing AVDs"
+                },
+                {
+                    "term": "Frida",
+                    "type": "product",
+                    "primary_domain": "reverse engineering",
+                    "tags": [
+                        "#instrumentation",
+                        "#debugging"
+                    ],
+                    "context": "Dynamic instrumentation toolkit for developers"
+                },
+                {
+                    "term": "pip3",
+                    "type": "technical_term",
+                    "primary_domain": "software installation",
+                    "tags": [
+                        "#python",
+                        "#package_management"
+                    ],
+                    "context": "Python package installer command"
+                },
+                {
+                    "term": "Frida Server",
+                    "type": "product",
+                    "primary_domain": "reverse engineering",
+                    "tags": [
+                        "#android",
+                        "#debugging"
+                    ],
+                    "context": "Server component for Frida on devices"
+                },
+                {
+                    "term": "wget",
+                    "type": "technical_term",
+                    "primary_domain": "file download",
+                    "tags": [
+                        "#linux",
+                        "#command_line"
+                    ],
+                    "context": "Command line utility to download files"
+                },
+                {
+                    "term": "adb",
+                    "type": "technical_term",
+                    "primary_domain": "development tools",
+                    "tags": [
+                        "#android",
+                        "#communication"
+                    ],
+                    "context": "Android Debug Bridge for accessing devices"
+                }
+            ],
+            "cached": false,
+            "processing_time": 9.341537714004517,
+            "error": null
+        },
+        {
+            "chunk_index": 8,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "Frida",
+                    "type": "product",
+                    "primary_domain": "mobile security",
+                    "tags": [
+                        "#scripting",
+                        "#reverseengineering",
+                        "#instrumentation"
+                    ],
+                    "context": "Dynamic instrumentation toolkit for developers, reverse-engineers"
+                },
+                {
+                    "term": "Java",
+                    "type": "technical_term",
+                    "primary_domain": "programming language",
+                    "tags": [
+                        "#android",
+                        "#development"
+                    ],
+                    "context": "Popular programming language used for Android development"
+                },
+                {
+                    "term": "SQLiteDatabase",
+                    "type": "technical_term",
+                    "primary_domain": "database",
+                    "tags": [
+                        "#sql",
+                        "#android"
+                    ],
+                    "context": "Class in Android for SQLite database management"
+                },
+                {
+                    "term": "SharedPreferences",
+                    "type": "technical_term",
+                    "primary_domain": "mobile development",
+                    "tags": [
+                        "#data",
+                        "#storage",
+                        "#android"
+                    ],
+                    "context": "Android API for managing key-value data storage"
+                },
+                {
+                    "term": "Cipher",
+                    "type": "technical_term",
+                    "primary_domain": "cryptography",
+                    "tags": [
+                        "#encryption",
+                        "#decryption",
+                        "#java"
+                    ],
+                    "context": "Java class used for encryption and decryption operations"
+                },
+                {
+                    "term": "Javascript",
+                    "type": "technical_term",
+                    "primary_domain": "programming language",
+                    "tags": [
+                        "#scripting",
+                        "#web",
+                        "#dynamic"
+                    ],
+                    "context": "Programming language used to implement Frida scripts"
+                }
+            ],
+            "cached": false,
+            "processing_time": 7.664687156677246,
+            "error": null
+        },
+        {
+            "chunk_index": 9,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "HttpURLConnection",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#java",
+                        "#network"
+                    ],
+                    "context": "Java class for managing HTTP requests"
+                },
+                {
+                    "term": "URL",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#java",
+                        "#network"
+                    ],
+                    "context": "Java class for handling URLs"
+                },
+                {
+                    "term": "File",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#java",
+                        "#filesystem"
+                    ],
+                    "context": "Java class for file system access"
+                }
+            ],
+            "cached": false,
+            "processing_time": 2.6536779403686523,
+            "error": null
+        },
+        {
+            "chunk_index": 10,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "Frida",
+                    "type": "product",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#instrumentation",
+                        "#security",
+                        "#dynamic_analysis"
+                    ],
+                    "context": "Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers"
+                },
+                {
+                    "term": "frida_android_analyzer.py",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#script",
+                        "#automation",
+                        "#Frida"
+                    ],
+                    "context": "Python script for automating tasks in Frida for Android applications"
+                },
+                {
+                    "term": "AndroidSecurityAnalyzer",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#automation",
+                        "#security",
+                        "#Frida"
+                    ],
+                    "context": "Class for analyzing Android app security using Frida"
+                },
+                {
+                    "term": "JSON",
+                    "type": "technical_term",
+                    "primary_domain": "data",
+                    "tags": [
+                        "#data_format",
+                        "#serialization"
+                    ],
+                    "context": "Lightweight data-interchange format"
+                },
+                {
+                    "term": "argparse",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#python",
+                        "#cli",
+                        "#parsing"
+                    ],
+                    "context": "Python library for parsing command line arguments"
+                }
+            ],
+            "cached": false,
+            "processing_time": 5.264485836029053,
+            "error": null
+        },
+        {
+            "chunk_index": 11,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "frida",
+                    "type": "technical_term",
+                    "primary_domain": "software_analysis",
+                    "tags": [
+                        "#tool",
+                        "#dynamic_instrumentation",
+                        "#reverse_engineering"
+                    ],
+                    "context": "a framework for dynamic instrumentation"
+                },
+                {
+                    "term": "ProcessNotFoundError",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#error",
+                        "#exception",
+                        "#frida"
+                    ],
+                    "context": "an error indicating process not found in Frida"
+                },
+                {
+                    "term": "json",
+                    "type": "technical_term",
+                    "primary_domain": "data_format",
+                    "tags": [
+                        "#format",
+                        "#serialization",
+                        "#data_exchange"
+                    ],
+                    "context": "a lightweight data interchange format"
+                }
+            ],
+            "cached": false,
+            "processing_time": 3.096806287765503,
+            "error": null
+        },
+        {
+            "chunk_index": 12,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "argparse",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#Python"
+                    ],
+                    "context": "A module for parsing command line arguments"
+                },
+                {
+                    "term": "Frida",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#instrumentation",
+                        "#dynamic_analysis"
+                    ],
+                    "context": "A dynamic instrumentation toolkit for developers"
+                },
+                {
+                    "term": "AndroidSecurityAnalyzer",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#security"
+                    ],
+                    "context": "A hypothetical class for analyzing Android app security"
+                },
+                {
+                    "term": "Drozer",
+                    "type": "product",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#Android",
+                        "#vulnerability_assessment"
+                    ],
+                    "context": "A tool for Android security assessments"
+                },
+                {
+                    "term": "Docker",
+                    "type": "technical_term",
+                    "primary_domain": "software_development",
+                    "tags": [
+                        "#containers"
+                    ],
+                    "context": "A platform for developing containerized applications"
+                },
+                {
+                    "term": "ADB",
+                    "type": "technical_term",
+                    "primary_domain": "android",
+                    "tags": [
+                        "#debugging"
+                    ],
+                    "context": "Android Debug Bridge, a tool for Android development"
+                },
+                {
+                    "term": "Python 2.7",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#Python",
+                        "#version"
+                    ],
+                    "context": "An older version of the Python programming language"
+                }
+            ],
+            "cached": false,
+            "processing_time": 6.187885999679565,
+            "error": null
+        },
+        {
+            "chunk_index": 13,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "Drozer",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#mobile",
+                        "#security",
+                        "#tool"
+                    ],
+                    "context": "Android security assessment tool"
+                },
+                {
+                    "term": "Bash",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#scripting",
+                        "#linux"
+                    ],
+                    "context": "Shell scripting language"
+                },
+                {
+                    "term": "OWASP ZAP",
+                    "type": "product",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#websecurity",
+                        "#tool",
+                        "#testing"
+                    ],
+                    "context": "Open-source web application security scanner"
+                },
+                {
+                    "term": "EOF",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#scripting",
+                        "#bash"
+                    ],
+                    "context": "End of file placeholder in scripts"
+                }
+            ],
+            "cached": false,
+            "processing_time": 3.7937490940093994,
+            "error": null
+        },
+        {
+            "chunk_index": 14,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "Docker",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#containerization"
+                    ],
+                    "context": "Container management service for running applications."
+                },
+                {
+                    "term": "ZAP",
+                    "type": "product",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#security",
+                        "#vulnerability"
+                    ],
+                    "context": "OWASP ZAP is a tool for finding vulnerabilities in web apps."
+                },
+                {
+                    "term": "ZAPv2",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#security",
+                        "#API"
+                    ],
+                    "context": "Python API client for interacting with ZAP tool."
+                },
+                {
+                    "term": "Python",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#language",
+                        "#software"
+                    ],
+                    "context": "High-level programming language used for scripting."
+                },
+                {
+                    "term": "Android",
+                    "type": "product",
                     "primary_domain": "mobile",
                     "tags": [
-                        "#package",
-                        "#application"
+                        "#OS",
+                        "#mobile"
                     ],
-                    "context": "Android application package file format"
+                    "context": "Mobile operating system developed by Google."
+                },
+                {
+                    "term": "ADB",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#Android",
+                        "#debugging"
+                    ],
+                    "context": "Android Debug Bridge, a tool for managing device state."
+                }
+            ],
+            "cached": false,
+            "processing_time": 9.204799890518188,
+            "error": null
+        },
+        {
+            "chunk_index": 15,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "ZAP",
+                    "type": "product",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#scanning",
+                        "#security",
+                        "#OWASP"
+                    ],
+                    "context": "ZAP is a security tool for testing web applications."
+                },
+                {
+                    "term": "zap_root_ca.crt",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#certificate",
+                        "#security"
+                    ],
+                    "context": "Certificate file used for setting up security layers."
+                },
+                {
+                    "term": "Android-App-Policy",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#security_policy"
+                    ],
+                    "context": "A security policy set for Android app testing."
+                },
+                {
+                    "term": "Persistent XSS",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#XSS",
+                        "#vulnerability"
+                    ],
+                    "context": "A type of cross-site scripting attack."
+                },
+                {
+                    "term": "SQL Injection",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#injection",
+                        "#vulnerability"
+                    ],
+                    "context": "A code injection technique that attacks SQL databases."
+                },
+                {
+                    "term": "Server Side Code Injection",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#injection",
+                        "#vulnerability"
+                    ],
+                    "context": "An attack exploiting code execution on the server."
+                },
+                {
+                    "term": "Remote OS Command Injection",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#command_injection",
+                        "#vulnerability"
+                    ],
+                    "context": "An attack that allows execution of OS commands."
+                },
+                {
+                    "term": "adb",
+                    "type": "technical_term",
+                    "primary_domain": "android",
+                    "tags": [
+                        "#android",
+                        "#debug_bridge"
+                    ],
+                    "context": "A command line tool for Android device management."
+                },
+                {
+                    "term": "Spider",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#web_crawling",
+                        "#security"
+                    ],
+                    "context": "A tool for crawling websites to identify vulnerabilities."
+                }
+            ],
+            "cached": false,
+            "processing_time": 4.401628017425537,
+            "error": null
+        },
+        {
+            "chunk_index": 16,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "ZAP",
+                    "type": "product",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#security",
+                        "#scanning",
+                        "#ZAP"
+                    ],
+                    "context": "OWASP ZAP is a widely used security scanner."
+                },
+                {
+                    "term": "ascan",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#activeScan",
+                        "#securityTool"
+                    ],
+                    "context": "Active scanning method used in ZAP."
+                },
+                {
+                    "term": "JSON",
+                    "type": "technical_term",
+                    "primary_domain": "data_format",
+                    "tags": [
+                        "#data",
+                        "#format",
+                        "#JSON"
+                    ],
+                    "context": "A lightweight data-interchange format."
+                },
+                {
+                    "term": "alerts",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#alerts",
+                        "#security",
+                        "#risks"
+                    ],
+                    "context": "Notifications triggered by security scan results."
+                },
+                {
+                    "term": "time",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#module",
+                        "#Python"
+                    ],
+                    "context": "A Python module for handling time-related tasks."
+                }
+            ],
+            "cached": false,
+            "processing_time": 6.35033392906189,
+            "error": null
+        },
+        {
+            "chunk_index": 17,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "AndroidZAPProxy",
+                    "type": "product",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#security",
+                        "#proxy",
+                        "#android",
+                        "#monitoring"
+                    ],
+                    "context": "A proxy tool for Android security monitoring"
+                },
+                {
+                    "term": "android_zap_report.json",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#json",
+                        "#report",
+                        "#security"
+                    ],
+                    "context": "JSON report file for ZAP proxy"
+                },
+                {
+                    "term": "android_zap_report.html",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#html",
+                        "#report",
+                        "#security"
+                    ],
+                    "context": "HTML report file for ZAP proxy"
+                },
+                {
+                    "term": "com.yourapp.package",
+                    "type": "technical_term",
+                    "primary_domain": "mobile_development",
+                    "tags": [
+                        "#android",
+                        "#package",
+                        "#app"
+                    ],
+                    "context": "Android application package name"
+                },
+                {
+                    "term": "https://api.yourapp.com",
+                    "type": "technical_term",
+                    "primary_domain": "mobile_development",
+                    "tags": [
+                        "#api",
+                        "#android",
+                        "#app"
+                    ],
+                    "context": "Target API endpoint for security scan"
+                },
+                {
+                    "term": "Charles Proxy",
+                    "type": "product",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#proxy",
+                        "#network",
+                        "#tools"
+                    ],
+                    "context": "A commercial cross-platform HTTP proxy"
+                },
+                {
+                    "term": "mitmproxy",
+                    "type": "product",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#proxy",
+                        "#opensource",
+                        "#network"
+                    ],
+                    "context": "An open-source HTTPS proxy tool"
+                },
+                {
+                    "term": "mitmdump",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#mitmproxy",
+                        "#command",
+                        "#tools"
+                    ],
+                    "context": "Command-line tool from mitmproxy suite"
+                },
+                {
+                    "term": "pip3",
+                    "type": "technical_term",
+                    "primary_domain": "software_development",
+                    "tags": [
+                        "#python",
+                        "#package_management"
+                    ],
+                    "context": "Python package installer for Python 3"
+                }
+            ],
+            "cached": false,
+            "processing_time": 9.170783042907715,
+            "error": null
+        },
+        {
+            "chunk_index": 18,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "mitmproxy",
+                    "type": "product",
+                    "primary_domain": "network_security",
+                    "tags": [
+                        "#opensource",
+                        "#tool",
+                        "#proxy"
+                    ],
+                    "context": "An interactive HTTPS proxy for man-in-the-middle attacks and debugging"
+                },
+                {
+                    "term": "Android",
+                    "type": "product",
+                    "primary_domain": "mobile_os",
+                    "tags": [
+                        "#OS",
+                        "#mobile",
+                        "#Google"
+                    ],
+                    "context": "A mobile operating system developed by Google"
+                },
+                {
+                    "term": "Python",
+                    "type": "technical_term",
+                    "primary_domain": "programming_language",
+                    "tags": [
+                        "#programming",
+                        "#language",
+                        "#Python"
+                    ],
+                    "context": "A high-level, interpreted programming language"
+                },
+                {
+                    "term": "HTTP",
+                    "type": "technical_term",
+                    "primary_domain": "web_technology",
+                    "tags": [
+                        "#protocol",
+                        "#web",
+                        "#network"
+                    ],
+                    "context": "Hypertext Transfer Protocol used for transmitting web pages"
+                },
+                {
+                    "term": "JSON",
+                    "type": "technical_term",
+                    "primary_domain": "data_format",
+                    "tags": [
+                        "#data",
+                        "#format",
+                        "#JSON"
+                    ],
+                    "context": "JavaScript Object Notation, a format for structuring data"
+                },
+                {
+                    "term": "URL",
+                    "type": "technical_term",
+                    "primary_domain": "web_technology",
+                    "tags": [
+                        "#link",
+                        "#web",
+                        "#location"
+                    ],
+                    "context": "Uniform Resource Locator, the address of a web resource"
+                }
+            ],
+            "cached": false,
+            "processing_time": 8.339575052261353,
+            "error": null
+        },
+        {
+            "chunk_index": 19,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "json",
+                    "type": "technical_term",
+                    "primary_domain": "data_format",
+                    "tags": [
+                        "#data",
+                        "#format"
+                    ],
+                    "context": "JavaScript Object Notation"
+                },
+                {
+                    "term": "application/x-www-form-urlencoded",
+                    "type": "technical_term",
+                    "primary_domain": "web",
+                    "tags": [
+                        "#content-type",
+                        "#web"
+                    ],
+                    "context": "MIME type for form submission"
+                },
+                {
+                    "term": "parse_qs",
+                    "type": "technical_term",
+                    "primary_domain": "python",
+                    "tags": [
+                        "#function",
+                        "#python"
+                    ],
+                    "context": "Parses query string parameters"
+                },
+                {
+                    "term": "http.HTTPFlow",
+                    "type": "technical_term",
+                    "primary_domain": "network",
+                    "tags": [
+                        "#http",
+                        "#flow"
+                    ],
+                    "context": "HTTP flow object in networking"
+                },
+                {
+                    "term": "status_code",
+                    "type": "technical_term",
+                    "primary_domain": "http",
+                    "tags": [
+                        "#http",
+                        "#response"
+                    ],
+                    "context": "HTTP response status indicator"
+                }
+            ],
+            "cached": false,
+            "processing_time": 3.1749889850616455,
+            "error": null
+        },
+        {
+            "chunk_index": 20,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "auth_tokens",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#security",
+                        "#token_management"
+                    ],
+                    "context": "Authentication tokens management in code"
+                },
+                {
+                    "term": "api_calls",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#api",
+                        "#request_handling"
+                    ],
+                    "context": "Logs of API calls with various details"
+                },
+                {
+                    "term": "URL",
+                    "type": "technical_term",
+                    "primary_domain": "web",
+                    "tags": [
+                        "#web",
+                        "#resources"
+                    ],
+                    "context": "Uniform Resource Locator used in API calls"
+                },
+                {
+                    "term": "JSON",
+                    "type": "technical_term",
+                    "primary_domain": "data_exchange",
+                    "tags": [
+                        "#format",
+                        "#serialization"
+                    ],
+                    "context": "Data format not used in some API responses"
+                },
+                {
+                    "term": "헤더",
+                    "type": "technical_term",
+                    "primary_domain": "networking",
+                    "tags": [
+                        "#http",
+                        "#header"
+                    ],
+                    "context": "HTTP header where tokens are extracted"
+                }
+            ],
+            "cached": false,
+            "processing_time": 3.9945080280303955,
+            "error": null
+        },
+        {
+            "chunk_index": 21,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "HTTPS POST",
+                    "type": "technical_term",
+                    "primary_domain": "networking",
+                    "tags": [
+                        "#internet",
+                        "#protocols"
+                    ],
+                    "context": "Recommended method for submitting data over the web"
+                },
+                {
+                    "term": "android_mitm_security_report.json",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#file",
+                        "#report"
+                    ],
+                    "context": "Filename for storing Android security report"
+                },
+                {
+                    "term": "JSON",
+                    "type": "technical_term",
+                    "primary_domain": "data_format",
+                    "tags": [
+                        "#data",
+                        "#format"
+                    ],
+                    "context": "Data format used for structured information exchange"
+                },
+                {
+                    "term": "ctx.log.info",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#logging",
+                        "#Python"
+                    ],
+                    "context": "A method used to log information in Python"
+                },
+                {
+                    "term": "AndroidSecurityMonitor",
+                    "type": "product",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#monitoring",
+                        "#Android"
+                    ],
+                    "context": "Tool to monitor Android application security"
+                },
+                {
+                    "term": "GitHub Actions",
+                    "type": "product",
+                    "primary_domain": "CI/CD",
+                    "tags": [
+                        "#automation",
+                        "#workflow"
+                    ],
+                    "context": "Service for automating software workflows"
+                },
+                {
+                    "term": ".github/workflows/android-security-test.yml",
+                    "type": "technical_term",
+                    "primary_domain": "development",
+                    "tags": [
+                        "#YAML",
+                        "#configuration"
+                    ],
+                    "context": "Configuration file for GitHub Actions workflow"
+                },
+                {
+                    "term": "Ubuntu",
+                    "type": "product",
+                    "primary_domain": "operating_system",
+                    "tags": [
+                        "#Linux",
+                        "#OS"
+                    ],
+                    "context": "Operating system used for running workflow jobs"
+                }
+            ],
+            "cached": false,
+            "processing_time": 7.06722092628479,
+            "error": null
+        },
+        {
+            "chunk_index": 22,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "JDK 11",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#java",
+                        "#jdk"
+                    ],
+                    "context": "Java Development Kit version 11"
+                },
+                {
+                    "term": "actions/setup-java@v3",
+                    "type": "product",
+                    "primary_domain": "CI/CD",
+                    "tags": [
+                        "#githubactions"
+                    ],
+                    "context": "GitHub Action to set up Java environment"
+                },
+                {
+                    "term": "temurin",
+                    "type": "product",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#jdk"
+                    ],
+                    "context": "Distribution of the OpenJDK"
+                },
+                {
+                    "term": "Android SDK",
+                    "type": "technical_term",
+                    "primary_domain": "mobile development",
+                    "tags": [
+                        "#android",
+                        "#sdk"
+                    ],
+                    "context": "Software Development Kit for Android"
+                },
+                {
+                    "term": "android-actions/setup-android@v2",
+                    "type": "product",
+                    "primary_domain": "CI/CD",
+                    "tags": [
+                        "#githubactions"
+                    ],
+                    "context": "GitHub Action for Android environment setup"
+                },
+                {
+                    "term": "actions/cache@v3",
+                    "type": "product",
+                    "primary_domain": "CI/CD",
+                    "tags": [
+                        "#githubactions",
+                        "#caching"
+                    ],
+                    "context": "GitHub Action for caching dependencies"
+                },
+                {
+                    "term": "Gradle",
+                    "type": "technical_term",
+                    "primary_domain": "build automation",
+                    "tags": [
+                        "#gradle"
+                    ],
+                    "context": "Build automation tool for Java projects"
+                },
+                {
+                    "term": "chmod",
+                    "type": "technical_term",
+                    "primary_domain": "Unix/Linux",
+                    "tags": [
+                        "#permissions"
+                    ],
+                    "context": "Command to change file permissions"
+                },
+                {
+                    "term": "APK",
+                    "type": "technical_term",
+                    "primary_domain": "mobile development",
+                    "tags": [
+                        "#android"
+                    ],
+                    "context": "Android Package Kit for applications"
+                },
+                {
+                    "term": "QARK",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#securityanalysis"
+                    ],
+                    "context": "Tool for Android application security analysis"
+                },
+                {
+                    "term": "Docker",
+                    "type": "product",
+                    "primary_domain": "virtualization",
+                    "tags": [
+                        "#containerization"
+                    ],
+                    "context": "Platform for developing containerized applications"
+                },
+                {
+                    "term": "opensecurity/mobsf",
+                    "type": "product",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#mobsf"
+                    ],
+                    "context": "Docker image for MobSF security testing"
+                },
+                {
+                    "term": "MobSF",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#securityframework"
+                    ],
+                    "context": "Mobile Security Framework for security analysis"
+                },
+                {
+                    "term": "spotbugs",
+                    "type": "technical_term",
+                    "primary_domain": "static analysis",
+                    "tags": [
+                        "#bugdetection"
+                    ],
+                    "context": "Static analysis tool to find bugs in Java code"
+                },
+                {
+                    "term": "detekt",
+                    "type": "technical_term",
+                    "primary_domain": "static analysis",
+                    "tags": [
+                        "#kotlincode"
+                    ],
+                    "context": "Static code analysis tool for Kotlin"
+                },
+                {
+                    "term": "actions/upload-artifact@v3",
+                    "type": "product",
+                    "primary_domain": "CI/CD",
+                    "tags": [
+                        "#githubactions",
+                        "#artifacts"
+                    ],
+                    "context": "GitHub Action for uploading build artifacts"
+                }
+            ],
+            "cached": false,
+            "processing_time": 9.41966962814331,
+            "error": null
+        },
+        {
+            "chunk_index": 23,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "Security Gate Check",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#automation",
+                        "#security"
+                    ],
+                    "context": "A security check process script"
+                },
+                {
+                    "term": "python3",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#scripting",
+                        "#language"
+                    ],
+                    "context": "A version of the Python programming language"
+                },
+                {
+                    "term": "GitHub",
+                    "type": "product",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#platform",
+                        "#code"
+                    ],
+                    "context": "Platform for version control and collaboration"
+                },
+                {
+                    "term": "JavaScript",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#language",
+                        "#scripting"
+                    ],
+                    "context": "A programming language for web development"
+                },
+                {
+                    "term": "JSON",
+                    "type": "technical_term",
+                    "primary_domain": "data format",
+                    "tags": [
+                        "#data",
+                        "#format"
+                    ],
+                    "context": "JavaScript Object Notation, a data format"
+                }
+            ],
+            "cached": false,
+            "processing_time": 4.792334079742432,
+            "error": null
+        },
+        {
+            "chunk_index": 24,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "높은 위험도 이슈",
+                    "type": "technical_term",
+                    "primary_domain": "risk management",
+                    "tags": [
+                        "#high_risk",
+                        "#issue",
+                        "#alert",
+                        "#safety",
+                        "#risk_management"
+                    ],
+                    "context": "High-risk issue identified"
+                }
+            ],
+            "cached": false,
+            "processing_time": 1.5342981815338135,
+            "error": null
+        },
+        {
+            "chunk_index": 25,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "GitHub",
+                    "type": "company",
+                    "primary_domain": "technology",
+                    "tags": [
+                        "#codehosting",
+                        "#development"
+                    ],
+                    "context": "Platform for code hosting and collaboration"
+                },
+                {
+                    "term": "Android",
+                    "type": "product",
+                    "primary_domain": "technology",
+                    "tags": [
+                        "#mobileOS",
+                        "#Google"
+                    ],
+                    "context": "Mobile operating system developed by Google"
+                },
+                {
+                    "term": "aapt",
+                    "type": "technical_term",
+                    "primary_domain": "software",
+                    "tags": [
+                        "#android",
+                        "#tooling"
+                    ],
+                    "context": "Android Asset Packaging Tool"
+                },
+                {
+                    "term": "QARK",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#security",
+                        "#analysis",
+                        "#Android"
+                    ],
+                    "context": "Tool for static security analysis of Android applications"
+                },
+                {
+                    "term": "MobSF",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#security",
+                        "#framework",
+                        "#mobile"
+                    ],
+                    "context": "Mobile Security Framework for analysis and pen testing"
+                },
+                {
+                    "term": "docker",
+                    "type": "technical_term",
+                    "primary_domain": "technology",
+                    "tags": [
+                        "#containers",
+                        "#devops"
+                    ],
+                    "context": "Platform for creating, deploying, and managing containers"
                 },
                 {
                     "term": "APKTool",
                     "type": "technical_term",
                     "primary_domain": "software",
                     "tags": [
-                        "#tool",
-                        "#reverse_engineering"
+                        "#decompiling",
+                        "#android"
                     ],
                     "context": "Tool for reverse engineering Android APK files"
                 },
                 {
                     "term": "JADX",
                     "type": "technical_term",
-                    "primary_domain": "decompiler",
+                    "primary_domain": "software",
                     "tags": [
-                        "#tool",
-                        "#reverse_engineering"
+                        "#decompiling",
+                        "#Java"
                     ],
-                    "context": "Decompiler for converting Android DEX to Java source"
+                    "context": "Dex to Java decompiler for Android APKs"
                 },
                 {
-                    "term": "DEX2JAR",
+                    "term": "RSA",
                     "type": "technical_term",
-                    "primary_domain": "tool",
-                    "tags": [
-                        "#conversion",
-                        "#reverse_engineering"
-                    ],
-                    "context": "Tool to convert Android DEX files to Java JAR files"
-                },
-                {
-                    "term": "Xposed",
-                    "type": "technical_term",
-                    "primary_domain": "framework",
-                    "tags": [
-                        "#runtime",
-                        "#modification"
-                    ],
-                    "context": "Framework for runtime manipulation of Android applications"
-                },
-                {
-                    "term": "Intent",
-                    "type": "technical_term",
-                    "primary_domain": "android",
-                    "tags": [
-                        "#communication",
-                        "#android"
-                    ],
-                    "context": "Messaging object for inter-component communication in Android"
-                },
-                {
-                    "term": "Frida",
-                    "type": "technical_term",
-                    "primary_domain": "reverse engineering",
-                    "tags": [
-                        "#tool",
-                        "#debugging"
-                    ],
-                    "context": "Dynamic instrumentation toolkit for developers, reverse engineers"
-                }
-            ],
-            "cached": false,
-            "processing_time": 13.339236974716187,
-            "error": null
-        },
-        {
-            "chunk_index": 1,
-            "source_filename": "Android_Security_Guidelines.md",
-            "entities": [
-                {
-                    "term": "Room",
-                    "type": "technical_term",
-                    "primary_domain": "database",
-                    "tags": [
-                        "#database",
-                        "#Android"
-                    ],
-                    "context": "An Android library for database management"
-                },
-                {
-                    "term": "SQLCipher",
-                    "type": "technical_term",
-                    "primary_domain": "security",
+                    "primary_domain": "cryptography",
                     "tags": [
                         "#encryption",
-                        "#database"
+                        "#cryptography"
                     ],
-                    "context": "Encryption extension for SQLite"
+                    "context": "Widely-used public key cryptosystem for secure data"
                 },
                 {
-                    "term": "kotlin",
+                    "term": "AES",
                     "type": "technical_term",
-                    "primary_domain": "programming",
-                    "tags": [
-                        "#language",
-                        "#Android"
-                    ],
-                    "context": "A modern programming language for JVM"
-                },
-                {
-                    "term": "net.zetetic:android-database-sqlcipher",
-                    "type": "product",
-                    "primary_domain": "library",
-                    "tags": [
-                        "#database",
-                        "#SQLCipher"
-                    ],
-                    "context": "Library for database encryption in Android"
-                },
-                {
-                    "term": "androidx.sqlite:sqlite",
-                    "type": "product",
-                    "primary_domain": "library",
-                    "tags": [
-                        "#database",
-                        "#SQLite"
-                    ],
-                    "context": "SQLite support library for Android"
-                },
-                {
-                    "term": "UserEntity",
-                    "type": "technical_term",
-                    "primary_domain": "database",
-                    "tags": [
-                        "#entity",
-                        "#data"
-                    ],
-                    "context": "Database entity representing user data"
-                },
-                {
-                    "term": "SecureDataEntity",
-                    "type": "technical_term",
-                    "primary_domain": "database",
-                    "tags": [
-                        "#entity",
-                        "#data"
-                    ],
-                    "context": "Database entity for storing secure data"
-                },
-                {
-                    "term": "Converts",
-                    "type": "technical_term",
-                    "primary_domain": "database",
-                    "tags": [
-                        "#conversion",
-                        "#mapping"
-                    ],
-                    "context": "Helper class for converting data types"
-                },
-                {
-                    "term": "UserDao",
-                    "type": "technical_term",
-                    "primary_domain": "database",
-                    "tags": [
-                        "#DAO",
-                        "#dataAccess"
-                    ],
-                    "context": "Data Access Object for user operations"
-                },
-                {
-                    "term": "SecureDataDao",
-                    "type": "technical_term",
-                    "primary_domain": "database",
-                    "tags": [
-                        "#DAO",
-                        "#dataAccess"
-                    ],
-                    "context": "Data Access Object for secure data operations"
-                },
-                {
-                    "term": "Context",
-                    "type": "technical_term",
-                    "primary_domain": "Android",
-                    "tags": [
-                        "#appContext",
-                        "#Android"
-                    ],
-                    "context": "Represents context in Android application"
-                }
-            ],
-            "cached": false,
-            "processing_time": 10.789701223373413,
-            "error": null
-        },
-        {
-            "chunk_index": 2,
-            "source_filename": "Android_Security_Guidelines.md",
-            "entities": [
-                {
-                    "term": "SupportOpenHelperFactory",
-                    "type": "technical_term",
-                    "primary_domain": "software development",
-                    "tags": [
-                        "#database",
-                        "#android"
-                    ],
-                    "context": "Factory class for creating a support SQLiteOpenHelper"
-                },
-                {
-                    "term": "Room",
-                    "type": "technical_term",
-                    "primary_domain": "software development",
-                    "tags": [
-                        "#database",
-                        "#android"
-                    ],
-                    "context": "Android's SQLite object mapping library"
-                },
-                {
-                    "term": "SecureRoomDatabase",
-                    "type": "technical_term",
-                    "primary_domain": "software development",
-                    "tags": [
-                        "#database",
-                        "#android"
-                    ],
-                    "context": "A class extending RoomDatabase"
-                },
-                {
-                    "term": "SecureRandom",
-                    "type": "technical_term",
-                    "primary_domain": "security",
-                    "tags": [
-                        "#random",
-                        "#java"
-                    ],
-                    "context": "Class providing cryptographically strong random number generator"
-                },
-                {
-                    "term": "Base64",
-                    "type": "technical_term",
-                    "primary_domain": "software development",
-                    "tags": [
-                        "#encoding",
-                        "#java"
-                    ],
-                    "context": "Utility class for encoding and decoding Base64"
-                },
-                {
-                    "term": "EncryptedSharedPreferences",
-                    "type": "technical_term",
-                    "primary_domain": "security",
-                    "tags": [
-                        "#storage",
-                        "#android"
-                    ],
-                    "context": "Android class for handling encrypted SharedPreferences"
-                },
-                {
-                    "term": "MasterKey",
-                    "type": "technical_term",
-                    "primary_domain": "security",
-                    "tags": [
-                        "#key",
-                        "#android"
-                    ],
-                    "context": "Class for managing encryption key for cryptographic operations"
-                }
-            ],
-            "cached": false,
-            "processing_time": 5.809479236602783,
-            "error": null
-        },
-        {
-            "chunk_index": 3,
-            "source_filename": "Android_Security_Guidelines.md",
-            "entities": [
-                {
-                    "term": "KEY_AUTH_TOKEN",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
+                    "primary_domain": "cryptography",
                     "tags": [
                         "#encryption",
-                        "#authentication",
-                        "#android"
+                        "#advancedEncryption"
                     ],
-                    "context": "Key used for storing auth token securely"
+                    "context": "Advanced Encryption Standard used in security protocols"
                 },
                 {
-                    "term": "PREFS_FILE_NAME",
+                    "term": "MD5",
                     "type": "technical_term",
-                    "primary_domain": "software_development",
+                    "primary_domain": "cryptography",
                     "tags": [
-                        "#encryption",
-                        "#android"
-                    ],
-                    "context": "Name of preferences file for secure storage"
-                },
-                {
-                    "term": "Certificate Pinning",
-                    "type": "technical_term",
-                    "primary_domain": "network_security",
-                    "tags": [
-                        "#security",
-                        "#encryption",
-                        "#certificates"
-                    ],
-                    "context": "A technique used to secure app communications"
-                },
-                {
-                    "term": "OkHttp",
-                    "type": "product",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#network",
-                        "#android",
-                        "#library"
-                    ],
-                    "context": "HTTP client for Android and Java applications"
-                },
-                {
-                    "term": "SSLContext",
-                    "type": "technical_term",
-                    "primary_domain": "network_security",
-                    "tags": [
-                        "#encryption",
-                        "#security",
-                        "#ssl"
-                    ],
-                    "context": "Java class for SSL and TLS protocols"
-                },
-                {
-                    "term": "TrustManager",
-                    "type": "technical_term",
-                    "primary_domain": "network_security",
-                    "tags": [
-                        "#security",
-                        "#certificates",
-                        "#java"
-                    ],
-                    "context": "Interface for managing trust material"
-                },
-                {
-                    "term": "X509TrustManager",
-                    "type": "technical_term",
-                    "primary_domain": "network_security",
-                    "tags": [
-                        "#ssl",
+                        "#hashing",
                         "#encryption"
                     ],
-                    "context": "Interface extending TrustManager for X.509"
-                },
-                {
-                    "term": "HttpLoggingInterceptor",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#network",
-                        "#logging",
-                        "#debugging"
-                    ],
-                    "context": "Tool for logging HTTP request and response data"
+                    "context": "Hash function producing a 128-bit hash value"
                 }
             ],
             "cached": false,
-            "processing_time": 6.578159332275391,
+            "processing_time": 8.114417314529419,
             "error": null
         },
         {
-            "chunk_index": 4,
-            "source_filename": "Android_Security_Guidelines.md",
+            "chunk_index": 26,
+            "source_filename": "Android_Security_Testing_Environment.md",
             "entities": [
                 {
-                    "term": "HttpLoggingInterceptor",
+                    "term": "os.walk",
                     "type": "technical_term",
-                    "primary_domain": "software_development",
+                    "primary_domain": "programming",
                     "tags": [
-                        "#logging",
-                        "#network",
-                        "#interceptor"
+                        "#filesystem",
+                        "#Python"
                     ],
-                    "context": "A tool used to log HTTP request and response data"
+                    "context": "Used to generate file names in a directory tree"
                 },
                 {
-                    "term": "OkHttpClient",
+                    "term": "open",
                     "type": "technical_term",
-                    "primary_domain": "software_development",
+                    "primary_domain": "programming",
                     "tags": [
-                        "#HTTP",
-                        "#client",
-                        "#network"
+                        "#filehandling",
+                        "#Python"
                     ],
-                    "context": "A client for sending and receiving HTTP-based network requests"
+                    "context": "Function to open a file in Python"
                 },
                 {
-                    "term": "AuthInterceptor",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#interceptor",
-                        "#authentication",
-                        "#HTTP"
-                    ],
-                    "context": "Intercepts HTTP requests to add authentication headers"
-                },
-                {
-                    "term": "SecurePreferencesManager",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#security",
-                        "#preferences",
-                        "#data"
-                    ],
-                    "context": "Manages secure storage of preferences"
-                },
-                {
-                    "term": "Interceptor",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#interface",
-                        "#HTTP",
-                        "#network"
-                    ],
-                    "context": "Used to intercept HTTP requests and responses"
-                },
-                {
-                    "term": "BuildConfig",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#build",
-                        "#configuration",
-                        "#versioning"
-                    ],
-                    "context": "Holds build-related configuration constants"
-                }
-            ],
-            "cached": false,
-            "processing_time": 10.043593883514404,
-            "error": null
-        },
-        {
-            "chunk_index": 5,
-            "source_filename": "Android_Security_Guidelines.md",
-            "entities": [
-                {
-                    "term": "Network Security Config",
-                    "type": "technical_term",
-                    "primary_domain": "network_security",
-                    "tags": [
-                        "#network",
-                        "#security",
-                        "#config"
-                    ],
-                    "context": "Configuration for network security settings"
-                },
-                {
-                    "term": "Biometric 인증",
-                    "type": "technical_term",
-                    "primary_domain": "authentication",
-                    "tags": [
-                        "#biometric",
-                        "#authentication"
-                    ],
-                    "context": "Implementation of biometric authentication"
-                },
-                {
-                    "term": "BiometricManager",
-                    "type": "technical_term",
-                    "primary_domain": "android",
-                    "tags": [
-                        "#android",
-                        "#biometric",
-                        "#manager"
-                    ],
-                    "context": "Android class for managing biometric authentication"
-                },
-                {
-                    "term": "BiometricPrompt",
-                    "type": "technical_term",
-                    "primary_domain": "android",
-                    "tags": [
-                        "#android",
-                        "#biometric",
-                        "#prompt"
-                    ],
-                    "context": "Android class for creating biometric authentication prompts"
-                },
-                {
-                    "term": "ContextCompat",
-                    "type": "technical_term",
-                    "primary_domain": "android",
-                    "tags": [
-                        "#android",
-                        "#context",
-                        "#compat"
-                    ],
-                    "context": "Android support library for context compatibility"
-                },
-                {
-                    "term": "BiometricAuthManager",
-                    "type": "technical_term",
-                    "primary_domain": "authentication",
-                    "tags": [
-                        "#biometric",
-                        "#manager",
-                        "#authentication"
-                    ],
-                    "context": "Manager class for handling biometric authentication"
-                },
-                {
-                    "term": "FragmentActivity",
-                    "type": "technical_term",
-                    "primary_domain": "android",
-                    "tags": [
-                        "#android",
-                        "#fragment",
-                        "#activity"
-                    ],
-                    "context": "Android activity class that supports fragment transactions"
-                }
-            ],
-            "cached": false,
-            "processing_time": 5.113113164901733,
-            "error": null
-        },
-        {
-            "chunk_index": 6,
-            "source_filename": "Android_Security_Guidelines.md",
-            "entities": [
-                {
-                    "term": "BiometricPrompt",
-                    "type": "product",
-                    "primary_domain": "Android Development",
-                    "tags": [
-                        "#authentication",
-                        "#biometrics",
-                        "#android"
-                    ],
-                    "context": "Android class for biometric authentication"
-                },
-                {
-                    "term": "PromptInfo",
-                    "type": "technical_term",
-                    "primary_domain": "Android Development",
-                    "tags": [
-                        "#authentication",
-                        "#android"
-                    ],
-                    "context": "Builder class for biometric prompt info"
-                },
-                {
-                    "term": "JWT",
-                    "type": "technical_term",
-                    "primary_domain": "Security",
-                    "tags": [
-                        "#tokens",
-                        "#security",
-                        "#authentication"
-                    ],
-                    "context": "JSON Web Token, standard for tokens"
-                },
-                {
-                    "term": "Claims",
-                    "type": "technical_term",
-                    "primary_domain": "Security",
-                    "tags": [
-                        "#jwt",
-                        "#tokens",
-                        "#claims"
-                    ],
-                    "context": "JWT claims, store key-value pairs"
-                },
-                {
-                    "term": "Jwts",
-                    "type": "technical_term",
-                    "primary_domain": "Security",
-                    "tags": [
-                        "#jwt",
-                        "#tokens",
-                        "#security"
-                    ],
-                    "context": "Java library for creating and parsing JWTs"
-                },
-                {
-                    "term": "SecurePreferencesManager",
-                    "type": "product",
-                    "primary_domain": "Android Development",
-                    "tags": [
-                        "#security",
-                        "#preferences",
-                        "#android"
-                    ],
-                    "context": "Manager class for secure shared preferences"
-                }
-            ],
-            "cached": false,
-            "processing_time": 5.4698097705841064,
-            "error": null
-        },
-        {
-            "chunk_index": 7,
-            "source_filename": "Android_Security_Guidelines.md",
-            "entities": [
-                {
-                    "term": "SecurePrefs",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#security"
-                    ],
-                    "context": "Secure preferences storage"
-                },
-                {
-                    "term": "KEY_ACCESS_TOKEN",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#token",
-                        "#security"
-                    ],
-                    "context": "Constant for access token key"
-                },
-                {
-                    "term": "KEY_REFRESH_TOKEN",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#token",
-                        "#security"
-                    ],
-                    "context": "Constant for refresh token key"
-                },
-                {
-                    "term": "Jwts",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#jwt",
-                        "#token"
-                    ],
-                    "context": "Java JWT library"
-                },
-                {
-                    "term": "Claims",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#jwt",
-                        "#token"
-                    ],
-                    "context": "JWT claims structure"
-                },
-                {
-                    "term": "ApiService",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#api",
-                        "#service"
-                    ],
-                    "context": "API service interface"
-                },
-                {
-                    "term": "JwtManager",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#jwt",
-                        "#security"
-                    ],
-                    "context": "JWT management tool"
-                },
-                {
-                    "term": "BiometricAuthManager",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#biometric",
-                        "#authentication"
-                    ],
-                    "context": "Manage biometric authentication"
-                },
-                {
-                    "term": "UserCredentials",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#security",
-                        "#authentication"
-                    ],
-                    "context": "User credentials data structure"
-                },
-                {
-                    "term": "AuthToken",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#token",
-                        "#authentication"
-                    ],
-                    "context": "Authentication token structure"
-                },
-                {
-                    "term": "SecurityRepository",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#repository",
-                        "#security"
-                    ],
-                    "context": "Security repository interface"
-                },
-                {
-                    "term": "SecurityRepositoryImpl",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#implementation",
-                        "#security"
-                    ],
-                    "context": "Implementation of security repository"
-                }
-            ],
-            "cached": false,
-            "processing_time": 6.718246936798096,
-            "error": null
-        },
-        {
-            "chunk_index": 8,
-            "source_filename": "Android_Security_Guidelines.md",
-            "entities": [
-                {
-                    "term": "AuthToken",
-                    "type": "technical_term",
-                    "primary_domain": "software",
-                    "tags": [
-                        "#authentication",
-                        "#security"
-                    ],
-                    "context": "Token for authentication purposes in software systems"
-                },
-                {
-                    "term": "jwtManager",
-                    "type": "technical_term",
-                    "primary_domain": "software",
-                    "tags": [
-                        "#JWT",
-                        "#tokenManagement"
-                    ],
-                    "context": "Manages JSON Web Tokens (JWT) in application code"
-                },
-                {
-                    "term": "apiService",
-                    "type": "technical_term",
-                    "primary_domain": "software",
-                    "tags": [
-                        "#APIs",
-                        "#networking"
-                    ],
-                    "context": "Service for handling API requests and responses"
-                },
-                {
-                    "term": "UserCredentials",
-                    "type": "technical_term",
-                    "primary_domain": "software",
-                    "tags": [
-                        "#userAuthentication",
-                        "#credentials"
-                    ],
-                    "context": "Class representing user credentials like email and password"
-                },
-                {
-                    "term": "SecurityException",
-                    "type": "technical_term",
-                    "primary_domain": "software",
-                    "tags": [
-                        "#exceptions",
-                        "#security"
-                    ],
-                    "context": "Exception thrown for security issues in the code"
-                },
-                {
-                    "term": "Result",
-                    "type": "technical_term",
-                    "primary_domain": "software",
-                    "tags": [
-                        "#errorHandling",
-                        "#type"
-                    ],
-                    "context": "Kotlin type for representing success or failure outcomes"
-                },
-                {
-                    "term": "Patterns.EMAIL_ADDRESS",
-                    "type": "technical_term",
-                    "primary_domain": "software",
-                    "tags": [
-                        "#regex",
-                        "#emailValidation"
-                    ],
-                    "context": "Android utility class for email format validation"
-                },
-                {
-                    "term": "SecurityRepository",
-                    "type": "technical_term",
-                    "primary_domain": "software",
-                    "tags": [
-                        "#repository",
-                        "#security"
-                    ],
-                    "context": "Repository layer for managing security-related operations"
-                },
-                {
-                    "term": "InputValidator",
-                    "type": "technical_term",
-                    "primary_domain": "software",
-                    "tags": [
-                        "#validation",
-                        "#sanitization"
-                    ],
-                    "context": "Class for input validation and sanitization"
-                },
-                {
-                    "term": "AuthenticateUserUseCase",
-                    "type": "technical_term",
-                    "primary_domain": "software",
-                    "tags": [
-                        "#useCase",
-                        "#authentication"
-                    ],
-                    "context": "Use case for authenticating a user in software architecture"
-                }
-            ],
-            "cached": false,
-            "processing_time": 5.692259073257446,
-            "error": null
-        },
-        {
-            "chunk_index": 9,
-            "source_filename": "Android_Security_Guidelines.md",
-            "entities": [
-                {
-                    "term": "Regex",
+                    "term": "re.findall",
                     "type": "technical_term",
                     "primary_domain": "programming",
                     "tags": [
                         "#regex",
-                        "#programming"
+                        "#Python"
                     ],
-                    "context": "Pattern matching library in programming"
+                    "context": "Find all substrings where the regex matches"
                 },
                 {
-                    "term": "ViewModel",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#android",
-                        "#mvvm",
-                        "#architecture"
-                    ],
-                    "context": "MVVM architecture component"
-                },
-                {
-                    "term": "MutableStateFlow",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#kotlin",
-                        "#stateflow",
-                        "#coroutines"
-                    ],
-                    "context": "Represents a state-holder observable flow"
-                },
-                {
-                    "term": "StateFlow",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#kotlin",
-                        "#stateflow"
-                    ],
-                    "context": "Read-only state-holder observable flow"
-                },
-                {
-                    "term": "HiltViewModel",
-                    "type": "technical_term",
-                    "primary_domain": "android",
-                    "tags": [
-                        "#android",
-                        "#hilt"
-                    ],
-                    "context": "Annotation for Hilt dependency injection in ViewModel"
-                },
-                {
-                    "term": "AuthenticateUserUseCase",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#usecase",
-                        "#authentication"
-                    ],
-                    "context": "Use case for handling user authentication"
-                },
-                {
-                    "term": "RootDetector",
-                    "type": "technical_term",
-                    "primary_domain": "security",
-                    "tags": [
-                        "#root",
-                        "#security"
-                    ],
-                    "context": "Tool or service for detecting rooted devices"
-                },
-                {
-                    "term": "SecurityViewModel",
-                    "type": "technical_term",
-                    "primary_domain": "android",
-                    "tags": [
-                        "#security",
-                        "#viewmodel"
-                    ],
-                    "context": "ViewModel for handling security-related UI state"
-                },
-                {
-                    "term": "MVI",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#architecture",
-                        "#software",
-                        "#patterns"
-                    ],
-                    "context": "Model-View-Intent architectural pattern"
-                }
-            ],
-            "cached": false,
-            "processing_time": 11.949221134185791,
-            "error": null
-        },
-        {
-            "chunk_index": 10,
-            "source_filename": "Android_Security_Guidelines.md",
-            "entities": [
-                {
-                    "term": "Exception",
+                    "term": "json.dump",
                     "type": "technical_term",
                     "primary_domain": "programming",
                     "tags": [
-                        "#error_handling",
-                        "#Java",
-                        "#Kotlin"
+                        "#json",
+                        "#Python"
                     ],
-                    "context": "An error encountered during program execution"
+                    "context": "Serialize Python object to a JSON formatted stream"
                 },
                 {
-                    "term": "viewModelScope",
-                    "type": "technical_term",
-                    "primary_domain": "programming",
-                    "tags": [
-                        "#coroutines",
-                        "#Kotlin"
-                    ],
-                    "context": "Kotlin Coroutine Scope tied to ViewModel"
-                },
-                {
-                    "term": "rootDetector",
-                    "type": "technical_term",
-                    "primary_domain": "security",
-                    "tags": [
-                        "#security",
-                        "#device"
-                    ],
-                    "context": "Tool to detect rooted devices"
-                },
-                {
-                    "term": "SecurityUiState",
-                    "type": "technical_term",
-                    "primary_domain": "UI/UX",
-                    "tags": [
-                        "#UIstate",
-                        "#Kotlin",
-                        "#data_class"
-                    ],
-                    "context": "Data class representing UI state in Kotlin"
-                }
-            ],
-            "cached": false,
-            "processing_time": 4.575250864028931,
-            "error": null
-        },
-        {
-            "chunk_index": 11,
-            "source_filename": "Android_Security_Guidelines.md",
-            "entities": [
-                {
-                    "term": "null",
-                    "type": "technical_term",
-                    "primary_domain": "programming",
-                    "tags": [
-                        "#programming",
-                        "#dataTypes"
-                    ],
-                    "context": "Represents a null reference or absence of value"
-                },
-                {
-                    "term": "securityWarning",
-                    "type": "technical_term",
-                    "primary_domain": "software",
-                    "tags": [
-                        "#security",
-                        "#warnings",
-                        "#softwareDevelopment"
-                    ],
-                    "context": "Variable for storing security-related messages or alerts"
-                }
-            ],
-            "cached": false,
-            "processing_time": 2.2539470195770264,
-            "error": null
-        },
-        {
-            "chunk_index": 12,
-            "source_filename": "Android_Security_Guidelines.md",
-            "entities": [
-                {
-                    "term": "SecurityIntent",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#kotlin",
-                        "#sealed_class"
-                    ],
-                    "context": "A sealed class in Kotlin for security operations"
-                },
-                {
-                    "term": "RootDetector",
-                    "type": "technical_term",
-                    "primary_domain": "software_security",
-                    "tags": [
-                        "#root_detection",
-                        "#android"
-                    ],
-                    "context": "A class for detecting rooted devices on Android"
-                },
-                {
-                    "term": "Login",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#data_class",
-                        "#kotlin"
-                    ],
-                    "context": "Data class in Kotlin for login functionality"
-                },
-                {
-                    "term": "Logout",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#object",
-                        "#kotlin"
-                    ],
-                    "context": "An object in Kotlin for logout functionality"
-                },
-                {
-                    "term": "CheckBiometric",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#object",
-                        "#kotlin"
-                    ],
-                    "context": "An object in Kotlin for checking biometric data"
-                },
-                {
-                    "term": "@Inject",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#dependency_injection",
-                        "#kotlin"
-                    ],
-                    "context": "Kotlin annotation for dependency injection"
-                },
-                {
-                    "term": "@Singleton",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#design_pattern",
-                        "#kotlin"
-                    ],
-                    "context": "Singleton design pattern annotation in Kotlin"
-                },
-                {
-                    "term": "@ApplicationContext",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#context",
-                        "#android"
-                    ],
-                    "context": "Annotation for providing application context in Kotlin"
-                },
-                {
-                    "term": "PackageManager",
-                    "type": "technical_term",
-                    "primary_domain": "android_development",
-                    "tags": [
-                        "#android",
-                        "#package_management"
-                    ],
-                    "context": "Android interface for app package management"
-                },
-                {
-                    "term": "NameNotFoundException",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#exception_handling",
-                        "#android"
-                    ],
-                    "context": "Exception thrown when a package name is not found"
-                }
-            ],
-            "cached": false,
-            "processing_time": 8.435553073883057,
-            "error": null
-        },
-        {
-            "chunk_index": 13,
-            "source_filename": "Android_Security_Guidelines.md",
-            "entities": [
-                {
-                    "term": "tRuntime",
-                    "type": "technical_term",
-                    "primary_domain": "programming",
-                    "tags": [
-                        "#Java",
-                        "#method"
-                    ],
-                    "context": "A method example in Java code snippet"
-                },
-                {
-                    "term": "Build.TAGS",
-                    "type": "technical_term",
-                    "primary_domain": "programming",
-                    "tags": [
-                        "#Android",
-                        "#buildsystem"
-                    ],
-                    "context": "Property used to identify build tags in Android"
-                },
-                {
-                    "term": "Exception",
-                    "type": "technical_term",
-                    "primary_domain": "programming",
-                    "tags": [
-                        "#Java",
-                        "#errorhandling"
-                    ],
-                    "context": "Represents an error or exception in Java"
-                },
-                {
-                    "term": "ProGuard",
-                    "type": "product",
-                    "primary_domain": "software",
-                    "tags": [
-                        "#Java",
-                        "#obfuscation"
-                    ],
-                    "context": "A tool for obfuscating Java bytecode"
-                },
-                {
-                    "term": "proguard-rules.pro",
-                    "type": "technical_term",
-                    "primary_domain": "programming",
-                    "tags": [
-                        "#Java",
-                        "#configuration"
-                    ],
-                    "context": "Configuration file for ProGuard settings"
-                }
-            ],
-            "cached": false,
-            "processing_time": 6.102886915206909,
-            "error": null
-        },
-        {
-            "chunk_index": 14,
-            "source_filename": "Android_Security_Guidelines.md",
-            "entities": [
-                {
-                    "term": "SourceFile",
-                    "type": "technical_term",
-                    "primary_domain": "programming",
-                    "tags": [
-                        "#attributes"
-                    ],
-                    "context": "Java attribute for source file tracking"
-                },
-                {
-                    "term": "LineNumberTable",
-                    "type": "technical_term",
-                    "primary_domain": "programming",
-                    "tags": [
-                        "#attributes"
-                    ],
-                    "context": "Java attribute for line number tracking"
-                },
-                {
-                    "term": "JNI",
-                    "type": "technical_term",
-                    "primary_domain": "programming",
-                    "tags": [
-                        "#Java",
-                        "#native"
-                    ],
-                    "context": "Java Native Interface for native method integration"
-                },
-                {
-                    "term": "anti-debugging",
-                    "type": "technical_term",
-                    "primary_domain": "cybersecurity",
-                    "tags": [
-                        "#security",
-                        "#debugging"
-                    ],
-                    "context": "Techniques to prevent or deter debugging"
-                },
-                {
-                    "term": "APK",
+                    "term": "android.permission.READ_EXTERNAL_STORAGE",
                     "type": "technical_term",
                     "primary_domain": "mobile",
                     "tags": [
                         "#Android",
-                        "#app"
+                        "#Permissions"
                     ],
-                    "context": "Android application package file"
+                    "context": "High risk permission to read external storage"
                 },
                 {
-                    "term": "AppIntegrityChecker",
-                    "type": "product",
-                    "primary_domain": "security",
+                    "term": "android.permission.ACCESS_FINE_LOCATION",
+                    "type": "technical_term",
+                    "primary_domain": "mobile",
                     "tags": [
-                        "#integrity",
-                        "#security"
+                        "#Android",
+                        "#Permissions"
                     ],
-                    "context": "Class to check Android app's integrity"
+                    "context": "High risk permission to access fine location"
                 },
                 {
-                    "term": "com.yourapp.model",
+                    "term": "ET",
                     "type": "technical_term",
                     "primary_domain": "programming",
                     "tags": [
-                        "#namespace",
-                        "#Java"
+                        "#XML",
+                        "#Python"
                     ],
-                    "context": "Java package naming convention"
+                    "context": "xml.etree.ElementTree module alias in Python"
                 },
                 {
-                    "term": "Debug",
+                    "term": "python3",
                     "type": "technical_term",
                     "primary_domain": "programming",
                     "tags": [
-                        "#Java",
-                        "#debugging"
+                        "#scripting",
+                        "#Python"
                     ],
-                    "context": "Java class related to debugging capabilities"
-                },
-                {
-                    "term": "System.loadLibrary",
-                    "type": "technical_term",
-                    "primary_domain": "programming",
-                    "tags": [
-                        "#Java",
-                        "#library"
-                    ],
-                    "context": "Method to load a shared library in Java"
+                    "context": "Python command for version 3 scripting"
                 }
             ],
             "cached": false,
-            "processing_time": 9.44226622581482,
+            "processing_time": 7.268351793289185,
             "error": null
         },
         {
-            "chunk_index": 15,
-            "source_filename": "Android_Security_Guidelines.md",
+            "chunk_index": 27,
+            "source_filename": "Android_Security_Testing_Environment.md",
             "entities": [
                 {
-                    "term": "Build.VERSION.SDK_INT",
+                    "term": "READ_PHONE_STATE",
                     "type": "technical_term",
-                    "primary_domain": "software_development",
+                    "primary_domain": "Android development",
                     "tags": [
-                        "#android",
-                        "#sdk"
+                        "#permission",
+                        "#Android"
                     ],
-                    "context": "Refer to the API level of the Android SDK"
+                    "context": "Permission to read phone state"
                 },
                 {
-                    "term": "Build.VERSION_CODES.P",
+                    "term": "CALL_PHONE",
                     "type": "technical_term",
-                    "primary_domain": "software_development",
+                    "primary_domain": "Android development",
                     "tags": [
-                        "#android",
-                        "#sdk_levels"
+                        "#permission",
+                        "#Android"
                     ],
-                    "context": "Represents API level 28, Android Pie"
+                    "context": "Permission to make phone calls"
                 },
                 {
-                    "term": "PackageManager.GET_SIGNING_CERTIFICATES",
+                    "term": "SEND_SMS",
                     "type": "technical_term",
-                    "primary_domain": "software_development",
+                    "primary_domain": "Android development",
                     "tags": [
-                        "#android",
-                        "#packagemanager"
+                        "#permission",
+                        "#Android"
                     ],
-                    "context": "Flag for retrieving signing certificates"
+                    "context": "Permission to send SMS messages"
                 },
                 {
-                    "term": "PackageManager.GET_SIGNATURES",
+                    "term": "RECEIVE_SMS",
                     "type": "technical_term",
-                    "primary_domain": "software_development",
+                    "primary_domain": "Android development",
                     "tags": [
-                        "#android",
-                        "#deprecation"
+                        "#permission",
+                        "#Android"
                     ],
-                    "context": "Deprecated flag for retrieving app signatures"
+                    "context": "Permission to receive SMS messages"
                 },
-                {
-                    "term": "MessageDigest",
-                    "type": "technical_term",
-                    "primary_domain": "cybersecurity",
-                    "tags": [
-                        "#cryptography",
-                        "#hashing"
-                    ],
-                    "context": "Class used to generate cryptographic hashes"
-                },
-                {
-                    "term": "SHA-256",
-                    "type": "technical_term",
-                    "primary_domain": "cybersecurity",
-                    "tags": [
-                        "#hashfunction",
-                        "#security"
-                    ],
-                    "context": "Cryptographic hash function producing 256-bit hash"
-                },
-                {
-                    "term": "Base64",
-                    "type": "technical_term",
-                    "primary_domain": "data_encoding",
-                    "tags": [
-                        "#encryption",
-                        "#encoding"
-                    ],
-                    "context": "Binary-to-text encoding scheme"
-                }
-            ],
-            "cached": false,
-            "processing_time": 8.888143062591553,
-            "error": null
-        },
-        {
-            "chunk_index": 16,
-            "source_filename": "Android_Security_Guidelines.md",
-            "entities": [
                 {
                     "term": "AndroidManifest.xml",
                     "type": "technical_term",
-                    "primary_domain": "software development",
+                    "primary_domain": "Android development",
                     "tags": [
+                        "#file",
                         "#Android"
                     ],
-                    "context": "Android configuration file for defining app settings"
+                    "context": "Manifest file in Android app"
                 },
                 {
-                    "term": "networkSecurityConfig",
+                    "term": "ET",
                     "type": "technical_term",
-                    "primary_domain": "software development",
+                    "primary_domain": "Python programming",
                     "tags": [
-                        "#Security",
-                        "#Networking"
+                        "#library",
+                        "#XML"
                     ],
-                    "context": "Attribute for defining network security configuration"
+                    "context": "ElementTree library for XML parsing"
                 },
                 {
-                    "term": "android.permission.INTERNET",
+                    "term": "apktool",
                     "type": "technical_term",
-                    "primary_domain": "permissions",
+                    "primary_domain": "Android development",
                     "tags": [
-                        "#Android",
-                        "#Permission"
+                        "#tool",
+                        "#reverse_engineering"
                     ],
-                    "context": "Permission for internet access in Android"
-                },
-                {
-                    "term": "android.permission.USE_BIOMETRIC",
-                    "type": "technical_term",
-                    "primary_domain": "permissions",
-                    "tags": [
-                        "#Android",
-                        "#Security"
-                    ],
-                    "context": "Permission for biometric authentication"
-                },
-                {
-                    "term": "WRITE_EXTERNAL_STORAGE",
-                    "type": "technical_term",
-                    "primary_domain": "permissions",
-                    "tags": [
-                        "#Android",
-                        "#Storage"
-                    ],
-                    "context": "Permission to write to external storage"
-                },
-                {
-                    "term": "build.gradle",
-                    "type": "technical_term",
-                    "primary_domain": "software development",
-                    "tags": [
-                        "#Android",
-                        "#Build"
-                    ],
-                    "context": "Gradle build configuration file"
-                },
-                {
-                    "term": "compileSdk",
-                    "type": "technical_term",
-                    "primary_domain": "software development",
-                    "tags": [
-                        "#Android"
-                    ],
-                    "context": "Specifies the SDK version used to compile the app"
-                },
-                {
-                    "term": "minSdk",
-                    "type": "technical_term",
-                    "primary_domain": "software development",
-                    "tags": [
-                        "#Android"
-                    ],
-                    "context": "Minimum Android SDK version the app will support"
-                },
-                {
-                    "term": "targetSdk",
-                    "type": "technical_term",
-                    "primary_domain": "software development",
-                    "tags": [
-                        "#Android"
-                    ],
-                    "context": "SDK version for which the app is targeted"
-                },
-                {
-                    "term": "DEBUG_MODE",
-                    "type": "technical_term",
-                    "primary_domain": "software development",
-                    "tags": [
-                        "#Android",
-                        "#Debugging"
-                    ],
-                    "context": "Build configuration field to allow debugging"
-                },
-                {
-                    "term": "isMinifyEnabled",
-                    "type": "technical_term",
-                    "primary_domain": "software development",
-                    "tags": [
-                        "#Android",
-                        "#ProGuard"
-                    ],
-                    "context": "Setting to enable code minification"
+                    "context": "Tool for decompiling Android apps"
                 }
             ],
             "cached": false,
-            "processing_time": 8.780411005020142,
+            "processing_time": 4.404320001602173,
             "error": null
         },
         {
-            "chunk_index": 17,
-            "source_filename": "Android_Security_Guidelines.md",
+            "chunk_index": 28,
+            "source_filename": "Android_Security_Testing_Environment.md",
             "entities": [
                 {
-                    "term": "isShrinkResources",
+                    "term": "permissions",
                     "type": "technical_term",
-                    "primary_domain": "software_development",
+                    "primary_domain": "software development",
                     "tags": [
-                        "#android",
-                        "#build_configuration"
-                    ],
-                    "context": "Indicates if resources should be shrunk during build"
-                },
-                {
-                    "term": "proguardFiles",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#android",
-                        "#proguard"
-                    ],
-                    "context": "Configures ProGuard for optimization and obfuscation"
-                },
-                {
-                    "term": "buildConfigField",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#android",
-                        "#build_configuration"
-                    ],
-                    "context": "Defines a field to be included in BuildConfig"
-                },
-                {
-                    "term": "packagingOptions",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#android",
-                        "#packaging"
-                    ],
-                    "context": "Configures packaging options for APK"
-                },
-                {
-                    "term": "pickFirst",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#android",
-                        "#packaging"
-                    ],
-                    "context": "Picks the first occurrence of a file"
-                },
-                {
-                    "term": "proguard-android-optimize.txt",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#proguard",
-                        "#android"
-                    ],
-                    "context": "ProGuard configuration file for optimization"
-                },
-                {
-                    "term": "libc++_shared.so",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#android",
-                        "#native_code"
-                    ],
-                    "context": "Shared library file for C++ support"
-                },
-                {
-                    "term": "libjsc.so",
-                    "type": "technical_term",
-                    "primary_domain": "software_development",
-                    "tags": [
-                        "#android",
-                        "#jsc"
-                    ],
-                    "context": "Shared library file for JavaScriptCore"
-                }
-            ],
-            "cached": false,
-            "processing_time": 4.867786169052124,
-            "error": null
-        },
-        {
-            "chunk_index": 18,
-            "source_filename": "Android_Security_Guidelines.md",
-            "entities": [
-                {
-                    "term": "Room",
-                    "type": "technical_term",
-                    "primary_domain": "database",
-                    "tags": [
-                        "#SQL",
-                        "#Android"
-                    ],
-                    "context": "Android database library for data persistence"
-                },
-                {
-                    "term": "SQLCipher",
-                    "type": "technical_term",
-                    "primary_domain": "encryption",
-                    "tags": [
+                        "#access_control",
                         "#security",
-                        "#database"
+                        "#software"
                     ],
-                    "context": "Open-source extension for database encryption"
+                    "context": "Refers to access rights in software systems."
                 },
                 {
-                    "term": "EncryptedSharedPreferences",
+                    "term": "risk_level",
                     "type": "technical_term",
                     "primary_domain": "security",
                     "tags": [
-                        "#Android",
-                        "#encryption"
+                        "#security",
+                        "#risk_assessment",
+                        "#software"
                     ],
-                    "context": "Android API for securing shared preferences"
-                },
+                    "context": "Indicates the potential risk associated with a permission."
+                }
+            ],
+            "cached": false,
+            "processing_time": 1.9469530582427979,
+            "error": null
+        },
+        {
+            "chunk_index": 29,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
                 {
-                    "term": "HTTPS",
-                    "type": "technical_term",
-                    "primary_domain": "network",
+                    "term": "QARK",
+                    "type": "product",
+                    "primary_domain": "mobile security",
                     "tags": [
                         "#security",
-                        "#protocol"
+                        "#analysis"
                     ],
-                    "context": "Secure version of HTTP for encrypted communication"
+                    "context": "A tool for Android application security analysis"
                 },
                 {
-                    "term": "Certificate Pinning",
-                    "type": "technical_term",
-                    "primary_domain": "network",
-                    "tags": [
-                        "#security"
-                    ],
-                    "context": "Security measure to prevent man-in-the-middle attacks"
-                },
-                {
-                    "term": "Network Security Config",
-                    "type": "technical_term",
-                    "primary_domain": "network",
-                    "tags": [
-                        "#Android",
-                        "#security"
-                    ],
-                    "context": "Android XML to configure app's network security"
-                },
-                {
-                    "term": "JWT",
-                    "type": "technical_term",
-                    "primary_domain": "authentication",
+                    "term": "MobSF",
+                    "type": "product",
+                    "primary_domain": "mobile security",
                     "tags": [
                         "#security",
-                        "#token"
+                        "#framework"
                     ],
-                    "context": "JSON Web Tokens for secure information exchange"
+                    "context": "A security framework for automating security analysis"
                 },
                 {
-                    "term": "ProGuard",
-                    "type": "technical_term",
-                    "primary_domain": "development",
+                    "term": "APKTool",
+                    "type": "product",
+                    "primary_domain": "software development",
                     "tags": [
-                        "#Android",
-                        "#optimization"
+                        "#reverseengineering",
+                        "#apk"
                     ],
-                    "context": "Java class file shrinker and obfuscator"
+                    "context": "A tool for reverse engineering Android APK files"
                 },
                 {
-                    "term": "R8",
-                    "type": "technical_term",
-                    "primary_domain": "development",
+                    "term": "JADX",
+                    "type": "product",
+                    "primary_domain": "software development",
                     "tags": [
-                        "#Android",
-                        "#optimization"
+                        "#java",
+                        "#decompiler"
                     ],
-                    "context": "Google's optimizer for Android applications"
+                    "context": "A dex to Java decompiler for Android apps"
                 },
                 {
-                    "term": "OWASP Mobile Security Testing Guide",
+                    "term": "Custom Scripts",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#automation",
+                        "#custom"
+                    ],
+                    "context": "Scripts written to automate specific security tasks"
+                },
+                {
+                    "term": "JSON",
+                    "type": "technical_term",
+                    "primary_domain": "data interchange",
+                    "tags": [
+                        "#dataformat",
+                        "#serialization"
+                    ],
+                    "context": "A lightweight data interchange format"
+                },
+                {
+                    "term": "datetime",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#python",
+                        "#datetime"
+                    ],
+                    "context": "Python module for manipulating dates and times"
+                },
+                {
+                    "term": "os",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#python",
+                        "#osmodule"
+                    ],
+                    "context": "Python module for interacting with the operating system"
+                }
+            ],
+            "cached": false,
+            "processing_time": 7.1708948612213135,
+            "error": null
+        },
+        {
+            "chunk_index": 30,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "sensitive_data",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#data",
+                        "#security",
+                        "#confidential"
+                    ],
+                    "context": "Refers to confidential information in security reports"
+                },
+                {
+                    "term": "api_keys",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#security",
+                        "#authentication"
+                    ],
+                    "context": "Authentication tokens for accessing APIs"
+                },
+                {
+                    "term": "json",
+                    "type": "technical_term",
+                    "primary_domain": "data_format",
+                    "tags": [
+                        "#data",
+                        "#serialization"
+                    ],
+                    "context": "A lightweight data interchange format"
+                },
+                {
+                    "term": "Android",
+                    "type": "product",
+                    "primary_domain": "technology",
+                    "tags": [
+                        "#mobile",
+                        "#OS"
+                    ],
+                    "context": "Mobile operating system by Google"
+                },
+                {
+                    "term": "QARK",
                     "type": "product",
                     "primary_domain": "security",
                     "tags": [
-                        "#OWASP",
+                        "#security",
+                        "#analysis",
+                        "#tool"
+                    ],
+                    "context": "Security analysis tool for Android"
+                },
+                {
+                    "term": "python3",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#programming",
+                        "#language"
+                    ],
+                    "context": "A high-level programming language"
+                }
+            ],
+            "cached": false,
+            "processing_time": 5.4232330322265625,
+            "error": null
+        },
+        {
+            "chunk_index": 31,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "CI/CD",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#integration",
+                        "#deployment",
+                        "#automation"
+                    ],
+                    "context": "Continuous Integration and Continuous Deployment"
+                }
+            ],
+            "cached": false,
+            "processing_time": 1.2580599784851074,
+            "error": null
+        },
+        {
+            "chunk_index": 32,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "Jenkins Pipeline",
+                    "type": "technical_term",
+                    "primary_domain": "DevOps",
+                    "tags": [
+                        "#CI",
+                        "#CD",
+                        "#automation"
+                    ],
+                    "context": "Automated workflow framework for CI/CD"
+                },
+                {
+                    "term": "Groovy",
+                    "type": "technical_term",
+                    "primary_domain": "Programming",
+                    "tags": [
+                        "#scripting",
+                        "#Jenkins"
+                    ],
+                    "context": "Programming language used in Jenkinsfiles"
+                },
+                {
+                    "term": "Jenkins",
+                    "type": "product",
+                    "primary_domain": "DevOps",
+                    "tags": [
+                        "#automation",
+                        "#CI/CD"
+                    ],
+                    "context": "Popular automation server for CI/CD"
+                },
+                {
+                    "term": "android-slave",
+                    "type": "technical_term",
+                    "primary_domain": "DevOps",
+                    "tags": [
+                        "#CI",
+                        "#agent"
+                    ],
+                    "context": "Jenkins agent used for Android builds"
+                },
+                {
+                    "term": "ANDROID_HOME",
+                    "type": "technical_term",
+                    "primary_domain": "Android Development",
+                    "tags": [
+                        "#environment_variable"
+                    ],
+                    "context": "Environment variable for Android SDK path"
+                },
+                {
+                    "term": "JAVA_HOME",
+                    "type": "technical_term",
+                    "primary_domain": "Java",
+                    "tags": [
+                        "#environment_variable"
+                    ],
+                    "context": "Environment variable for Java installation path"
+                },
+                {
+                    "term": "Gradle",
+                    "type": "technical_term",
+                    "primary_domain": "Build Tools",
+                    "tags": [
+                        "#buildsystem",
+                        "#Java"
+                    ],
+                    "context": "Build automation tool used with Java projects"
+                },
+                {
+                    "term": "QARK",
+                    "type": "technical_term",
+                    "primary_domain": "Security",
+                    "tags": [
+                        "#analysis",
+                        "#security"
+                    ],
+                    "context": "Static analysis tool for Android vulnerabilities"
+                },
+                {
+                    "term": "SpotBugs",
+                    "type": "technical_term",
+                    "primary_domain": "Security",
+                    "tags": [
+                        "#analysis",
+                        "#static"
+                    ],
+                    "context": "Static analysis tool for detecting Java bugs"
+                },
+                {
+                    "term": "Dependency Check",
+                    "type": "technical_term",
+                    "primary_domain": "Security",
+                    "tags": [
+                        "#analysis",
+                        "#dependencies"
+                    ],
+                    "context": "Tool for known vulnerabilities in project dependencies"
+                },
+                {
+                    "term": "Docker",
+                    "type": "product",
+                    "primary_domain": "DevOps",
+                    "tags": [
+                        "#containerization",
+                        "#cloud"
+                    ],
+                    "context": "Platform for developing, shipping, and running applications"
+                },
+                {
+                    "term": "MobSF",
+                    "type": "technical_term",
+                    "primary_domain": "Security",
+                    "tags": [
+                        "#analysis",
                         "#mobile"
                     ],
-                    "context": "Guide for security testing of mobile apps"
+                    "context": "Security analysis tool for Android and iOS apps"
+                }
+            ],
+            "cached": false,
+            "processing_time": 7.959573030471802,
+            "error": null
+        },
+        {
+            "chunk_index": 33,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "Android",
+                    "type": "product",
+                    "primary_domain": "mobile",
+                    "tags": [
+                        "#operatingsystem"
+                    ],
+                    "context": "Operating system used for mobile devices"
                 },
                 {
-                    "term": "Android App Bundle",
+                    "term": "adb",
                     "type": "technical_term",
-                    "primary_domain": "development",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#tool",
+                        "#Android"
+                    ],
+                    "context": "Android Debug Bridge, command-line tool for Android devices"
+                },
+                {
+                    "term": "emulator",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#virtualdevice",
+                        "#testing"
+                    ],
+                    "context": "Software to emulate Android devices for testing"
+                },
+                {
+                    "term": "Frida",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#dynamicanalysis",
+                        "#tool"
+                    ],
+                    "context": "Dynamic instrumentation toolkit for developers"
+                },
+                {
+                    "term": "QARK",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#security",
+                        "#testing"
+                    ],
+                    "context": "Tool to analyze Android apps for security threats"
+                },
+                {
+                    "term": "MobSF",
+                    "type": "technical_term",
+                    "primary_domain": "cybersecurity",
+                    "tags": [
+                        "#security",
+                        "#mobile"
+                    ],
+                    "context": "Mobile Security Framework for analysis of mobile apps"
+                },
+                {
+                    "term": "SpotBugs",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#bugchecking",
+                        "#Java"
+                    ],
+                    "context": "Static analysis tool to find bugs in Java programs"
+                },
+                {
+                    "term": "Python",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#programminglanguage"
+                    ],
+                    "context": "High-level programming language widely used in development"
+                },
+                {
+                    "term": "Jenkins",
+                    "type": "technical_term",
+                    "primary_domain": "software development",
+                    "tags": [
+                        "#automation",
+                        "#CICD"
+                    ],
+                    "context": "Automation server used for continuous integration and delivery"
+                }
+            ],
+            "cached": false,
+            "processing_time": 6.760818958282471,
+            "error": null
+        },
+        {
+            "chunk_index": 34,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "securityReport.high_risk_issues",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#high_risk"
+                    ],
+                    "context": "Handles high risk issues in security reports"
+                },
+                {
+                    "term": "securityReport.medium_risk_issues",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#medium_risk"
+                    ],
+                    "context": "Handles medium risk issues in security reports"
+                },
+                {
+                    "term": "error",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#exception_handling"
+                    ],
+                    "context": "Error reporting function in script"
+                },
+                {
+                    "term": "unstable",
+                    "type": "technical_term",
+                    "primary_domain": "programming",
+                    "tags": [
+                        "#build_status"
+                    ],
+                    "context": "Function indicating build instability"
+                }
+            ],
+            "cached": false,
+            "processing_time": 2.6590609550476074,
+            "error": null
+        },
+        {
+            "chunk_index": 35,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "GitLab CI/CD",
+                    "type": "technical_term",
+                    "primary_domain": "DevOps",
+                    "tags": [
+                        "#CI",
+                        "#CD",
+                        "#automation"
+                    ],
+                    "context": "Continuous integration and delivery tool"
+                },
+                {
+                    "term": ".gitlab-ci.yml",
+                    "type": "technical_term",
+                    "primary_domain": "DevOps",
+                    "tags": [
+                        "#config",
+                        "#yaml"
+                    ],
+                    "context": "YAML configuration file for GitLab CI"
+                },
+                {
+                    "term": "GRADLE_OPTS",
+                    "type": "technical_term",
+                    "primary_domain": "Software Development",
+                    "tags": [
+                        "#Gradle",
+                        "#environment"
+                    ],
+                    "context": "Environment variable for Gradle options"
+                },
+                {
+                    "term": "GRADLE_USER_HOME",
+                    "type": "technical_term",
+                    "primary_domain": "Software Development",
+                    "tags": [
+                        "#Gradle",
+                        "#environment"
+                    ],
+                    "context": "Environment variable for Gradle user home directory"
+                },
+                {
+                    "term": "openjdk:11-jdk",
+                    "type": "technical_term",
+                    "primary_domain": "Software Development",
+                    "tags": [
+                        "#Java",
+                        "#Docker"
+                    ],
+                    "context": "Docker image for Java Development Kit 11"
+                },
+                {
+                    "term": "commandlinetools-linux",
+                    "type": "technical_term",
+                    "primary_domain": "Software Development",
                     "tags": [
                         "#Android",
-                        "#APK"
+                        "#tools"
                     ],
-                    "context": "Android format for publishing an app"
+                    "context": "Android command line tools for Linux"
                 },
                 {
-                    "term": "Kotlin",
+                    "term": "curl",
+                    "type": "technical_term",
+                    "primary_domain": "Networking",
+                    "tags": [
+                        "#download",
+                        "#tool"
+                    ],
+                    "context": "Tool for transferring data with URLs"
+                },
+                {
+                    "term": "gradlew",
+                    "type": "technical_term",
+                    "primary_domain": "Software Development",
+                    "tags": [
+                        "#Gradle",
+                        "#build"
+                    ],
+                    "context": "Gradle wrapper script"
+                },
+                {
+                    "term": "adb",
+                    "type": "technical_term",
+                    "primary_domain": "Android Development",
+                    "tags": [
+                        "#Android",
+                        "#debugging"
+                    ],
+                    "context": "Android Debug Bridge"
+                },
+                {
+                    "term": "qark",
+                    "type": "technical_term",
+                    "primary_domain": "Security",
+                    "tags": [
+                        "#static-analysis",
+                        "#security"
+                    ],
+                    "context": "Tool for Android malware detection"
+                },
+                {
+                    "term": "Python 3.9",
+                    "type": "technical_term",
+                    "primary_domain": "Programming",
+                    "tags": [
+                        "#Python",
+                        "#language"
+                    ],
+                    "context": "Version 3.9 of Python programming language"
+                },
+                {
+                    "term": "slackSend",
+                    "type": "technical_term",
+                    "primary_domain": "Communication",
+                    "tags": [
+                        "#Slack",
+                        "#notification"
+                    ],
+                    "context": "Jenkins plugin to send messages to Slack"
+                }
+            ],
+            "cached": false,
+            "processing_time": 5.1260292530059814,
+            "error": null
+        },
+        {
+            "chunk_index": 36,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "QARK",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#security",
+                        "#analysis"
+                    ],
+                    "context": "Tool for analyzing APK security"
+                },
+                {
+                    "term": "junit.xml",
+                    "type": "technical_term",
+                    "primary_domain": "testing",
+                    "tags": [
+                        "#JUnit",
+                        "#reports"
+                    ],
+                    "context": "Report format used for unit tests"
+                },
+                {
+                    "term": "MobSF",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#mobile",
+                        "#security",
+                        "#framework"
+                    ],
+                    "context": "Mobile Security Framework for security testing"
+                },
+                {
+                    "term": "Docker",
+                    "type": "technical_term",
+                    "primary_domain": "containerization",
+                    "tags": [
+                        "#containers",
+                        "#devops"
+                    ],
+                    "context": "Platform for containerizing applications"
+                },
+                {
+                    "term": "dependencyCheck",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#vulnerability",
+                        "#analysis"
+                    ],
+                    "context": "Tool for dependency vulnerability analysis"
+                },
+                {
+                    "term": "Ubuntu",
+                    "type": "product",
+                    "primary_domain": "operating_system",
+                    "tags": [
+                        "#linux",
+                        "#OS"
+                    ],
+                    "context": "Popular Linux-based operating system"
+                },
+                {
+                    "term": "Frida",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#dynamic",
+                        "#analysis"
+                    ],
+                    "context": "Dynamic instrumentation toolkit"
+                },
+                {
+                    "term": "jinja2",
+                    "type": "technical_term",
+                    "primary_domain": "templating",
+                    "tags": [
+                        "#python",
+                        "#templating"
+                    ],
+                    "context": "Python template engine"
+                },
+                {
+                    "term": "matplotlib",
+                    "type": "technical_term",
+                    "primary_domain": "data_visualization",
+                    "tags": [
+                        "#python",
+                        "#visualization"
+                    ],
+                    "context": "Python library for plotting graphs"
+                }
+            ],
+            "cached": false,
+            "processing_time": 8.800745010375977,
+            "error": null
+        },
+        {
+            "chunk_index": 37,
+            "source_filename": "Android_Security_Testing_Environment.md",
+            "entities": [
+                {
+                    "term": "python3",
                     "type": "technical_term",
                     "primary_domain": "programming",
                     "tags": [
                         "#language",
-                        "#Android"
+                        "#script"
                     ],
-                    "context": "Programming language for Android development"
+                    "context": "Python script being used for security check"
+                },
+                {
+                    "term": "scripts/security_gate_check.py",
+                    "type": "technical_term",
+                    "primary_domain": "devops",
+                    "tags": [
+                        "#script",
+                        "#security"
+                    ],
+                    "context": "Python script for security gate check"
+                },
+                {
+                    "term": "security-reports/summary.json",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#report",
+                        "#json"
+                    ],
+                    "context": "Summary report in JSON format"
+                },
+                {
+                    "term": "security-reports/comprehensive_report.html",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#report",
+                        "#html"
+                    ],
+                    "context": "HTML formatted comprehensive security report"
+                },
+                {
+                    "term": "Android 보안 테스트 환경",
+                    "type": "technical_term",
+                    "primary_domain": "security",
+                    "tags": [
+                        "#testing",
+                        "#android"
+                    ],
+                    "context": "Comprehensive Android security testing environment"
                 }
             ],
             "cached": false,
-            "processing_time": 8.882321119308472,
+            "processing_time": 4.605946063995361,
             "error": null
         }
     ],
     "summary": {
-        "total_chunks": 19,
-        "processed_chunks": 19,
+        "total_chunks": 38,
+        "processed_chunks": 38,
         "failed_chunks": 0,
         "cache_hits": 0,
         "cache_hit_rate": 0,
-        "total_entities": 159,
-        "total_processing_time": 143.732,
-        "average_processing_time": 7.565
+        "total_entities": 277,
+        "total_processing_time": 233.433,
+        "average_processing_time": 6.143
     }
 }

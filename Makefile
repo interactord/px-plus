@@ -7,7 +7,7 @@
 # ========================================
 PROJECT_ID ?= hyper-personalization-ai
 REGION ?= asia-northeast3
-SERVICE_NAME ?= px-plus-api
+SERVICE_NAME ?= px-plus
 IMAGE_NAME ?= px-plus
 REGISTRY ?= gcr.io
 
@@ -93,8 +93,15 @@ push: ## GCR에 이미지 푸시
 	docker push $(FULL_IMAGE_NAME)
 	@echo "$(GREEN)✓ 푸시 완료$(NC)"
 
+.PHONY: setup-secrets
+setup-secrets: ## Secret Manager 설정
+	@echo "$(BLUE)Secret Manager 설정 중...$(NC)"
+	@chmod +x scripts/setup-secrets.sh
+	@PROJECT_ID=$(PROJECT_ID) ./scripts/setup-secrets.sh .env.production
+	@echo "$(GREEN)✓ Secret Manager 설정 완료$(NC)"
+
 .PHONY: deploy
-deploy: env-to-yaml ## 프로덕션 배포
+deploy: env-to-yaml ## 프로덕션 배포 (Secret Manager 사용)
 	@echo "$(RED)프로덕션 환경에 배포하시겠습니까? [y/N]$(NC)"
 	@read -r CONFIRM; \
 	if [ "$$CONFIRM" = "y" ] || [ "$$CONFIRM" = "Y" ]; then \
@@ -112,7 +119,8 @@ deploy: env-to-yaml ## 프로덕션 배포
 			--cpu $(CPU) \
 			--memory $(MEMORY) \
 			--timeout $(TIMEOUT) \
-			--env-vars-file config/env-vars-production.yaml; \
+			--env-vars-file config/env-vars-production.yaml \
+			--update-secrets=GOOGLE_API_KEY=google-api-key:latest,OPENAI_API_KEY=openai-api-key:latest,ANTHROPIC_API_KEY=anthropic-api-key:latest,RAPIDAPI_KEY=rapidapi-key:latest,SECRET_KEY=secret-key:latest; \
 		echo "$(GREEN)✓ 배포 완료$(NC)"; \
 		$(MAKE) describe; \
 	else \
@@ -120,8 +128,16 @@ deploy: env-to-yaml ## 프로덕션 배포
 	fi
 
 .PHONY: deploy-full
-deploy-full: build push deploy ## 전체 배포 프로세스 (빌드 + 푸시 + 배포)
+deploy-full: build push setup-secrets deploy ## 전체 배포 프로세스 (빌드 + 푸시 + Secret 설정 + 배포)
 	@echo "$(GREEN)✓ 전체 배포 완료$(NC)"
+
+.PHONY: deploy-with-env
+deploy-with-env: build push ## 환경 변수로 배포 (Secret Manager 권한 불필요)
+	@echo "$(BLUE)환경 변수로 배포 중...$(NC)"
+	@chmod +x scripts/deploy-with-env-vars.sh
+	@PROJECT_ID=$(PROJECT_ID) REGION=$(REGION) SERVICE_NAME=$(SERVICE_NAME) \
+		./scripts/deploy-with-env-vars.sh .env.production $(FULL_IMAGE_NAME)
+	@echo "$(GREEN)✓ 배포 완료$(NC)"
 
 # ========================================
 # 환경변수 관리

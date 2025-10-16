@@ -5,6 +5,7 @@ Gemini + Google Search Grounding 기반 웹 강화 어댑터
 """
 
 import json
+import os
 from typing import List
 from pathlib import Path
 

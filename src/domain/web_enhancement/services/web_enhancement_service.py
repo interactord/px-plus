@@ -155,11 +155,7 @@ class WebEnhancementService:
         primary_error: str
     ) -> Result[List[EnhancedTerm], str]:
         """
-        4단계 폴백 시도
-        
-        1. Gemini + 웹검색
-        2. Gemini Flash (일반 번역)
-        3. GPT-4o-mini (일반 번역)
+        폴백 시도 (Fallback이 None이면 즉시 실패 반환)
         
         Args:
             term_infos: 강화할 용어 정보
@@ -170,6 +166,12 @@ class WebEnhancementService:
             Result[List[EnhancedTerm], str]: 성공 시 강화된 용어, 실패 시 에러
         """
         errors = [f"Primary: {primary_error}"]
+        
+        # Fallback 비활성화 확인
+        if self._fallback_adapter is None:
+            error_msg = "모든 Fallback 어댑터가 비활성화되었습니다"
+            logger.error(f"❌ {error_msg}")
+            return Failure(f"{primary_error} | {error_msg}")
         
         # Fallback 1: Gemini + 웹검색
         logger.info(f"🔄 Fallback 1 시도: Gemini + 웹검색 ({len(term_infos)}개 용어)")
@@ -194,7 +196,7 @@ class WebEnhancementService:
             logger.error(f"❌ {error_msg}")
             errors.append(error_msg)
         
-        # Fallback 2: Gemini Flash (일반 번역) - 캐시 저장 안 함
+        # Fallback 2: Gemini Flash (일반 번역) - 비활성화됨
         if self._simple_translation_adapter:
             logger.info(f"🔄 Fallback 2 시도: Gemini Flash 일반 번역 ({len(term_infos)}개 용어)")
             if self._fallback_delay > 0:
@@ -203,7 +205,6 @@ class WebEnhancementService:
             simple_result = self._simple_translation_adapter.enhance_terms(term_infos, target_languages)
             
             if simple_result.is_success():
-                # 일반 번역은 검증 완화 (웹 출처 없어도 OK)
                 logger.info(f"✅ Fallback 2 성공: Gemini Flash 일반 번역")
                 return simple_result
             else:
@@ -211,7 +212,7 @@ class WebEnhancementService:
                 logger.error(f"❌ {error_msg}")
                 errors.append(error_msg)
         
-        # Fallback 3: GPT-4o-mini (일반 번역) - 캐시 저장 안 함
+        # Fallback 3: GPT-4o-mini (일반 번역) - 비활성화됨
         if self._final_fallback_adapter:
             logger.info(f"🔄 Fallback 3 시도: GPT-4o-mini 일반 번역 ({len(term_infos)}개 용어)")
             if self._fallback_delay > 0:
@@ -220,7 +221,6 @@ class WebEnhancementService:
             final_result = self._final_fallback_adapter.enhance_terms(term_infos, target_languages)
             
             if final_result.is_success():
-                # 일반 번역은 검증 완화
                 logger.info(f"✅ Fallback 3 성공: GPT-4o-mini 일반 번역")
                 return final_result
             else:

@@ -80,7 +80,7 @@ class GeminiChatAdapter(ModelPort):
         
         Args:
             api_key: Google API 키 (None이면 GOOGLE_API_KEY 환경 변수 사용)
-            model_name: Gemini 모델명 (기본: gemini-2.0-flash-exp)
+            model_name: Gemini 모델명 (기본: gemini-2.0-flash)
             temperature: 온도 (0.0-1.0, 낮을수록 일관성)
             max_tokens: 최대 토큰 수
             timeout: 타임아웃 (초)
@@ -89,6 +89,10 @@ class GeminiChatAdapter(ModelPort):
             ImportError: google-genai 패키지가 설치되지 않은 경우
             ValueError: API 키가 없는 경우
         """
+        import logging
+        
+        logger = logging.getLogger(__name__)
+        
         if not GENAI_AVAILABLE:
             raise ImportError(
                 "google-genai 패키지가 설치되지 않았습니다. "
@@ -111,7 +115,9 @@ class GeminiChatAdapter(ModelPort):
         
         # Google Gen AI 클라이언트 생성
         from google import genai
+        
         self._client = genai.Client(api_key=self._api_key)
+        logger.debug(f"Gemini Client 생성 완료: {model_name}")
 
     def execute(self, request: ModelRequest) -> Result[ModelResponse, str]:
         """

@@ -95,6 +95,10 @@ class GeminiSDKAdapter(ModelPort):
             ImportError: google-genai 패키지가 설치되지 않은 경우
             ValueError: API 키가 없는 경우
         """
+        import logging
+
+        logger = logging.getLogger(__name__)
+
         if not GENAI_AVAILABLE:
             raise ImportError(
                 "google-genai 패키지가 설치되지 않았습니다. "
@@ -117,6 +121,7 @@ class GeminiSDKAdapter(ModelPort):
 
         # Google Gen AI 클라이언트 생성
         self._client = genai.Client(api_key=self._api_key)
+        logger.debug(f"Gemini Client 생성 완료: {model_name}")
 
     def execute(self, request: ModelRequest) -> Result[ModelResponse, str]:
         """
