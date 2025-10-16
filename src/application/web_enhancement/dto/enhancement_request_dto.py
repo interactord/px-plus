@@ -43,15 +43,15 @@ class EnhancementRequestDTO:
         terms: 강화할 용어 목록
         target_languages: 번역 대상 언어 (None이면 10개 모두)
         use_cache: 캐시 사용 여부 (기본: True)
-        batch_size: 배치 크기 (기본: 5)
-        concurrent_batches: 동시 배치 수 (기본: 3)
+        batch_size: 배치 크기 (기본: 15)
+        concurrent_batches: 동시 배치 수 (기본: 10)
     """
     
     terms: List[dict]
     target_languages: Optional[List[str]] = None
     use_cache: bool = True
-    batch_size: int = 5
-    concurrent_batches: int = 3
+    batch_size: int = 15
+    concurrent_batches: int = 10
     
     @classmethod
     def create(
@@ -59,8 +59,8 @@ class EnhancementRequestDTO:
         terms: List[dict],
         target_languages: Optional[List[str]] = None,
         use_cache: bool = True,
-        batch_size: int = 5,
-        concurrent_batches: int = 3
+        batch_size: int = 15,
+        concurrent_batches: int = 10
     ) -> Result["EnhancementRequestDTO", str]:
         """
         EnhancementRequestDTO 생성
@@ -82,8 +82,8 @@ class EnhancementRequestDTO:
         if batch_size < 1:
             return Failure(f"배치 크기는 1 이상이어야 합니다: {batch_size}")
         
-        if batch_size > 10:
-            return Failure(f"배치 크기는 10 이하를 권장합니다: {batch_size}")
+        if batch_size > 20:
+            return Failure(f"배치 크기는 20 이하를 권장합니다: {batch_size}")
         
         if concurrent_batches < 1:
             return Failure(f"동시 배치 수는 1 이상이어야 합니다: {concurrent_batches}")

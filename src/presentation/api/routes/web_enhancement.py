@@ -35,7 +35,7 @@ class EnhanceRequest(BaseModel):
         example=["ko", "en", "ja"]
     )
     use_cache: bool = Field(default=True, description="캐시 사용 여부")
-    batch_size: int = Field(default=5, ge=1, le=10, description="배치 크기")
+    batch_size: int = Field(default=15, ge=1, le=20, description="배치 크기")
     concurrent_batches: int = Field(default=10, ge=1, le=15, description="동시 배치 수")
 
 
@@ -105,8 +105,8 @@ def get_cached_enhancement_service() -> AsyncCachedEnhancementService:
     - ar (العربية), es (Español)
     
     처리 방식:
-    - 배치 크기: 5개 용어 (Single-shot 최적)
-    - 동시 배치: 10개 (라운드 로빈, 비동기 최적화)
+    - 배치 크기: 15개 용어 (비동기 최적화)
+    - 동시 배치: 10개 (라운드 로빈, 병렬 처리)
     - 캐시 TTL: 24시간
     """
 )
