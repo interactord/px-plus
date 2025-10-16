@@ -1,0 +1,29 @@
+{
+  "terms": [
+    {
+      "term": "Partido Popular",
+      "type": "organization",
+      "primary_domain": "politics",
+      "context": "Major Spanish political party",
+      "tags": ["#PP", "#Spain", "#politics"]
+    },
+    {
+      "term": "Real Madrid",
+      "type": "organization",
+      "primary_domain": "sports",
+      "context": "Spanish football club",
+      "tags": ["#football", "#LaLiga", "#Spain"]
+    },
+    {
+      "term": "Toyota",
+      "type": "company",
+      "primary_domain": "automotive",
+      "context": "Japanese car manufacturer",
+      "tags": ["#automotive", "#Japan"]
+    }
+  ],
+  "target_languages": ["ko", "en", "ja"],
+  "use_cache": false,
+  "batch_size": 3,
+  "concurrent_batches": 1
+}
