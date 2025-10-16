@@ -88,8 +88,8 @@ class EnhancementRequestDTO:
         if concurrent_batches < 1:
             return Failure(f"동시 배치 수는 1 이상이어야 합니다: {concurrent_batches}")
         
-        if concurrent_batches > 5:
-            return Failure(f"동시 배치 수는 5 이하를 권장합니다: {concurrent_batches}")
+        if concurrent_batches > 15:
+            return Failure(f"동시 배치 수는 15 이하를 권장합니다: {concurrent_batches}")
         
         # 언어 코드 검증
         if target_languages is not None:
